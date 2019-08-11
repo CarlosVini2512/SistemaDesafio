@@ -2,10 +2,20 @@ package br.com.hospitalif.model;
 
 public class Pessoa {
 	
+	private int idPessoa;
 	private String nome;
 	private String cpf;
-	private String endereco;
+	private int idade;
+	private String tipoSanguineo;
+	private char sexo;
+	private String StatusPessoa;
 
+	public int getIdPessoa() {
+		return this.idPessoa;
+	}
+	public void setIdPessoa(int idPessoa) {
+		this.idPessoa = idPessoa;
+	}
 	
 	public String getNome() {
 		return this.nome;
@@ -21,16 +31,33 @@ public class Pessoa {
 		this.cpf = cpf;
 	}
 	
-	public String getEndereco() {
-		return this.endereco;
+	public int getIdade() {
+		return this.idade;
 	}
-	public void setEndereco(String end) {
-		this.endereco = end;
+	public void setIdade(int idade) {
+		this.idade = idade;
 	}
+	
+	public String getTipoSangue() {
+		return this.tipoSanguineo;
+	}
+	public void setTipoSangue(String tipoSangue) {
+		this.tipoSanguineo = tipoSangue;
+	}
+	
+	public char getSexo() {
+		return this.sexo;
+	}
+	public void setSexo(char Sx) {
+		this.sexo = Sx;
+	}
+	
+	public String getStatusDaPessoa() {
+		return this.StatusPessoa;
+	}
+	public void setStatusDaPessoa(String StatusP) {
+		this.StatusPessoa = StatusP;
+	}
+	
 
-	public void status() {
-		System.out.println("Pessoa:");
-		System.out.println("Nome:" + this.nome);
-		System.out.println("CPF:" + this.cpf);
-	}
 }
