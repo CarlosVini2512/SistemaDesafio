@@ -1,6 +1,6 @@
 package br.com.hospitalif.model;
 
-public class Pessoa {
+public class Pessoa  {
 	
 	private int idPessoa;
 	private String nome;
