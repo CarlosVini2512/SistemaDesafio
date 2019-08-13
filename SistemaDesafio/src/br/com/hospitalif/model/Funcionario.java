@@ -1,6 +1,6 @@
 package br.com.hospitalif.model;
 
-public class Funcionario extends Pessoa{
+public class Funcionario {
 
 	private int idFuncionario;
 	private String login;
