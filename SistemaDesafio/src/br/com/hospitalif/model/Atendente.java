@@ -1,14 +1,10 @@
 package br.com.hospitalif.model;
 
-public class Atendente {
-
-	public int cadastrarPaciente;
+public class Atendente extends Gerente{
 	
-	public int getCadastrarPaciente() {
-		return this.cadastrarPaciente;
+	public void CadastrarPaciente() {
+		
 	}
-	public void setCadastrarPaciente(int cadastrarP) {
-		this.cadastrarPaciente = cadastrarP;
-	}
+	
 	
 }

@@ -5,8 +5,8 @@ import java.util.List;
 public class Paciente {
 
 	private int idPaciente;
-	private List EnfermidadePessoal;
-	private List Entrada;
+	private List<EnfermidadePessoal> doenca;
+	private List<Entrada> historico;
 	
 
 	public int getIdPaciente() {
@@ -16,17 +16,17 @@ public class Paciente {
 		this.idPaciente = idPaciente;
 	}
 	
-	public List getEnfermidadePessoal() {
-		return this.EnfermidadePessoal;
+	public List<EnfermidadePessoal> getDoenca() {
+		return this.doenca;
 	}
-	public void setEnfermidadePessoal(List EnfermidadeP) {
-		this.EnfermidadePessoal = EnfermidadeP;
+	public void setDoenca(List<EnfermidadePessoal> doenca) {
+		this.doenca = doenca;
 	}
 	
-	public List getEntrada() {
-		return this.Entrada;
+	public List<Entrada> getHistorico() {
+		return this.historico;
 	}
-	public void setEntrada(List entrada) {
-		this.Entrada = entrada;
+	public void setHistorico(List<Entrada> historico) {
+		this.historico = historico;
 	}
 }

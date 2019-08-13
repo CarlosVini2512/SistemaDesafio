@@ -3,7 +3,7 @@ package br.com.hospitalif.model;
 import java.util.Date;
 import java.util.List;
 
-public class Entrada {
+public class Entrada extends Atendimento{
 
 	private int idEntrada;
 	private Date dataEntrada;
@@ -39,10 +39,10 @@ public class Entrada {
 		this.statusDeEntrada = statusEntrada;
 	}
 	
-	public List getSituacaoDoPaciente() {
+	public List<Atendimento> getSituacaoDoPaciente() {
 		return this.situacaoDoPaciente;
 	}
-	public void setSituacaoDoPaciente(List situacaoPaciente) {
+	public void setSituacaoDoPaciente(List<Atendimento> situacaoPaciente) {
 		this.situacaoDoPaciente = situacaoPaciente;
 	}
 }
