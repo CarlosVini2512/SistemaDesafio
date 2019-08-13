@@ -1,6 +1,6 @@
 package br.com.hospitalif.model;
 
-public class Enfermeiro {
+public class Enfermeiro extends Funcionario{
 
 	private int numeroderegistro;
 	

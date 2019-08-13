@@ -1,6 +1,6 @@
 package br.com.hospitalif.model;
 
-public class Medico {
+public class Medico extends Funcionario{
 
 		private int numeroderegistro;
 		private String especialidade;
