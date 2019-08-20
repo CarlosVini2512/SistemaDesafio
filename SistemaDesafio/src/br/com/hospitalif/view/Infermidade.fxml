@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="582.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="580.0" fitWidth="790.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@SistemaHospitalarImagem/7.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="25.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:">
+         <font>
+            <Font name="Arial Black" size="21.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Text>
+      <TextField layoutX="115.0" layoutY="198.0" prefHeight="38.0" prefWidth="322.0">
+         <effect>
+            <Lighting diffuseConstant="1.2" specularConstant="2.0" specularExponent="37.56" surfaceScale="6.38">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="18.66" elevation="53.78" />
+               </light>
+            </Lighting>
+         </effect>
+      </TextField>
+      <TextArea layoutX="55.0" layoutY="294.0" prefHeight="135.0" prefWidth="322.0">
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="2.0" specularExponent="40.0" surfaceScale="5.16">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="31.83" elevation="53.78" />
+               </light>
+            </Lighting>
+         </effect>
+      </TextArea>
+      <TextField alignment="CENTER" layoutX="76.0" layoutY="273.0" prefHeight="30.0" prefWidth="151.0" text="Descriçao">
+         <font>
+            <Font name="Arial Black" size="21.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.85" specularConstant="0.0" specularExponent="40.0" surfaceScale="2.35">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="23.05" elevation="31.83" />
+               </light>
+            </Lighting>
+         </effect>
+      </TextField>
+      <TextField alignment="CENTER" layoutX="258.0" layoutY="40.0" text="ENFERMIDADE">
+         <font>
+            <Font name="Arial Black" size="22.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.56" specularConstant="2.0" specularExponent="38.05" surfaceScale="5.28">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="220.61" elevation="36.22" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TextField>
+      <ImageView fitHeight="114.0" fitWidth="113.0" layoutX="560.0" layoutY="7.0" opacity="0.53" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@SistemaHospitalarImagem/CRUZ.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="104.0" fitWidth="131.0" layoutX="107.0" layoutY="12.0" opacity="0.41" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@SistemaHospitalarImagem/brasao2.png" />
+         </image>
+      </ImageView>
+      <SplitMenuButton alignment="BASELINE_RIGHT" cache="true" cacheHint="ROTATE" contentDisplay="CENTER" graphicTextGap="5.0" layoutX="465.0" layoutY="195.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="274.0" text="Tipo de Infermidade" textAlignment="CENTER" textFill="#137970" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+         <font>
+            <Font name="Arial Black" size="19.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="2.0" specularExponent="40.0" surfaceScale="5.16">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="229.39" elevation="40.61" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </SplitMenuButton>
+   </children>
+</Pane>

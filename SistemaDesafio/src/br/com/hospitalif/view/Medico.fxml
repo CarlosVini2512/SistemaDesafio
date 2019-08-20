@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="474.0" prefWidth="706.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="480.0" fitWidth="707.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@SistemaHospitalarImagem/1.jpg" />
+         </image>
+      </ImageView>
+      <TextField editable="false" layoutX="311.0" layoutY="14.0" prefHeight="45.0" prefWidth="133.0" text="MÉDICO">
+         <font>
+            <Font name="Arial Black" size="21.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.63" specularConstant="0.25" specularExponent="40.0" surfaceScale="5.65">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="211.83" elevation="36.22" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TextField>
+      <Text fill="#3c3c3c" layoutX="471.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Número de Registro:">
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font>
+      </Text>
+      <TextField layoutX="474.0" layoutY="142.0" prefHeight="31.0" prefWidth="180.0">
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="1.5" specularExponent="40.0" surfaceScale="5.28">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="40.61" />
+               </light>
+            </Lighting>
+         </effect>
+      </TextField>
+      <SplitMenuButton layoutX="475.0" layoutY="193.0" mnemonicParsing="false" text="Especialidade:">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="1.71" specularExponent="40.0" surfaceScale="7.48">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="220.61" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </SplitMenuButton>
+      <Button layoutX="565.0" layoutY="433.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="111.0" text="Entrar">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Lighting diffuseConstant="1.88" specularConstant="1.59" specularExponent="40.0" surfaceScale="6.99">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="220.61" elevation="40.61" />
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+   </children>
+</Pane>

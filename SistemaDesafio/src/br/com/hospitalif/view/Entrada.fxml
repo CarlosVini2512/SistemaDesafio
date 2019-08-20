@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="619.0" style="-fx-background-color: LightBlue;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="436.0" fitWidth="685.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@SistemaHospitalarImagem/4.jpg" />
+         </image>
+      </ImageView>
+      <TextField alignment="CENTER" layoutX="238.0" prefHeight="42.0" prefWidth="144.0" text="ENTRADA">
+         <font>
+            <Font name="Arial Black" size="19.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.78" specularConstant="2.0" specularExponent="40.0" surfaceScale="5.52">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="203.05" elevation="31.83" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DISAPPEAR" />
+         </cursor>
+      </TextField>
+      <DatePicker layoutX="22.0" layoutY="244.0" prefHeight="31.0" prefWidth="144.0">
+         <effect>
+            <Lighting diffuseConstant="1.54" specularConstant="1.28" specularExponent="40.0" surfaceScale="4.06">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="27.44" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </DatePicker>
+      <Text fill="WHITE" layoutX="21.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Entrada:">
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="21.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Saída:">
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font>
+      </Text>
+      <DatePicker layoutX="22.0" layoutY="304.0" prefHeight="31.0" prefWidth="144.0">
+         <effect>
+            <Lighting diffuseConstant="1.51" specularConstant="1.37" specularExponent="40.0" surfaceScale="3.7">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="31.83" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </DatePicker>
+      <Accordion layoutX="275.0" layoutY="318.0" />
+    <TitledPane alignment="CENTER_RIGHT" animated="false" layoutX="382.0" layoutY="260.0" prefHeight="150.0" prefWidth="202.0" text="Status de Entrada" textFill="#545454">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="63.0" prefWidth="166.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </AnchorPane>
+      </content>
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.46" specularConstant="0.06" specularExponent="34.63" surfaceScale="3.82">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="58.17" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+    </TitledPane>
+      <SplitMenuButton layoutX="21.0" layoutY="346.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="254.0" text="Situação do Paciente" textFill="#6b6b6b">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.86" specularConstant="2.0" specularExponent="40.0" surfaceScale="4.31">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="229.39" elevation="40.61" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </SplitMenuButton>
+   </children>
+</Pane>

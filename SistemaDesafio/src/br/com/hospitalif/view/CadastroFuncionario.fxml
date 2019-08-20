@@ -7,15 +7,14 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: Navy;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fitHeight="390.0" fitWidth="600.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" y="3.0">
          <image>
-            <Image url="@../../../../../../../../Desktop/SistemaHospitalarImagem/3.jpg" />
+            <Image url="@SistemaHospitalarImagem/3.jpg" />
          </image>
       </ImageView>
-      <TextField layoutX="137.0" layoutY="9.0" prefHeight="42.0" prefWidth="334.0" text="CADASTRO DE FUNCIONÁRIO">
+      <TextField alignment="CENTER" layoutX="137.0" layoutY="9.0" prefHeight="42.0" prefWidth="334.0" text="ÁREA DO FUNCIONÁRIO">
          <font>
             <Font name="Arial Black" size="19.0" />
          </font>
@@ -32,7 +31,7 @@
       </TextField>
       <Text fill="WHITE" layoutX="341.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login:">
          <font>
-            <Font name="Arial Black" size="15.0" />
+            <Font name="Arial Black" size="19.0" />
          </font>
          <effect>
             <Lighting diffuseConstant="2.0" specularExponent="39.51" surfaceScale="0.0">
@@ -47,7 +46,7 @@
       </Text>
       <Text fill="#f5f5f5" layoutX="339.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:">
          <font>
-            <Font name="Arial Black" size="15.0" />
+            <Font name="Arial Black" size="19.0" />
          </font>
          <effect>
             <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
@@ -62,12 +61,12 @@
       </Text>
       <TextArea layoutX="278.0" layoutY="229.0" prefHeight="117.0" prefWidth="309.0">
          <effect>
-            <Lighting>
+            <Lighting diffuseConstant="1.05" specularConstant="0.08" specularExponent="0.0" surfaceScale="7.36">
                <bumpInput>
                   <Shadow />
                </bumpInput>
                <light>
-                  <Light.Distant />
+                  <Light.Distant azimuth="49.39" elevation="49.39" />
                </light>
             </Lighting>
          </effect>
@@ -84,7 +83,7 @@
             </Lighting>
          </effect>
       </TextField>
-      <TextField layoutX="407.0" layoutY="134.0" prefHeight="31.0" prefWidth="127.0">
+      <TextField layoutX="410.0" layoutY="132.0" prefHeight="31.0" prefWidth="127.0">
          <effect>
             <Lighting diffuseConstant="1.1" specularConstant="2.0" specularExponent="8.29" surfaceScale="5.65">
                <bumpInput>
@@ -96,10 +95,20 @@
             </Lighting>
          </effect>
       </TextField>
-      <TextField layoutX="290.0" layoutY="214.0" prefHeight="33.0" prefWidth="73.0" text="Status">
+      <TextField alignment="CENTER" layoutX="490.0" layoutY="213.0" prefHeight="21.0" prefWidth="89.0" text="Status">
          <font>
             <Font name="Arial Black" size="15.0" />
          </font>
+         <effect>
+            <Lighting diffuseConstant="1.34" specularConstant="0.0" specularExponent="6.83" surfaceScale="5.16">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="36.22" elevation="31.83" />
+               </light>
+            </Lighting>
+         </effect>
       </TextField>
    </children>
 </Pane>
