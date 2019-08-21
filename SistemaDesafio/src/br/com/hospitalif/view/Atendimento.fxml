@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="428.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="435.0" fitWidth="600.0" layoutX="-2.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@SistemaHospitalarImagem/8.jpg" />
+         </image>
+      </ImageView>
+      <TextField layoutX="208.0" layoutY="1.0" prefHeight="42.0" prefWidth="180.0" text="ATENDIMENTO">
+         <font>
+            <Font name="Arial Black" size="19.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.37" specularConstant="1.03" specularExponent="34.63" surfaceScale="6.87">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="216.22" elevation="40.61" />
+               </light>
+            </Lighting>
+         </effect>
+      </TextField>
+      <DatePicker layoutX="77.0" layoutY="75.0" prefHeight="31.0" prefWidth="132.0">
+         <effect>
+            <Lighting diffuseConstant="1.32" specularConstant="1.23" specularExponent="28.78" surfaceScale="5.65">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="211.83" elevation="40.61" />
+               </light>
+            </Lighting>
+         </effect>
+      </DatePicker>
+      <Accordion layoutX="43.0" layoutY="81.0" />
+      <TitledPane animated="false" layoutX="471.0" layoutY="146.0" prefHeight="212.0" prefWidth="110.0" text="Altura(m)">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="427.0" prefWidth="108.0">
+               <children>
+                  <ScrollBar layoutX="85.0" orientation="VERTICAL" prefHeight="180.0" prefWidth="0.0" />
+               </children>
+            </AnchorPane>
+        </content>
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.44" specularConstant="1.47" specularExponent="36.59" surfaceScale="4.06">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="225.0" elevation="40.61" />
+               </light>
+            </Lighting>
+         </effect>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="347.0" layoutY="146.0" text="Peso(kg)">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="134.0" prefWidth="93.0">
+               <children>
+                  <ScrollBar layoutX="70.0" layoutY="14.0" orientation="VERTICAL" />
+               </children>
+            </AnchorPane>
+        </content>
+         <effect>
+            <Lighting diffuseConstant="1.49" specularConstant="0.0" specularExponent="40.0" surfaceScale="3.93">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="229.39" elevation="36.22" />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </TitledPane>
+      <Accordion layoutX="43.0" layoutY="81.0" />
+      <Text fill="#464646" layoutX="17.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data:">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font>
+      </Text>
+    <AnchorPane layoutX="257.0" layoutY="128.0" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="8.0" />
+      <Accordion layoutX="55.0" layoutY="91.0" />
+      <Text fill="#4d4d4d" layoutX="42.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comentários:">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Text>
+      <Accordion layoutX="90.0" layoutY="102.0" />
+      <Accordion layoutX="90.0" layoutY="95.0" />
+      <Accordion layoutX="42.0" layoutY="146.0">
+        <panes>
+          <TitledPane animated="false" text="Medico">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.59" specularConstant="0.96" specularExponent="40.0" surfaceScale="4.06">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant elevation="36.22" />
+                     </light>
+                  </Lighting>
+               </effect>
+          </TitledPane>
+          <TitledPane animated="false" text="Enfermeiro">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.63" specularConstant="1.67" specularExponent="30.24" surfaceScale="4.3">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant elevation="36.22" />
+                     </light>
+                  </Lighting>
+               </effect>
+          </TitledPane>
+        </panes>
+      </Accordion>
+      <SplitMenuButton layoutX="257.0" layoutY="75.0" mnemonicParsing="false" text="Doenças">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+         <effect>
+            <Lighting diffuseConstant="1.98" specularConstant="2.0" specularExponent="37.07" surfaceScale="4.91">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="216.22" elevation="31.83" />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </SplitMenuButton>
+   </children>
+</Pane>
