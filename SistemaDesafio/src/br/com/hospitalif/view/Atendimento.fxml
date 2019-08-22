@@ -8,12 +8,11 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="428.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fitHeight="435.0" fitWidth="600.0" layoutX="-2.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@SistemaHospitalarImagem/8.jpg" />
+            <Image url="@Imagens/8.jpg" />
          </image>
       </ImageView>
       <TextField layoutX="208.0" layoutY="1.0" prefHeight="42.0" prefWidth="180.0" text="ATENDIMENTO">

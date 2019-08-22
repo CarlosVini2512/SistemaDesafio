@@ -12,7 +12,7 @@
    <children>
       <ImageView fitHeight="580.0" fitWidth="790.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@SistemaHospitalarImagem/7.jpg" />
+            <Image url="@Imagens/7.jpg" />
          </image>
       </ImageView>
       <Text fill="WHITE" layoutX="25.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:">
@@ -89,12 +89,12 @@
       </TextField>
       <ImageView fitHeight="114.0" fitWidth="113.0" layoutX="560.0" layoutY="7.0" opacity="0.53" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@SistemaHospitalarImagem/CRUZ.png" />
+            <Image url="@Imagens/CRUZ.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="104.0" fitWidth="131.0" layoutX="107.0" layoutY="12.0" opacity="0.41" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@SistemaHospitalarImagem/brasao2.png" />
+            <Image url="@Imagens/brasao2.png" />
          </image>
       </ImageView>
       <SplitMenuButton alignment="BASELINE_RIGHT" cache="true" cacheHint="ROTATE" contentDisplay="CENTER" graphicTextGap="5.0" layoutX="465.0" layoutY="195.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="274.0" text="Tipo de Infermidade" textAlignment="CENTER" textFill="#137970" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">

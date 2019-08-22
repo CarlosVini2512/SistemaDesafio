@@ -12,7 +12,7 @@
    <children>
       <ImageView fitHeight="436.0" fitWidth="685.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@SistemaHospitalarImagem/4.jpg" />
+            <Image url="@Imagens/4.jpg" />
          </image>
       </ImageView>
       <TextField alignment="CENTER" layoutX="238.0" prefHeight="42.0" prefWidth="144.0" text="ENTRADA">

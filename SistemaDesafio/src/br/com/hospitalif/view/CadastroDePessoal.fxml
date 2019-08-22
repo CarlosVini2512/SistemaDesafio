@@ -13,7 +13,7 @@
    <children>
       <ImageView disable="true" fitHeight="314.0" fitWidth="600.0" layoutY="87.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@SistemaHospitalarImagem/10.jpg" />
+            <Image url="@Imagens/10.jpg" />
          </image>
          <effect>
             <Lighting diffuseConstant="1.59">

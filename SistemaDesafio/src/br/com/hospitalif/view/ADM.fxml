@@ -11,7 +11,7 @@
    <children>
       <ImageView disable="true" fitHeight="406.0" fitWidth="613.0" layoutX="2.0" layoutY="-6.0" opacity="0.33" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@SistemaHospitalarImagem/11.jpg" />
+            <Image url="@Imagens/11.jpg" />
          </image>
       </ImageView>
       <TextField alignment="TOP_CENTER" layoutX="160.0" layoutY="8.0" prefHeight="42.0" prefWidth="317.0" text="ÁREA DO ADMINISTRADOR">
