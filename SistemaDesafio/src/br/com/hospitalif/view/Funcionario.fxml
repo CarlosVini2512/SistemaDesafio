@@ -8,8 +8,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.hospitalif.controller.Funcionario">
    <children>
       <ImageView fitHeight="440.0" fitWidth="656.0" layoutX="-2.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" translateX="2.0" translateY="1.0">
          <image>
@@ -44,7 +43,7 @@
             <Font name="Arial Black" size="17.0" />
          </font>
       </Text>
-      <TextField layoutX="84.0" layoutY="94.0">
+      <TextField fx:id="txtLogin" layoutX="84.0" layoutY="94.0">
          <effect>
             <Lighting diffuseConstant="1.27" specularConstant="2.0" specularExponent="40.0" surfaceScale="5.53">
                <bumpInput>
@@ -56,7 +55,7 @@
             </Lighting>
          </effect>
       </TextField>
-      <PasswordField layoutX="84.0" layoutY="137.0" prefHeight="31.0" prefWidth="132.0">
+      <PasswordField fx:id="txtSenha" layoutX="84.0" layoutY="137.0" prefHeight="31.0" prefWidth="132.0">
          <effect>
             <Lighting diffuseConstant="1.32" specularConstant="0.84" specularExponent="37.56" surfaceScale="5.77">
                <bumpInput>
@@ -68,7 +67,7 @@
             </Lighting>
          </effect>
       </PasswordField>
-      <TextArea layoutX="328.0" layoutY="110.0" prefHeight="137.0" prefWidth="308.0">
+      <TextArea fx:id="StatusFuncionario" layoutX="328.0" layoutY="110.0" prefHeight="137.0" prefWidth="308.0">
          <effect>
             <Lighting diffuseConstant="1.48" specularConstant="0.0" specularExponent="0.0" surfaceScale="4.91">
                <bumpInput>
@@ -80,7 +79,7 @@
             </Lighting>
          </effect>
       </TextArea>
-      <TextField editable="false" layoutX="329.0" layoutY="93.0" prefHeight="14.0" prefWidth="82.0" text="Status:">
+      <TextField editable="false" layoutX="329.0" layoutY="82.0" prefHeight="14.0" prefWidth="82.0" text="Status:">
          <font>
             <Font name="Arial Black" size="15.0" />
          </font>
@@ -98,7 +97,7 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </TextField>
-      <Button layoutX="529.0" layoutY="383.0" mnemonicParsing="false" text="ENTRAR">
+      <Button fx:id="buttonEntrar" layoutX="529.0" layoutY="383.0" mnemonicParsing="false" onAction="#LogarFuncionario" text="ENTRAR">
          <font>
             <Font name="Arial Black" size="18.0" />
          </font>
@@ -109,6 +108,24 @@
                </bumpInput>
                <light>
                   <Light.Distant azimuth="229.39" elevation="31.83" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="buttonVoltar" layoutX="24.0" layoutY="383.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="39.0" prefWidth="107.0" text="VOLTAR">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.02" surfaceScale="5.46">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="208.26" />
                </light>
             </Lighting>
          </effect>

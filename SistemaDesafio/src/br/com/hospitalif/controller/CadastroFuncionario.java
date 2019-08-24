@@ -1,35 +1,27 @@
 package br.com.hospitalif.controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
-public class Funcionario {
+public class CadastroFuncionario {
 
     @FXML
     private TextField txtLogin;
 
     @FXML
-    private PasswordField txtSenha;
-
-    @FXML
-    private Button buttonVoltar;
+    private TextField pswSenha;
 
     @FXML
     private Button buttonEntrar;
 
     @FXML
-    private TextArea StatusFuncionario;
+    private TextArea txtStatusFuncionario;
 
     @FXML
-    void 575757(ActionEvent event) {
-
-    }
-
-    @FXML
-    void 4a4a4a(ActionEvent event) {
+    void f5f5f5(ActionEvent event) {
 
     }
 
@@ -38,10 +30,4 @@ public class Funcionario {
 
     }
 
-    @FXML
-    void VoltarTela(ActionEvent event) {
-
-    }
-
 }
-
