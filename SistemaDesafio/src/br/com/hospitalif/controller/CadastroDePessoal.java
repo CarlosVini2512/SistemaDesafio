@@ -11,7 +11,7 @@ import javafx.scene.control.TextField;
 public class CadastroDePessoal {
 
     @FXML
-    private ComboBox<?> buttonIdade;
+    private Button buttonPessoa;
 
     @FXML
     private SplitMenuButton buttonSexo;
@@ -26,13 +26,31 @@ public class CadastroDePessoal {
     private TextField txtNome;
 
     @FXML
-    private ComboBox<?> buttonTipoSanguineo;
+    private ComboBox<?> buttonTipoSangue;
 
     @FXML
-    private TextField txtCpf;
+    private TextField txtCPF;
 
     @FXML
-    void CadastrarPessoal(ActionEvent event) {
+    private TextField txtIdade;
+
+    @FXML
+    void SexoDaPessoa(ActionEvent event) {
+
+    }
+
+    @FXML
+    void TipoSanguineo(ActionEvent event) {
+
+    }
+
+    @FXML
+    void CadastrarPessoa(ActionEvent event) {
+
+    }
+
+    @FXML
+    void VoltarTela(ActionEvent event) {
 
     }
 

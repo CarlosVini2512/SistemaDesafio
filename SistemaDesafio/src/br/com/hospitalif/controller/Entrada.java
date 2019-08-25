@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.SplitMenuButton;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TitledPane;
 
 public class Entrada {
@@ -24,7 +25,10 @@ public class Entrada {
     private Button buttonRegistrar;
 
     @FXML
-    private TitledPane listStatus;
+    private TitledPane buttonStatus;
+
+    @FXML
+    private TextArea txtStatusDeEntrada;
 
     @FXML
     void 545454(ActionEvent event) {
@@ -42,7 +46,7 @@ public class Entrada {
     }
 
     @FXML
-    void RegistraEntrada(ActionEvent event) {
+    void RegistrarEntrada(ActionEvent event) {
 
     }
 
@@ -52,4 +56,5 @@ public class Entrada {
     }
 
 }
+
 

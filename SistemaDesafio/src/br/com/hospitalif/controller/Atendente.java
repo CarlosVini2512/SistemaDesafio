@@ -7,7 +7,7 @@ import javafx.scene.control.Button;
 public class Atendente {
 
     @FXML
-    private Button buttonCadastrar;
+    private Button buttonCadastroDePaciente;
 
     @FXML
     void CadastrarPaciente(ActionEvent event) {

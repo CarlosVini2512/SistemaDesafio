@@ -4,45 +4,35 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
-import javafx.scene.control.SplitMenuButton;
-import javafx.scene.control.TitledPane;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
 public class Atendimento {
 
-	
     @FXML
-    private AnchorPane txtPeso;
+    private TextField txtPeso;
 
     @FXML
-    private AnchorPane txtComentMedico;
+    private ListView<?> listAltura;
 
     @FXML
-    private TitledPane buttonEnfermeiro;
+    private TextArea txtComentEnfermeiro;
 
     @FXML
-    private AnchorPane txtcomentEnfermeiro;
+    private Button buttonVoltar;
 
     @FXML
-    private Button buttonSalvar;
+    private TextArea txtComentMedico;
 
     @FXML
-    private TitledPane buttonMedico;
+    private ListView<?> listDoencas;
 
     @FXML
-    private DatePicker dateData;
+    private DatePicker dateDataAtendimento;
 
     @FXML
-    private SplitMenuButton buttonDoencas;
-
-    @FXML
-    private TitledPane buttonAltura;
-
-    @FXML
-    private AnchorPane txtAltura;
-
-    @FXML
-    private TitledPane buttonPeso;
+    private Button buttonCadastrar;
 
     @FXML
     void 464646(ActionEvent event) {
@@ -55,8 +45,20 @@ public class Atendimento {
     }
 
     @FXML
-    void SalvarAtendimento(ActionEvent event) {
+    void CadastrarAtendimento(ActionEvent event) {
+
+    }
+
+    @FXML
+    void VoltarTela(ActionEvent event) {
+
+    }
+
+    @FXML
+    void 4a4a4a(ActionEvent event) {
 
     }
 
 }
+
+

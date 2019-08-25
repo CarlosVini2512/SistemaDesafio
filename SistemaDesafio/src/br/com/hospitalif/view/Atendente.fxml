@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
@@ -7,7 +8,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: PowderBlue;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: PowderBlue;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.hospitalif.controller.Atendente">
    <children>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="42.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fitHeight="400.0" fitWidth="590.0" layoutX="5.0" pickOnBounds="true" preserveRatio="true">
@@ -15,7 +16,7 @@
             <Image url="@Imagens/7.jpg" />
          </image>
       </ImageView>
-      <TextField layoutX="212.0" layoutY="14.0" prefHeight="42.0" prefWidth="156.0" text="ATENDENTE">
+      <TextField editable="false" layoutX="212.0" layoutY="14.0" prefHeight="42.0" prefWidth="156.0" text="ATENDENTE">
          <font>
             <Font name="Arial Black" size="19.0" />
          </font>
@@ -29,8 +30,11 @@
                </light>
             </Lighting>
          </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
       </TextField>
-      <Button layoutX="157.0" layoutY="207.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="252.0" text="Cadastrar Paciente" textAlignment="CENTER">
+      <Button fx:id="buttonCadastroDePaciente" layoutX="157.0" layoutY="207.0" mnemonicParsing="false" onAction="#CadastrarPaciente" prefHeight="54.0" prefWidth="252.0" text="Cadastrar Paciente" textAlignment="CENTER">
          <font>
             <Font name="Arial Black" size="19.0" />
          </font>
@@ -44,6 +48,9 @@
                </light>
             </Lighting>
          </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
    </children>
 </Pane>
