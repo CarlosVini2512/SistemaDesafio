@@ -22,7 +22,7 @@ public class EnfermidadePessoal {
 
     @FXML
     void SalvarDados(ActionEvent event) {
-
+    	String Coment = txtComent.setText();
     }
 
     @FXML

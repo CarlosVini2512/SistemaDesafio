@@ -1,14 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="749.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Login">
    <children>
-      <ImageView fitHeight="400.0" fitWidth="600.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
-      <Text layoutX="277.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN[" />
+      <ImageView fitHeight="485.0" fitWidth="750.0" layoutX="2.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true" x="-2.0">
+         <image>
+            <Image url="@Imagens/fundo_login.png" />
+         </image></ImageView>
+      <Text fill="WHITE" layoutX="333.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN" wrappingWidth="64.09765625">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </Text>
+      <Button fx:id="buttonEntrar" layoutX="625.0" layoutY="424.0" mnemonicParsing="false" onAction="#LogarUsuario" prefHeight="23.0" prefWidth="85.0" text="Entrar">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtLogin" layoutX="291.0" layoutY="189.0">
+         <effect>
+            <Lighting diffuseConstant="1.35" specularExponent="40.0" surfaceScale="2.78">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="49.19" />
+               </light>
+            </Lighting>
+         </effect>
+      </TextField>
+      <TextField fx:id="txtSenha" layoutX="309.0" layoutY="256.0" prefHeight="25.0" prefWidth="113.0">
+         <effect>
+            <Lighting diffuseConstant="1.14" specularExponent="40.0" surfaceScale="3.82">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant elevation="57.56" />
+               </light>
+            </Lighting>
+         </effect>
+      </TextField>
+      <Text fill="WHITE" layoutX="336.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SENHA">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </Text>
    </children>
 </Pane>

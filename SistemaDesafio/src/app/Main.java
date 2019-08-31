@@ -1,5 +1,7 @@
 package app;
 
+import java.io.IOException;
+
 import br.com.hospitalif.util.Rotas;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -9,13 +11,13 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-	
-	
+	static Stage stageAtual;
+	static FXMLLoader loader;
 	
 	
 	@Override
 	public void start(Stage stage) throws Exception {
-
+		
 		FXMLLoader loader = new FXMLLoader(getClass().getResource(Rotas.LOGIN));
 		
 		Parent root = loader.load();
@@ -25,6 +27,16 @@ public class Main extends Application {
 		stage.show();
 		
 	}
+	
+	public void openPage(String rota) throws IOException {
+		loader = new FXMLLoader(getClass().getResource(rota));
+					 	
+			Scene scene = new Scene(loader.load());
+			stageAtual.setScene(scene);
+			stageAtual.show();				
+	}
+		
+	
 	public static void main(String[] args) {
 		launch(args);
 	}
