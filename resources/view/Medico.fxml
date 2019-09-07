@@ -51,7 +51,7 @@
             </Lighting>
          </effect>
       </TextField>
-      <SplitMenuButton fx:id="buttonEspecialidade" layoutX="475.0" layoutY="193.0" mnemonicParsing="false" text="Especialidade:">
+      <SplitMenuButton fx:id="listEspecialidade" layoutX="475.0" layoutY="193.0" mnemonicParsing="false" text="Especialidade:">
         <items>
           <MenuItem mnemonicParsing="false" text="Action 1" />
           <MenuItem mnemonicParsing="false" text="Action 2" />

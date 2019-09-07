@@ -3,5 +3,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="SistemaDesafio/src"/>
 	<classpathentry kind="src" path="resources"/>
+	<classpathentry kind="lib" path="C:/Users/45244451880/Desktop/LP2/SistemaDesafio/lib/mysql-connector-java-5.1.48/mysql-connector-java-5.1.48.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

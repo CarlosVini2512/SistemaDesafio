@@ -7,23 +7,23 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="749.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Login">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="466.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.hospitalif.controller.Login">
    <children>
-      <ImageView fitHeight="485.0" fitWidth="750.0" layoutX="2.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true" x="-2.0">
+      <ImageView fitHeight="467.0" fitWidth="705.0" layoutX="4.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" x="-3.0">
          <image>
-            <Image url="@Imagens/fundo_login.png" />
+            <Image url="@Imagens/13.png" />
          </image></ImageView>
-      <Text fill="WHITE" layoutX="333.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN" wrappingWidth="64.09765625">
+      <Text fill="WHITE" layoutX="108.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN" wrappingWidth="64.09765625">
          <font>
             <Font name="Arial Black" size="15.0" />
          </font>
       </Text>
-      <Button fx:id="buttonEntrar" layoutX="625.0" layoutY="424.0" mnemonicParsing="false" onAction="#LogarUsuario" prefHeight="23.0" prefWidth="85.0" text="Entrar">
+      <Button fx:id="buttonEntrar" layoutX="553.0" layoutY="415.0" mnemonicParsing="false" onAction="#LogarUsuario" prefHeight="23.0" prefWidth="85.0" text="Entrar">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
-      <TextField fx:id="txtLogin" layoutX="291.0" layoutY="189.0">
+      <TextField fx:id="txtLogin" layoutX="66.0" layoutY="189.0">
          <effect>
             <Lighting diffuseConstant="1.35" specularExponent="40.0" surfaceScale="2.78">
                <bumpInput>
@@ -35,7 +35,7 @@
             </Lighting>
          </effect>
       </TextField>
-      <TextField fx:id="txtSenha" layoutX="309.0" layoutY="256.0" prefHeight="25.0" prefWidth="113.0">
+      <TextField fx:id="txtSenha" layoutX="84.0" layoutY="255.0" prefHeight="25.0" prefWidth="113.0">
          <effect>
             <Lighting diffuseConstant="1.14" specularExponent="40.0" surfaceScale="3.82">
                <bumpInput>
@@ -47,7 +47,7 @@
             </Lighting>
          </effect>
       </TextField>
-      <Text fill="WHITE" layoutX="336.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SENHA">
+      <Text fill="WHITE" layoutX="111.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SENHA">
          <font>
             <Font name="Arial Black" size="15.0" />
          </font>

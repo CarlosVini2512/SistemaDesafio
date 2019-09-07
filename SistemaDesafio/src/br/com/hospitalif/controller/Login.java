@@ -1,6 +1,5 @@
 package br.com.hospitalif.controller;
 
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -22,7 +21,7 @@ public class Login {
     void LogarUsuario(ActionEvent event) {
     	msgInfo("Nova msg chegando...");  
     }
-
+    
     public void msgInfo(String msg) {
     	Alert msgg = new Alert(Alert.AlertType.INFORMATION, msg);
     	msgg.setContentText("Minha msg aqui!");
