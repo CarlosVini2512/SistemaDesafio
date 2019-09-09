@@ -16,26 +16,20 @@ public class Funcionario {
     private PasswordField txtSenha;
 
     @FXML
-    private Button buttonVoltar;
+    private Button btnVoltar;
 
     @FXML
-    private Button buttonEntrar;
+    private Button btnEntrar;
 
     @FXML
-    private TextArea StatusFuncionario;
-
-    @FXML
-    void 575757(ActionEvent event) {
-
-    }
-
-    @FXML
-    void 4a4a4a(ActionEvent event) {
-
-    }
+    private TextArea txtStatusFuncionario;
+    
 
     @FXML
     void LogarFuncionario(ActionEvent event) {
+    	String login = txtLogin.getText();
+    	String senha = txtSenha.getText();
+    	String statusFunc = txtStatusFuncionario.getText();
 
     }
 

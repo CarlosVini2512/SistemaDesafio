@@ -67,7 +67,7 @@
             </Lighting>
          </effect>
       </PasswordField>
-      <TextArea fx:id="StatusFuncionario" layoutX="328.0" layoutY="110.0" prefHeight="137.0" prefWidth="308.0">
+      <TextArea fx:id="txtStatusFuncionario" layoutX="328.0" layoutY="110.0" prefHeight="137.0" prefWidth="308.0">
          <effect>
             <Lighting diffuseConstant="1.48" specularConstant="0.0" specularExponent="0.0" surfaceScale="4.91">
                <bumpInput>
@@ -97,7 +97,7 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </TextField>
-      <Button fx:id="buttonEntrar" layoutX="529.0" layoutY="383.0" mnemonicParsing="false" onAction="#LogarFuncionario" text="ENTRAR">
+      <Button fx:id="btnEntrar" layoutX="529.0" layoutY="383.0" mnemonicParsing="false" onAction="#LogarFuncionario" text="ENTRAR">
          <font>
             <Font name="Arial Black" size="18.0" />
          </font>
@@ -115,7 +115,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="buttonVoltar" layoutX="24.0" layoutY="383.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="39.0" prefWidth="107.0" text="VOLTAR">
+      <Button fx:id="btnVoltar" layoutX="24.0" layoutY="383.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="39.0" prefWidth="107.0" text="VOLTAR">
          <font>
             <Font name="Arial Black" size="17.0" />
          </font>

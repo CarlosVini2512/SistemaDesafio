@@ -38,7 +38,7 @@
             <Font name="Arial Black" size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="txtNumeroDeRegistro" layoutX="14.0" layoutY="182.0" onAction="#NumeroDeRegistro" prefHeight="33.0" prefWidth="191.0">
+      <TextField fx:id="txtNumDeRegistro" layoutX="14.0" layoutY="182.0" prefHeight="33.0" prefWidth="191.0">
          <effect>
             <Lighting diffuseConstant="1.39" specularConstant="1.79" specularExponent="40.0" surfaceScale="4.79">
                <bumpInput>
@@ -50,7 +50,7 @@
             </Lighting>
          </effect>
       </TextField>
-      <Button fx:id="buttonConsultar" layoutX="480.0" layoutY="351.0" mnemonicParsing="false" onAction="#LogarEnfermeiro" prefHeight="42.0" prefWidth="106.0" text="Entrar">
+      <Button fx:id="btnEntrar" layoutX="480.0" layoutY="351.0" mnemonicParsing="false" onAction="#LogarEnfermeiro" prefHeight="42.0" prefWidth="106.0" text="Entrar">
          <font>
             <Font name="Arial Black" size="17.0" />
          </font>
@@ -65,7 +65,7 @@
             </Lighting>
          </effect>
       </Button>
-      <Button fx:id="buttonVoltar" layoutX="14.0" layoutY="356.0" mnemonicParsing="false" onAction="#VoltarInicio" prefHeight="33.0" prefWidth="94.0" text="Voltar">
+      <Button fx:id="btnVoltar" layoutX="14.0" layoutY="356.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="33.0" prefWidth="94.0" text="Voltar">
          <font>
             <Font name="Arial Black" size="17.0" />
          </font>

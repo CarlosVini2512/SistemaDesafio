@@ -1,52 +1,54 @@
 package br.com.hospitalif.controller;
 
+import java.time.LocalDate;
+import java.util.List;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Labeled;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.util.Callback;
+
 
 public class Atendimento {
+
+    @FXML
+    private DatePicker txtData;
 
     @FXML
     private TextField txtPeso;
 
     @FXML
-    private ListView<?> listAltura;
-
-    @FXML
     private TextArea txtComentEnfermeiro;
 
     @FXML
-    private Button buttonVoltar;
+    private ListView<EnfermidadePessoal> txtDoenca;
 
     @FXML
     private TextArea txtComentMedico;
 
     @FXML
-    private ListView<?> listDoencas;
+    private Button btnVoltar;
 
     @FXML
-    private DatePicker dateDataAtendimento;
+    private Button btnCadastrar;
 
     @FXML
-    private Button buttonCadastrar;
+    private TextField txtAltura;
 
-    @FXML
-    void 464646(ActionEvent event) {
-
-    }
-
-    @FXML
-    void 4d4d4d(ActionEvent event) {
-
-    }
 
     @FXML
     void CadastrarAtendimento(ActionEvent event) {
-
+    	LocalDate data = txtData.getValue();
+    	String peso = txtPeso.getText();
+    	String ComentarioEnfermeiro = txtComentEnfermeiro.getText();  	
+    	Callback <?,?> doenca = txtDoenca.getCellFactory();
+    	String ComentarioEnf = txtComentMedico.getText();
+    	String altura = txtAltura.getText();
     }
 
     @FXML
@@ -54,11 +56,7 @@ public class Atendimento {
 
     }
 
-    @FXML
-    void 4a4a4a(ActionEvent event) {
-
-    }
-
 }
+
 
 

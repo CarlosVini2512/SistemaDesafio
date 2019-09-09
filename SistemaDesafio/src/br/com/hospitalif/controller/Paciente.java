@@ -1,44 +1,43 @@
 package br.com.hospitalif.controller;
 
+import java.time.LocalDate;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.ListView;
+import javafx.util.Callback;
+
 
 public class Paciente {
 
     @FXML
-    private ListView<?> listHistorico;
+    private ListView<Entrada> listHistorico;
 
     @FXML
-    private Button buttonConsultar;
+    private DatePicker dtDataInicio;
 
     @FXML
-    private DatePicker dateDataFinal;
+    private ListView<EnfermidadePessoal> listDoenca;
 
     @FXML
-    private Button buttonVoltar;
+    private Button btnVoltar;
 
     @FXML
-    private ListView<?> listDoencas;
+    private Button btnConsultar;
 
     @FXML
-    private DatePicker dateDataInicio;
+    private DatePicker dtDataFinal;
 
-    @FXML
-    void 4d4d4d(ActionEvent event) {
-
-    }
-
-    @FXML
-    void 4d4d4d(ActionEvent event) {
-
-    }
 
     @FXML
     void ConsultarPaciente(ActionEvent event) {
 
+    	Callback<?, ?> historico = listHistorico.getCellFactory();
+    	LocalDate dataInicial = dtDataInicio.getValue();
+    	Callback<?,?> doenca = listDoenca.getCellFactory();
+    	LocalDate dataFinal = dtDataFinal.getValue();
     }
 
     @FXML

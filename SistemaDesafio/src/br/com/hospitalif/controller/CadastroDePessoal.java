@@ -3,7 +3,6 @@ package br.com.hospitalif.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -11,42 +10,37 @@ import javafx.scene.control.TextField;
 public class CadastroDePessoal {
 
     @FXML
-    private Button buttonPessoa;
-
-    @FXML
-    private SplitMenuButton buttonSexo;
-
-    @FXML
     private TextArea txtStatus;
 
     @FXML
-    private Button buttonCadastrar;
+    private Button btnVoltar;
+
+    @FXML
+    private Button btnCadastrar;
 
     @FXML
     private TextField txtNome;
 
     @FXML
-    private ComboBox<?> buttonTipoSangue;
+    private TextField txtCPF;
 
     @FXML
-    private TextField txtCPF;
+    private SplitMenuButton btnTipoSangue;
 
     @FXML
     private TextField txtIdade;
 
     @FXML
-    void SexoDaPessoa(ActionEvent event) {
-
-    }
-
-    @FXML
-    void TipoSanguineo(ActionEvent event) {
-
-    }
+    private SplitMenuButton btnSexo;
 
     @FXML
     void CadastrarPessoa(ActionEvent event) {
-
+    	String status = txtStatus.getText();
+    	String nome  = txtNome.getText();
+    	String cpf = txtCPF.getText();
+    	String tipodesangue = btnTipoSangue.getId();
+    	String idade = txtIdade.getText();
+    	String sexo = btnSexo.getId();
     }
 
     @FXML
@@ -55,3 +49,5 @@ public class CadastroDePessoal {
     }
 
 }
+
+

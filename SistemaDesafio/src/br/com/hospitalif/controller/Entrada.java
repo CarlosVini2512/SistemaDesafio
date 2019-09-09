@@ -1,61 +1,48 @@
 package br.com.hospitalif.controller;
 
+
+import java.time.LocalDate;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TitledPane;
 
 public class Entrada {
 
     @FXML
-    private DatePicker dateSaida;
-
-    @FXML
-    private DatePicker dateEntrada;
-
-    @FXML
-    private SplitMenuButton buttonSituacaoPaciente;
-
-    @FXML
-    private Button buttonVoltar;
-
-    @FXML
-    private Button buttonRegistrar;
-
-    @FXML
-    private TitledPane buttonStatus;
+    private Button btnVoltar;
 
     @FXML
     private TextArea txtStatusDeEntrada;
 
     @FXML
-    void 545454(ActionEvent event) {
-
-    }
+    private DatePicker dtDataSaida;
 
     @FXML
-    void SelecionaSituacao(ActionEvent event) {
-
-    }
+    private SplitMenuButton btnSituacaoPaciente;
 
     @FXML
-    void 6b6b6b(ActionEvent event) {
+    private DatePicker dtDataEntrada;
 
-    }
+    @FXML
+    private Button btnRegistrar;
+
 
     @FXML
     void RegistrarEntrada(ActionEvent event) {
-
+    	String statusEntrada = txtStatusDeEntrada.getText();
+    	String situacaoPaciente = btnSituacaoPaciente.getId();
+    	LocalDate dataEntrada = dtDataEntrada.getValue();
+    	LocalDate dataSaida = dtDataSaida.getValue();
+    	
     }
 
     @FXML
     void VoltarTela(ActionEvent event) {
-
+    	
     }
-
 }
-
 

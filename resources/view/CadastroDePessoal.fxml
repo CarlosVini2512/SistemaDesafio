@@ -40,7 +40,7 @@
             <Font name="Arial Black" size="16.0" />
          </font>
       </Text>
-      <SplitMenuButton fx:id="buttonSexo" layoutX="497.0" layoutY="162.0" mnemonicParsing="false" onAction="#SexoDaPessoa" text="Sexo">
+      <SplitMenuButton fx:id="btnSexo" layoutX="497.0" layoutY="162.0" mnemonicParsing="false" text="Sexo">
         <items>
           <MenuItem mnemonicParsing="false" text="Action 1" />
           <MenuItem mnemonicParsing="false" text="Action 2" />
@@ -62,20 +62,6 @@
             <Font name="Arial Unicode MS" size="15.0" />
          </font>
       </SplitMenuButton>
-      <ComboBox fx:id="buttonTipoSangue" layoutX="310.0" layoutY="162.0" onAction="#TipoSanguineo" prefHeight="31.0" prefWidth="178.0" promptText="Tipo Sanguíneo" visibleRowCount="11">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <effect>
-            <Lighting diffuseConstant="1.27" surfaceScale="4.91">
-               <bumpInput>
-                  <Shadow />
-               </bumpInput>
-               <light>
-                  <Light.Distant azimuth="220.61" />
-               </light>
-            </Lighting>
-         </effect></ComboBox>
       <Text fill="WHITE" layoutX="18.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Idade:" wrappingWidth="53.85205078125">
          <font>
             <Font name="Arial Black" size="15.0" />
@@ -165,7 +151,7 @@
             </Lighting>
          </effect>
       </TextField>
-      <Button fx:id="buttonCadastrar" layoutX="489.0" layoutY="350.0" mnemonicParsing="false" onAction="#CadastrarPessoa" prefHeight="42.0" prefWidth="101.0" text="Cadastrar">
+      <Button fx:id="btnCadastrar" layoutX="489.0" layoutY="350.0" mnemonicParsing="false" onAction="#CadastrarPessoa" prefHeight="42.0" prefWidth="101.0" text="Cadastrar">
          <font>
             <Font name="Arial Black" size="15.0" />
          </font>
@@ -183,7 +169,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="buttonPessoa" layoutX="409.0" layoutY="350.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="42.0" prefWidth="70.0" text="Voltar">
+      <Button fx:id="btnVoltar" layoutX="409.0" layoutY="350.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="42.0" prefWidth="70.0" text="Voltar">
          <font>
             <Font name="Arial Black" size="15.0" />
          </font>
@@ -201,5 +187,24 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
+      <SplitMenuButton fx:id="btnTipoSangue" layoutX="312.0" layoutY="162.0" mnemonicParsing="false" text="Tipo Sanguíneo">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+         <effect>
+            <Lighting diffuseConstant="1.44" specularConstant="0.0" specularExponent="40.0" surfaceScale="5.28">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="49.39" elevation="132.8" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </SplitMenuButton>
    </children>
 </Pane>

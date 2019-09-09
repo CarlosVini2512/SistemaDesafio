@@ -10,10 +10,7 @@ import javafx.scene.control.TextField;
 public class Enfermidade {
 
     @FXML
-    private Button buttonConsultar;
-
-    @FXML
-    private Button buttonVoltar;
+    private Button btnVoltar;
 
     @FXML
     private TextField txtNome;
@@ -22,16 +19,18 @@ public class Enfermidade {
     private TextArea txtDescricao;
 
     @FXML
-    private SplitMenuButton buttonTipoEnfermidade;
+    private Button btnConsultar;
 
     @FXML
-    void 137970(ActionEvent event) {
+    private SplitMenuButton btnTipoEnfermidade;
 
-    }
 
     @FXML
     void ConsultarEnfermidade(ActionEvent event) {
-
+    	
+    	String nome = txtNome.getText();
+    	String descricao = txtDescricao.getText();
+    	String tipoEnf = btnTipoEnfermidade.getId();
     }
 
     @FXML

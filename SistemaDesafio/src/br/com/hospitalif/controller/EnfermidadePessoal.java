@@ -4,25 +4,26 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
-import javafx.scene.layout.AnchorPane;
 
 public class EnfermidadePessoal {
 
     @FXML
-    private Button buttonVoltar;
+    private Button btnSalvar;
 
     @FXML
-    private Button buttonSalvar;
+    private Button btnVoltar;
+
+    @FXML
+    private TextArea txtStatusEnfermidadeP;
 
     @FXML
     private TextArea txtComent;
 
     @FXML
-    private AnchorPane listStatusInfermidadeP;
-
-    @FXML
     void SalvarDados(ActionEvent event) {
-    	String Coment = txtComent.setText();
+    	
+    	String comentario = txtComent.getText();
+    	String StatusEnfPessoal = txtStatusEnfermidadeP.getText();
     }
 
     @FXML

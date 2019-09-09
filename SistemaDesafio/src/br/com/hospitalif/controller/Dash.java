@@ -8,53 +8,44 @@ import javafx.scene.control.Tab;
 public class Dash {
 
     @FXML
-    private Button buttonFuncionario;
+    private Button btnEntrada;
 
     @FXML
-    private Button buttonGerente;
+    private Button btnEnfermeiro;
 
     @FXML
-    private Button buttonAdm;
+    private Button btnEnfermidadePessoal;
 
     @FXML
-    private Button buttonPaciente;
+    private Tab btnServidores;
 
     @FXML
-    private Tab buttonServidores;
+    private Button btnEnfermidade;
 
     @FXML
-    private Button buttonEntrada;
+    private Button btnMedico;
 
     @FXML
-    private Button buttonPessoal;
+    private Button btnPaciente;
 
     @FXML
-    private Button buttonEnfermeiro;
+    private Button btnAtendimento;
 
     @FXML
-    private Button buttonMedico;
+    private Button btnGerente;
 
     @FXML
-    private Button buttonAtendimento;
+    private Tab btnRecepcao;
 
     @FXML
-    private Tab buttonRecepcao;
+    private Button btnFuncionario;
 
     @FXML
-    private Button buttonEnfermidadePessoal;
+    private Button btnPessoal;
 
     @FXML
-    private Button buttonEnfermidade;
-
-    @FXML
-    void 02a469(ActionEvent event) {
-
-    }
-
-    @FXML
-    void 052390(ActionEvent event) {
-
-    }
+    private Button btnAdm;
+    
 
     @FXML
     void RegistrarAtendimento(ActionEvent event) {

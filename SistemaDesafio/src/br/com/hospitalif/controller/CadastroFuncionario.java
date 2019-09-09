@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
 
 public class CadastroFuncionario {
 
@@ -13,7 +12,7 @@ public class CadastroFuncionario {
     private TextField txtLogin;
 
     @FXML
-    private ImageView txtSenha;
+    private TextField txtSenha;
 
     @FXML
     private TextArea txtStatus;
@@ -24,13 +23,12 @@ public class CadastroFuncionario {
     @FXML
     private Button buttonEntrar;
 
-    @FXML
-    void f5f5f5(ActionEvent event) {
-
-    }
 
     @FXML
     void VoltarTela(ActionEvent event) {
+    	String login = txtLogin.getText();
+    	String senha = txtSenha.getText();
+    	String status = txtStatus.getText();
 
     }
 

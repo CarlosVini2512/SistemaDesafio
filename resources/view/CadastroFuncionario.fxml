@@ -87,7 +87,7 @@
             </Lighting>
          </effect>
       </TextField>
-      <TextField layoutX="411.0" layoutY="132.0" prefHeight="31.0" prefWidth="127.0">
+      <TextField fx:id="txtSenha" layoutX="411.0" layoutY="132.0" prefHeight="31.0" prefWidth="127.0">
          <effect>
             <Lighting diffuseConstant="1.1" specularConstant="0.2" specularExponent="5.36" surfaceScale="5.65">
                <bumpInput>

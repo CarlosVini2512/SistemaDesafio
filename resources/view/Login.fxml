@@ -18,12 +18,22 @@
             <Font name="Arial Black" size="15.0" />
          </font>
       </Text>
-      <Button fx:id="buttonEntrar" layoutX="553.0" layoutY="415.0" mnemonicParsing="false" onAction="#LogarUsuario" prefHeight="23.0" prefWidth="85.0" text="Entrar">
+      <Button fx:id="btnEntrar" layoutX="591.0" layoutY="416.0" mnemonicParsing="false" onAction="#LogarUsuario" prefHeight="31.0" prefWidth="83.0" text="Entrar">
          <font>
-            <Font size="16.0" />
+            <Font name="Arial Black" size="16.0" />
          </font>
+         <effect>
+            <Lighting diffuseConstant="1.29" specularConstant="0.0" specularExponent="21.95" surfaceScale="4.92">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="211.83" />
+               </light>
+            </Lighting>
+         </effect>
       </Button>
-      <TextField fx:id="txtLogin" layoutX="66.0" layoutY="189.0">
+      <TextField fx:id="txtLogin" layoutX="47.0" layoutY="189.0">
          <effect>
             <Lighting diffuseConstant="1.35" specularExponent="40.0" surfaceScale="2.78">
                <bumpInput>

@@ -1,5 +1,7 @@
 package br.com.hospitalif.controller;
 
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -7,31 +9,22 @@ import javafx.scene.control.TextField;
 public class Enfermeiro {
 
     @FXML
-    private Button buttonConsultar;
+    private Button btnVoltar;
 
     @FXML
-    private Button buttonVoltar;
+    private TextField txtNumDeRegistro;
 
     @FXML
-    private TextField txtNumeroDeRegistro;
-
-    @FXML
-    void 434343(ActionEvent event) {
-
-    }
-
-    @FXML
-    void NumeroDeRegistro(ActionEvent event) {
-
-    }
+    private Button btnEntrar;
+    
 
     @FXML
     void LogarEnfermeiro(ActionEvent event) {
-
+    	String numRegistro = txtNumDeRegistro.getText();
     }
 
     @FXML
-    void VoltarInicio(ActionEvent event) {
+    void VoltarTela(ActionEvent event) {
 
     }
 
