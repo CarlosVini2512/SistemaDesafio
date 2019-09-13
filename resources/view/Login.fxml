@@ -13,12 +13,12 @@
          <image>
             <Image url="@Imagens/13.png" />
          </image></ImageView>
-      <Text fill="WHITE" layoutX="108.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN" wrappingWidth="64.09765625">
+      <Text fill="WHITE" layoutX="89.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN" wrappingWidth="64.09765625">
          <font>
             <Font name="Arial Black" size="15.0" />
          </font>
       </Text>
-      <Button fx:id="btnEntrar" layoutX="591.0" layoutY="416.0" mnemonicParsing="false" onAction="#LogarUsuario" prefHeight="31.0" prefWidth="83.0" text="Entrar">
+      <Button fx:id="btnEntrar" layoutX="24.0" layoutY="416.0" mnemonicParsing="false" onAction="#LogarUsuario" prefHeight="31.0" prefWidth="83.0" text="Entrar">
          <font>
             <Font name="Arial Black" size="16.0" />
          </font>
@@ -45,7 +45,7 @@
             </Lighting>
          </effect>
       </TextField>
-      <TextField fx:id="txtSenha" layoutX="84.0" layoutY="255.0" prefHeight="25.0" prefWidth="113.0">
+      <TextField fx:id="txtSenha" layoutX="65.0" layoutY="255.0" prefHeight="25.0" prefWidth="113.0">
          <effect>
             <Lighting diffuseConstant="1.14" specularExponent="40.0" surfaceScale="3.82">
                <bumpInput>
@@ -57,7 +57,7 @@
             </Lighting>
          </effect>
       </TextField>
-      <Text fill="WHITE" layoutX="111.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SENHA">
+      <Text fill="WHITE" layoutX="92.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SENHA">
          <font>
             <Font name="Arial Black" size="15.0" />
          </font>

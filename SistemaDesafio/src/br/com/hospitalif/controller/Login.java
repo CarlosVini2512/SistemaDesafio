@@ -14,7 +14,7 @@ public class Login {
     private TextField txtSenha;
 
     @FXML
-    private Button buttonEntrar;
+    private Button btnEntrar;
 
     @FXML
     void LogarUsuario(ActionEvent event) {

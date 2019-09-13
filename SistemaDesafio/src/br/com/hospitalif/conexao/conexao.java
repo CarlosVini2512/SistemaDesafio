@@ -18,7 +18,7 @@ public class conexao {
 	 
 	 
 	//método para devolver a conexão
-	public java.sql.Connection getConneciton() {
+	public java.sql.Connection getConnection() {
 		try {
 			Class.forName(this.driverName);
 			this.conn = DriverManager.getConnection(url, user, pwd);
@@ -51,7 +51,7 @@ public class conexao {
 	//abrir uma conexão
 	public void resetConnection() {
 		this.closeConnection();
-		this.getConneciton();
+		this.getConnection();
 	}
 	
 }
