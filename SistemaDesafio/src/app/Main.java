@@ -1,7 +1,10 @@
 package app;
 
 import java.io.IOException;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
+import br.com.hospitalif.conexao.Conexao;
 import br.com.hospitalif.util.Rotas;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -37,7 +40,14 @@ public class Main extends Application {
 	}
 		
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
+		Conexao conexao = new Conexao();
+		conexao.getConnection();
+		String sql = "select into Atendimento "
+				+ "(idAtendimento, comentEnfermeiro, comentMedico, peso, altura, doenca) value"
+				+ "(?,?,?,?,?,?)"; 
+		PreparedStatement stmt = conexao.prepareAtantement(sql);
+		stmt.execute();
 		launch(args);
 	}
 }

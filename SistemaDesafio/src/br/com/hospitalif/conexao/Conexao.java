@@ -1,9 +1,10 @@
 package br.com.hospitalif.conexao;
 
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class conexao {
+public class Conexao {
 	
 	
 	
@@ -53,5 +54,6 @@ public class conexao {
 		this.closeConnection();
 		this.getConnection();
 	}
+
 	
 }
