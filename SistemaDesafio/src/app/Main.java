@@ -41,13 +41,13 @@ public class Main extends Application {
 		
 	
 	public static void main(String[] args) throws SQLException {
-		Conexao conexao = new Conexao();
+		/*Conexao conexao = new Conexao();
 		conexao.getConnection();
 		String sql = "select into Atendimento "
 				+ "(idAtendimento, comentEnfermeiro, comentMedico, peso, altura, doenca) value"
 				+ "(?,?,?,?,?,?)"; 
 		PreparedStatement stmt = conexao.prepareAtantement(sql);
-		stmt.execute();
+		stmt.execute();*/
 		launch(args);
 	}
 }
