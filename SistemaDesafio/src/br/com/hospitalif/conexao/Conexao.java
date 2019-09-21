@@ -55,5 +55,10 @@ public class Conexao {
 		this.getConnection();
 	}
 
+	public PreparedStatement prepareAtantement(String sql) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	
 }
