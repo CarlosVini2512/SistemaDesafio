@@ -1,13 +1,12 @@
 package br.com.hospitalif.DAO;
 
-
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import br.com.hospitalif.conexao.Conexao;
 import br.com.hospitalif.model.Medico;
+
 
 public class MedicoDAO {
 
@@ -16,12 +15,11 @@ public class MedicoDAO {
 			Connection conexao = conn.getConnection();
 			System.out.println(conn.getStatus());
 			
-			String sqlINSERE = "INSERT INTO Atendimento VALUES(?,?,?,?,?)";
+			String sqlINSERE = "INSERT INTO Medico VALUES(?,?,?,?,?)";
 			
-			PreparedStatement stmt = conexao.preparedStatement(sqlINSERE);
-			stmt.setString(1, m.getCRM()); 
-			stmt.setString(2, m.getEspecialidade());
-			stmt.setInt(3, m.getIdFuncionario);
+			PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
+			stmt.setString(1, m.getEspecialidade());
+			stmt.setInt(2, m.getNumeroRegistro()); 
 			stmt.execute();
 		}
 		
@@ -33,10 +31,9 @@ public class MedicoDAO {
 			
 			String sqlINSERE = "DELETE FROM Medico" + "WHERE id = (?)";
 			
-			PreparedStatement stmt = conexao.preparedStatement(sqlINSERE);
-			stmt.setString(1, m.getCRM()); 
-			stmt.setString(2, m.getEspecialidade());
-			stmt.setInt(3, m.getIdFuncionario);
+			PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
+			stmt.setString(1, m.getEspecialidade());
+			stmt.setString(2, m.getNumRegistro()); 
 			stmt.execute();
 		}
 }
