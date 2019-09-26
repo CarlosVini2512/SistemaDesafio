@@ -14,7 +14,26 @@ public class AtendimentoDAO {
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "INSERT INTO Atendimento VALUES(?,?,?,?,?)";
+		String sqlINSERE = "INSERT INTO Atendimento VALUES(?,?,?,?,?,?)";
+		//seta valores
+		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
+		stmt.setString(2, a.getComentarioEnfermeiro()); 
+		stmt.setString(3, a.getComentarioMedico());
+		stmt.setFloat(4, a.getPeso());
+		stmt.setFloat(5, a.getAltura());
+		stmt.setDate(6, a.getData());
+		stmt.setList(7, a.getDoenca());
+		//executa
+		stmt.execute();
+	}
+	
+
+	public void removeById(int id) {
+		Conexao conn = new Conexao();
+		Connection conexao = conn.getConnection();		
+		System.out.println(conn.getStatus());
+		
+		String sqlINSERE = "DELETE FROM Atendiment WHERE id = (?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		stmt.setString(2, a.getComentarioEnfermeiro()); 
@@ -26,23 +45,40 @@ public class AtendimentoDAO {
 		stmt.execute();
 	}
 	
-
-	public void removeById(int id) {
+	public void update(int id) {
 		Conexao conn = new Conexao();
-		Connection conexao = conn.getConnection();
-		
+		Connection conexao = conn.getConnection();	
 		System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "DELETE FROM Atendimento" + "WHERE id = (?)";
+		String sqlINSERE = "UPDATE Atendimento SET (?,?,?,?,?,?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-		stmt.setString(2, a.getcomentarioEnfermeiro()); 
-		stmt.setString(3, a.getcomentarioMedico());
-		stmt.setFloat(4, a.peso());
-		stmt.setFloat(5, a.altura());
-		stmt.setDate(6, a.data());
-		stmt.setList(7, a.doenca());
+		stmt.setString(2, a.getComentarioEnfermeiro()); 
+		stmt.setString(3, a.getComentarioMedico());
+		stmt.setFloat(4, a.getPeso());
+		stmt.setFloat(5, a.getAltura());
+		stmt.setDate(6, a.getData());
+		stmt.setList(7, a.getDoenca());
 		stmt.execute();
 	}
+	
+	public void select(int id) {
+		Conexao conn = new Conexao();
+		Connection conexao = conn.getConnection();		
+		System.out.println(conn.getStatus());
+		
+		String sqlINSERE = "SELECT from Atendimento (?,?,?,?,?,?)";
+		
+		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
+		stmt.setString(2, a.getComentarioEnfermeiro()); 
+		stmt.setString(3, a.getComentarioMedico());
+		stmt.setFloat(4, a.getPeso());
+		stmt.setFloat(5, a.getAltura());
+		stmt.setDate(6, a.getData());
+		stmt.setList(7, a.getDoenca());
+		//executa
+		stmt.execute();
+
+		
 	
 }
