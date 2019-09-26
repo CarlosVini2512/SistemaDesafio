@@ -9,7 +9,7 @@ public class EnfermidadePessoal extends Enfermidade{
 		public int getIdEnfermidadePessoal() {
 			return this.idEnfermidadePessoal;
 		}
-		public void setEnfermidadePessoal(int idEnfermidadeP) {
+		public void setIdEnfermidadePessoal(int idEnfermidadeP) {
 			this.idEnfermidadePessoal = idEnfermidadeP;
 		}
 		
