@@ -14,7 +14,7 @@ public class EnfermidadePessoalDAO {
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "INSERT INTO EnfermidadePessoal VALUES(?,?,?,?,?)";
+		String sqlINSERE = "INSERT INTO EnfermidadePessoal VALUES(?,?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		stmt.setString(1, ep.getComentario());
@@ -22,13 +22,38 @@ public class EnfermidadePessoalDAO {
 		stmt.execute();
 	}
 	
-	public void removeById(int id) {
+	public void removeById(EnfermidadePessoal ep) throws SQLException {
 		Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();
 		
 		System.out.println(conn.getStatus());
 		
 		String sqlINSERE = "DELETE FROM EnfermidadePessoal" + "WHERE id = (?)";
+		
+		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
+		stmt.setString(1, ep.getComentario());
+		stmt.setString(2, ep.getStatusEnfermidade()); 
+		stmt.execute();
+	}
+	
+	public void update(EnfermidadePessoal ep) throws SQLException {
+		Conexao conn = new Conexao();
+		Connection conexao = conn.getConnection();
+		System.out.println(conn.getStatus());
+		
+		String sqlINSERE = "UPDATE EnfermidadePessoal SET(?,?)";
+		
+		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
+		stmt.setString(1, ep.getComentario());
+		stmt.setString(2, ep.getStatusEnfermidade()); 
+		stmt.execute();
+	}
+	public void select(EnfermidadePessoal ep) throws SQLException {
+		Conexao conn = new Conexao();
+		Connection conexao = conn.getConnection();
+		System.out.println(conn.getStatus());
+		
+		String sqlINSERE = "SELECT EnfermidadePessoal VALUES(?,?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		stmt.setString(1, ep.getComentario());

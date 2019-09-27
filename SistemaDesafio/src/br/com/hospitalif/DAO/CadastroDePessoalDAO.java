@@ -49,7 +49,24 @@ public class CadastroDePessoalDAO {
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "INSERT INTO Pessoa VALUES(?,?,?,?,?)";
+		String sqlINSERE = "UPDATE Pessoa SET (?,?,?,?,?,?)";
+		
+		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
+		stmt.setString(1, cp.getNome());
+		stmt.setString(2, cp.getCPF()); 
+		stmt.setInt(3, cp.getIdade()); 
+		stmt.setString(4, cp.getTipoSangue()); 
+		stmt.setChar(5, cp.getSexo());
+		stmt.setString(6, cp.getStatusDaPessoa());
+		stmt.execute();
+	}
+	
+	public void select(Pessoa cp) throws SQLException {
+		Conexao conn = new Conexao();
+		Connection conexao = conn.getConnection();
+		System.out.println(conn.getStatus());
+		
+		String sqlINSERE = "SELECT from Pessoa (?,?,?,?,?,?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		stmt.setString(1, cp.getNome());
