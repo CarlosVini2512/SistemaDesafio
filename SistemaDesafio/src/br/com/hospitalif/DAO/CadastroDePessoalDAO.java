@@ -14,7 +14,7 @@ public class CadastroDePessoalDAO {
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "INSERT INTO CadastroDePessoal VALUES(?,?,?,?,?)";
+		String sqlINSERE = "INSERT INTO Pessoa VALUES(?,?,?,?,?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		stmt.setString(1, cp.getNome());
@@ -26,13 +26,13 @@ public class CadastroDePessoalDAO {
 		stmt.execute();
 	}
 	
-	public void removeById(int id) {
+	public void removeById(Pessoa cp) {
 		Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();
 		
 		System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "DELETE FROM CadastroDePessoal" + "WHERE id = (?)";
+		String sqlINSERE = "DELETE FROM Pessoa" + "WHERE id = (?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		stmt.setString(1, cp.getNome());
@@ -41,6 +41,23 @@ public class CadastroDePessoalDAO {
 		stmt.setString(5, cp.getTipoSangue()); 
 		stmt.setChar(6, cp.getSexo());
 		stmt.setString(7, cp.getStatusDaPessoa());
+		stmt.execute();
+	}
+	
+	public void update(Pessoa cp) throws SQLException {
+		Conexao conn = new Conexao();
+		Connection conexao = conn.getConnection();
+		System.out.println(conn.getStatus());
+		
+		String sqlINSERE = "INSERT INTO Pessoa VALUES(?,?,?,?,?)";
+		
+		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
+		stmt.setString(1, cp.getNome());
+		stmt.setString(2, cp.getCPF()); 
+		stmt.setInt(3, cp.getIdade()); 
+		stmt.setString(4, cp.getTipoSangue()); 
+		stmt.setChar(5, cp.getSexo());
+		stmt.setString(6, cp.getStatusDaPessoa());
 		stmt.execute();
 	}
 }
