@@ -9,7 +9,7 @@ public class Entrada extends Atendimento{
 	private Date dataEntrada;
 	private Date dataSaida;
 	private String statusDeEntrada;
-	private List<Atendimento> situacaoDoPaciente;
+	private String situacaoDoPaciente;
 	
 	public int getIdEntrada() {
 		return this.idEntrada;
@@ -39,10 +39,10 @@ public class Entrada extends Atendimento{
 		this.statusDeEntrada = statusEntrada;
 	}
 	
-	public List<Atendimento> getSituacaoDoPaciente() {
+	public String getSituacaoDoPaciente() {
 		return this.situacaoDoPaciente;
 	}
-	public void setSituacaoDoPaciente(List<Atendimento> situacaoPaciente) {
+	public void setSituacaoDoPaciente(String situacaoPaciente) {
 		this.situacaoDoPaciente = situacaoPaciente;
 	}
 }

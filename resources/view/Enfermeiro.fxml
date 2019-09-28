@@ -64,6 +64,9 @@
                </light>
             </Lighting>
          </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <Button fx:id="btnVoltar" layoutX="14.0" layoutY="356.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="33.0" prefWidth="94.0" text="Voltar">
          <font>

@@ -1,11 +1,15 @@
 package br.com.hospitalif.controller;
 
+import java.io.IOException;
+
+import app.Main;
+import br.com.hospitalif.util.Rotas;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tab;
 
-public class Dash {
+public class Dash extends Main{
 
     @FXML
     private Button btnEntrada;
@@ -48,8 +52,8 @@ public class Dash {
     
 
     @FXML
-    void RegistrarAtendimento(ActionEvent event) {
-
+    void RegistrarAtendimento(ActionEvent event) throws IOException {
+    	openPage(Rotas.DASH);
     }
 
     @FXML

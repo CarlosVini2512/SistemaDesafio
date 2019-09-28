@@ -3,6 +3,7 @@ package br.com.hospitalif.DAO;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import br.com.hospitalif.conexao.Conexao;
@@ -15,7 +16,7 @@ public class AtendimentoDAO {
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "INSERT INTO Atendimento VALUES(?,?,?,?,?,?)";
+		String sqlINSERE = "INSERT INTO Atendimento () VALUES(?,?,?,?,?,?)";
 		//seta valores
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		stmt.setString(2, a.getComentarioEnfermeiro()); 
@@ -30,7 +31,7 @@ public class AtendimentoDAO {
 	}
 	
 
-	public void removeById(Atendimento a) throws SQLException {
+	public void remove(Atendimento a) throws SQLException {
 		Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();		
 		System.out.println(conn.getStatus());
@@ -80,6 +81,7 @@ public class AtendimentoDAO {
 		stmt.setFloat(5, a.getAltura());
 		stmt.setDate(6,new Date(a.getData().getTime()));
 	//	stmt.setList(7, a.getDoenca());
+		
 		
 		//executa
 		stmt.execute();

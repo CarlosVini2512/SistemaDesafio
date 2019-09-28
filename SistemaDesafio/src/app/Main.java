@@ -22,13 +22,17 @@ public class Main extends Application {
 	@Override
 	public void start(Stage stage) throws Exception {
 		
-		FXMLLoader loader = new FXMLLoader(getClass().getResource(Rotas.LOGIN));
+		// FXMLLoader loader = new FXMLLoader(getClass().getResource(Rotas.DASH));
 		
-		Parent root = loader.load();
+		stageAtual = stage;
+		
+		
+		/*Parent root = loader.load();
 		Scene scene = new Scene(root, 600, 400);
 		scene.getStylesheets().add(getClass().getResource("/css/app.css").toExternalForm());
 		stage.setScene(scene);
-		stage.show();
+		stage.show();*/
+		openPage(Rotas.DASH);
 		
 	}
 	

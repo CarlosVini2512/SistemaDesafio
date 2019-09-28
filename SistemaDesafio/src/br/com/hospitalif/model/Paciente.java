@@ -1,12 +1,10 @@
 package br.com.hospitalif.model;
 
-import java.util.List;
-
 public class Paciente {
 
 	private int idPaciente;
-	private List<EnfermidadePessoal> doenca;
-	private List<Entrada> historico;
+	private String doenca;
+	private String historico;
 	
 
 	public int getIdPaciente() {
@@ -16,17 +14,17 @@ public class Paciente {
 		this.idPaciente = idPaciente;
 	}
 	
-	public List<EnfermidadePessoal> getDoenca() {
+	public String getDoenca() {
 		return this.doenca;
 	}
-	public void setDoenca(List<EnfermidadePessoal> doenca) {
+	public void setDoenca(String doenca) {
 		this.doenca = doenca;
 	}
 	
-	public List<Entrada> getHistorico() {
+	public String getHistorico() {
 		return this.historico;
 	}
-	public void setHistorico(List<Entrada> historico) {
+	public void setHistorico(String historico) {
 		this.historico = historico;
 	}
 }
