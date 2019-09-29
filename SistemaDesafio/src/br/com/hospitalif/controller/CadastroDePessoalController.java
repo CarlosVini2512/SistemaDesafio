@@ -7,7 +7,7 @@ import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
-public class CadastroDePessoal {
+public class CadastroDePessoalController {
 
     @FXML
     private TextArea txtStatus;

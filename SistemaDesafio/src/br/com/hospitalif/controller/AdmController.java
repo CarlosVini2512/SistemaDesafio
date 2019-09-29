@@ -4,16 +4,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
-public class Atendente {
+public class AdmController {
 
     @FXML
-    private Button buttonCadastroDePaciente;
+    private Button buttonCadastroFuncionario;
 
     @FXML
-    void CadastrarPaciente(ActionEvent event) {
+    void CadastrarFuncionario(ActionEvent event) {
 
     }
-
 }
 
 

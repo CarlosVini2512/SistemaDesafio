@@ -10,7 +10,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextArea;
 
-public class Entrada {
+public class EntradaController {
 
     @FXML
     private Button btnVoltar;

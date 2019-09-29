@@ -8,9 +8,9 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="787.0" style="-fx-background-color: LightBlue;" translateX="-1.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.hospitalif.controller.Entrada">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="787.0" style="-fx-background-color: LightBlue;" translateX="-1.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.hospitalif.controller.EntradaController">
    <children>
-      <ImageView fitHeight="549.0" fitWidth="787.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="549.0" fitWidth="787.0" layoutX="4.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagens/4.jpg" />
          </image>

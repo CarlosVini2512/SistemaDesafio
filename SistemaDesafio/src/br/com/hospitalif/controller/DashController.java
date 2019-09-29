@@ -9,7 +9,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tab;
 
-public class Dash extends Main{
+public class DashController extends Main{
 
     @FXML
     private Button btnEntrada;
@@ -53,7 +53,7 @@ public class Dash extends Main{
 
     @FXML
     void RegistrarAtendimento(ActionEvent event) throws IOException {
-    	openPage(Rotas.DASH);
+    	openPage(Rotas.ATENDIMENTO);
     }
 
     @FXML

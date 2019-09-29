@@ -7,7 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextField;
 
-public class Medico {
+public class MedicoController {
 
     @FXML
     private SplitMenuButton btnEspecialidade;

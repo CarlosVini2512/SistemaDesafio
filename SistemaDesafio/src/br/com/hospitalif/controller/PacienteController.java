@@ -10,16 +10,16 @@ import javafx.scene.control.ListView;
 import javafx.util.Callback;
 
 
-public class Paciente {
+public class PacienteController {
 
     @FXML
-    private ListView<Entrada> listHistorico;
+    private ListView<EntradaController> listHistorico;
 
     @FXML
     private DatePicker dtDataInicio;
 
     @FXML
-    private ListView<EnfermidadePessoal> listDoenca;
+    private ListView<EnfermidadePessoalController> listDoenca;
 
     @FXML
     private Button btnVoltar;

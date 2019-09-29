@@ -3,38 +3,37 @@ package br.com.hospitalif.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
-public class Funcionario {
+public class CadastroFuncionarioController {
 
     @FXML
     private TextField txtLogin;
 
     @FXML
-    private PasswordField txtSenha;
+    private TextField txtSenha;
 
     @FXML
-    private Button btnVoltar;
+    private TextArea txtStatus;
 
     @FXML
-    private Button btnEntrar;
+    private Button buttonSair;
 
     @FXML
-    private TextArea txtStatusFuncionario;
-    
+    private Button buttonEntrar;
+
 
     @FXML
-    void LogarFuncionario(ActionEvent event) {
+    void VoltarTela(ActionEvent event) {
     	String login = txtLogin.getText();
     	String senha = txtSenha.getText();
-    	String statusFunc = txtStatusFuncionario.getText();
+    	String status = txtStatus.getText();
 
     }
 
     @FXML
-    void VoltarTela(ActionEvent event) {
+    void LogarFuncionario(ActionEvent event) {
 
     }
 

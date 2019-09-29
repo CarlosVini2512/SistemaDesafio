@@ -7,8 +7,8 @@ public class Pessoa  {
 	private String cpf;
 	private int idade;
 	private String tipoSanguineo;
-	private char sexo;
-	private String StatusPessoa;
+	private String sexo;
+	private String statusPessoa;
 
 	public int getIdPessoa() {
 		return this.idPessoa;
@@ -45,18 +45,18 @@ public class Pessoa  {
 		this.tipoSanguineo = tipoSangue;
 	}
 	
-	public char getSexo() {
+	public String getSexo() {
 		return this.sexo;
 	}
-	public void setSexo(char Sx) {
+	public void setSexo(String Sx) {
 		this.sexo = Sx;
 	}
 	
 	public String getStatusDaPessoa() {
-		return this.StatusPessoa;
+		return this.statusPessoa;
 	}
 	public void setStatusDaPessoa(String StatusP) {
-		this.StatusPessoa = StatusP;
+		this.statusPessoa = StatusP;
 	}
 	
 

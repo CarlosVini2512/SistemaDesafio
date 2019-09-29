@@ -18,27 +18,20 @@ public class Main extends Application {
 	static Stage stageAtual;
 	static FXMLLoader loader;
 	
-	
 	@Override
 	public void start(Stage stage) throws Exception {
-		
-		// FXMLLoader loader = new FXMLLoader(getClass().getResource(Rotas.DASH));
-		
-		stageAtual = stage;
+		stageAtual = stage;	
 		
 		
-		/*Parent root = loader.load();
-		Scene scene = new Scene(root, 600, 400);
-		scene.getStylesheets().add(getClass().getResource("/css/app.css").toExternalForm());
-		stage.setScene(scene);
-		stage.show();*/
-		openPage(Rotas.DASH);
-		
+		try {	
+				openPage(Rotas.DASH);
+		} catch (Exception e) {
+				e.printStackTrace();
+		}
 	}
 	
 	public void openPage(String rota) throws IOException {
-		loader = new FXMLLoader(getClass().getResource(rota));
-					 	
+			loader = new FXMLLoader(getClass().getResource(rota));				 	
 			Scene scene = new Scene(loader.load());
 			stageAtual.setScene(scene);
 			stageAtual.show();				
@@ -46,9 +39,9 @@ public class Main extends Application {
 		
 	
 	public static void main(String[] args) throws SQLException {
-		Conexao conn = new Conexao();
+		/*Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();
-		System.out.println(conn.getStatus());
+		System.out.println(conn.getStatus());*/
 		launch(args);
 				
 	}

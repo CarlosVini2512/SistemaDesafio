@@ -2,7 +2,10 @@ package br.com.hospitalif.DAO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import br.com.hospitalif.conexao.Conexao;
 import br.com.hospitalif.model.Gerente;
@@ -13,7 +16,6 @@ public class GerenteDAO {
 		Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
-		
 		String sqlINSERE = "INSERT INTO Gerente VALUES(?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
@@ -21,16 +23,14 @@ public class GerenteDAO {
 		stmt.execute();
 	}
 	
-	public void removeById(Gerente g) throws SQLException {
+	public void removeById(int id) throws SQLException {
 		Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();
-		
 		System.out.println(conn.getStatus());
-		
-		String sqlINSERE = "DELETE FROM Gerente" + "WHERE id = (?)";
-		
+		String sqlINSERE = "DELETE FROM Gerente WHERE id = (?)";
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-		stmt.setString(1, g.getCargo());
+		
+		stmt.setInt(1,id);	
 		stmt.execute();
 	}
 	
@@ -38,10 +38,9 @@ public class GerenteDAO {
 		Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
-		
 		String sqlINSERE = "UPDATE Gerente SET(?)";
-		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
+		
 		stmt.setString(1, g.getCargo());
 		stmt.execute();
 	}
@@ -50,11 +49,17 @@ public class GerenteDAO {
 		Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
-		
-		String sqlINSERE = "SELECT Gerente VALUES(?)";
+		String sqlINSERE = "SELECT * FROM Gerente VALUES(?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-		stmt.setString(1, g.getCargo());
-		stmt.execute();
+		ResultSet rs = stmt.executeQuery();
+		List <Gerente> gerentes = new ArrayList<Gerente>();
+		
+		while(rs.next()) {
+			Gerente ger = new Gerente();
+			
+			ger.setCargo(rs.getString("cargo"));
+			gerentes.add(ger);
+		}
 	}
 }

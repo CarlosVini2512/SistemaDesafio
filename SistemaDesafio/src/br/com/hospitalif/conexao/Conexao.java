@@ -1,5 +1,6 @@
 package br.com.hospitalif.conexao;
 
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -19,7 +20,7 @@ public class Conexao {
 	 
 	 
 	//método para devolver a conexão
-	public java.sql.Connection getConnection() {
+	public Connection getConnection() {
 		try {
 			Class.forName(this.driverName);
 			this.conn = DriverManager.getConnection(url, user, pwd);
@@ -45,19 +46,18 @@ public class Conexao {
 	}
 	
 	//fechar conexão
-	public boolean closeConnection() {
+	public boolean closeConnection() throws SQLException{
 		return false;
 	}
 	
 	//abrir uma conexão
-	public void resetConnection() {
-		this.closeConnection();
-		this.getConnection();
-	}
-
-	public PreparedStatement prepareAtantement(String sql) {
-		// TODO Auto-generated method stub
-		return null;
+	public void resetConnection() throws SQLException {
+		try {
+			this.closeConnection();
+			this.getConnection();
+			}catch(SQLException e) {
+				e.printStackTrace();
+			}
 	}
 
 	

@@ -17,7 +17,7 @@ import javafx.scene.control.TextField;
 import javafx.util.Callback;
 
 
-public class Atendimento extends Main{
+public class AtendimentoController extends Main{
 
     @FXML
     private DatePicker txtData;
@@ -29,7 +29,7 @@ public class Atendimento extends Main{
     private TextArea txtComentEnfermeiro;
 
     @FXML
-    private ListView<EnfermidadePessoal> txtDoenca;
+    private ListView<EnfermidadePessoalController> txtDoenca;
 
     @FXML
     private TextArea txtComentMedico;
@@ -52,7 +52,6 @@ public class Atendimento extends Main{
     	Callback <?,?> doenca = txtDoenca.getCellFactory();
     	String ComentarioEnf = txtComentMedico.getText();
     	String altura = txtAltura.getText();
-    	openPage(Rotas.DASH);
     }
 
     @FXML
