@@ -1,7 +1,7 @@
 package br.com.hospitalif.util;
 
 public class Rotas {
-	public static String ADM = "/view/ADM.fxml";
+	public static String ADM = "/view/Adm.fxml";
 	public static String ATENDENTE = "/view/Atendente.fxml";
 	public static String ATENDIMENTO = "/view/Atendimento.fxml";
 	public static String CADASTRODEPESSOA = "/view/CadastroDePessoal.fxml";

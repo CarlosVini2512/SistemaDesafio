@@ -22,9 +22,8 @@ public class Main extends Application {
 	public void start(Stage stage) throws Exception {
 		stageAtual = stage;	
 		
-		
 		try {	
-				openPage(Rotas.DASH);
+				openPage(Rotas.ADM);
 		} catch (Exception e) {
 				e.printStackTrace();
 		}
