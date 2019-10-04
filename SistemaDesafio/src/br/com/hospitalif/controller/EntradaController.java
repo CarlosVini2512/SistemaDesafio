@@ -1,8 +1,11 @@
 package br.com.hospitalif.controller;
 
 
+import java.io.IOException;
 import java.time.LocalDate;
 
+import app.Main;
+import br.com.hospitalif.util.Rotas;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -10,7 +13,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextArea;
 
-public class EntradaController {
+public class EntradaController extends Main{
 
     @FXML
     private Button btnVoltar;
@@ -41,8 +44,8 @@ public class EntradaController {
     }
 
     @FXML
-    void VoltarTela(ActionEvent event) {
-    	
+    void VoltarTela(ActionEvent event) throws IOException {
+    	openPage(Rotas.DASH);
     }
 }
 

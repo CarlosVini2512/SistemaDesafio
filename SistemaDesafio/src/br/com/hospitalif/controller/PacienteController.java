@@ -1,7 +1,10 @@
 package br.com.hospitalif.controller;
 
+import java.io.IOException;
 import java.time.LocalDate;
 
+import app.Main;
+import br.com.hospitalif.util.Rotas;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -10,7 +13,7 @@ import javafx.scene.control.ListView;
 import javafx.util.Callback;
 
 
-public class PacienteController {
+public class PacienteController extends Main{
 
     @FXML
     private ListView<EntradaController> listHistorico;
@@ -41,8 +44,8 @@ public class PacienteController {
     }
 
     @FXML
-    void VoltarTela(ActionEvent event) {
-
+    void VoltarTela(ActionEvent event) throws IOException {
+    	openPage(Rotas.DASH);
     }
 
 }

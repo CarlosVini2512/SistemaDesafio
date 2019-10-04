@@ -47,6 +47,7 @@ public class Conexao {
 	
 	//fechar conexão
 	public boolean closeConnection() throws SQLException{
+		this.conn.close();
 		return false;
 	}
 	

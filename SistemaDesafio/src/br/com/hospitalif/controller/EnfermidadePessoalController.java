@@ -1,11 +1,15 @@
 package br.com.hospitalif.controller;
 
+import java.io.IOException;
+
+import app.Main;
+import br.com.hospitalif.util.Rotas;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 
-public class EnfermidadePessoalController {
+public class EnfermidadePessoalController extends Main{
 
     @FXML
     private Button btnSalvar;
@@ -27,8 +31,8 @@ public class EnfermidadePessoalController {
     }
 
     @FXML
-    void VoltarTela(ActionEvent event) {
-
+    void VoltarTela(ActionEvent event) throws IOException {
+    	openPage(Rotas.DASH);
     }
 
 }

@@ -50,13 +50,14 @@ public class AtendimentoController extends Main{
     	String peso = txtPeso.getText();
     	String ComentarioEnfermeiro = txtComentEnfermeiro.getText();  	
     	Callback <?,?> doenca = txtDoenca.getCellFactory();
-    	String ComentarioEnf = txtComentMedico.getText();
+    	String ComentarioMedico = txtComentMedico.getText();
     	String altura = txtAltura.getText();
     }
 
     @FXML
-    void VoltarTela(ActionEvent event) {
-    	
+    void VoltarTela(ActionEvent event) throws IOException {
+    	openPage(Rotas.DASH);
+
     }
 
 }

@@ -57,53 +57,53 @@ public class DashController extends Main{
     }
 
     @FXML
-    void SalvarEnfermidadePessoal(ActionEvent event) {
-
+    void SalvarEnfermidadePessoal(ActionEvent event) throws IOException {
+    	openPage(Rotas.ENFERMEIRO);
     }
 
     @FXML
-    void EntradaDePaciente(ActionEvent event) {
-
+    void EntradaDePaciente(ActionEvent event) throws IOException {
+    	openPage(Rotas.ENTRADA);
     }
 
     @FXML
-    void Atender(ActionEvent event) {
-
+    void Atender(ActionEvent event) throws IOException {
+    	openPage(Rotas.ATENDENTE);
     }
 
     @FXML
-    void RegistrarEnfermidade(ActionEvent event) {
-
+    void RegistrarEnfermidade(ActionEvent event) throws IOException {
+    	openPage(Rotas.ENFERMIDADE);
     }
 
     @FXML
-    void CadastrarPessoa(ActionEvent event) {
-
+    void CadastrarPessoa(ActionEvent event) throws IOException {
+    	openPage(Rotas.CADASTRODEPESSOA);
     }
 
     @FXML
-    void consultarPaciente(ActionEvent event) {
-
+    void consultarPaciente(ActionEvent event) throws IOException {
+    	openPage(Rotas.PACIENTE);
     }
 
     @FXML
-    void CadastrarAdministrador(ActionEvent event) {
-
+    void CadastrarAdministrador(ActionEvent event) throws IOException {
+    	openPage(Rotas.ADM);
     }
 
     @FXML
-    void CadastrarMedico(ActionEvent event) {
-
+    void CadastrarMedico(ActionEvent event) throws IOException {
+    	openPage(Rotas.MEDICO);
     }
 
     @FXML
-    void CadastrarEnfermeiro(ActionEvent event) {
-
+    void CadastrarEnfermeiro(ActionEvent event) throws IOException {
+    	openPage(Rotas.ENFERMEIRO);
     }
 
     @FXML
-    void CadastrarFuncionario(ActionEvent event) {
-
+    void CadastrarFuncionario(ActionEvent event) throws IOException {
+    	openPage(Rotas.CADASTROFUNCIONARIO);
     }
 
     @FXML

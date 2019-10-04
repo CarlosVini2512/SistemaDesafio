@@ -1,5 +1,9 @@
 package br.com.hospitalif.controller;
 
+import java.io.IOException;
+
+import app.Main;
+import br.com.hospitalif.util.Rotas;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -7,7 +11,7 @@ import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
-public class CadastroDePessoalController {
+public class CadastroDePessoalController extends Main {
 
     @FXML
     private TextArea txtStatus;
@@ -44,7 +48,8 @@ public class CadastroDePessoalController {
     }
 
     @FXML
-    void VoltarTela(ActionEvent event) {
+    void VoltarTela(ActionEvent event) throws IOException {
+    	openPage(Rotas.DASH);
 
     }
 
