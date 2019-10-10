@@ -3,7 +3,6 @@ package app;
 import java.io.IOException;
 import java.sql.SQLException;
 
-import br.com.hospitalif.conexao.Conexao;
 import br.com.hospitalif.util.Rotas;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
