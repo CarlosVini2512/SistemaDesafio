@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.hospitalif.controller.PacienteController">
+   <children>
+      <ImageView fitHeight="448.0" fitWidth="669.0" layoutX="-2.0" layoutY="-4.0" opacity="0.66" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagens/13.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <TextField alignment="CENTER" editable="false" layoutX="254.0" prefHeight="42.0" prefWidth="156.0" text="PACIENTE">
+         <font>
+            <Font name="Arial Black" size="19.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.37" specularConstant="2.0" specularExponent="40.0" surfaceScale="7.23">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="216.22" elevation="49.39" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DISAPPEAR" />
+         </cursor>
+      </TextField>
+      <Accordion layoutX="22.0" layoutY="21.0" />
+      <DatePicker fx:id="dtDataInicio" editable="false" layoutX="327.0" layoutY="124.0" prefHeight="31.0" prefWidth="131.0">
+         <effect>
+            <Lighting diffuseConstant="1.61" specularConstant="2.0" specularExponent="40.0" surfaceScale="3.82">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="207.44" elevation="36.22" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </DatePicker>
+      <DatePicker fx:id="dtDataFinal" editable="false" layoutX="491.0" layoutY="124.0" prefHeight="31.0" prefWidth="131.0">
+         <effect>
+            <Lighting diffuseConstant="1.68" specularConstant="2.0" specularExponent="40.0" surfaceScale="5.16">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="211.83" elevation="40.61" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </DatePicker>
+      <Text fill="#4d4d4d" layoutX="327.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="De:">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#4d4d4d" layoutX="491.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Até:">
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font>
+      </Text>
+    <TitledPane layoutX="22.0" layoutY="126.0" text="Doenças">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="listDoenca" layoutX="-2.0" prefHeight="180.0" prefWidth="177.0" />
+                  <ScrollBar layoutX="175.0" layoutY="1.0" orientation="VERTICAL" prefHeight="179.0" prefWidth="22.0" />
+               </children>
+            </AnchorPane>
+      </content>
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.49" specularConstant="2.0" specularExponent="40.0" surfaceScale="3.21">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="58.17" />
+               </light>
+            </Lighting>
+         </effect>
+    </TitledPane>
+      <Accordion layoutX="327.0" layoutY="292.0" />
+      <Accordion layoutX="315.0" layoutY="252.0" />
+    <TitledPane animated="false" layoutX="390.0" layoutY="228.0" text="Histórico">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="123.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="listHistorico" layoutX="1.0" prefHeight="124.0" prefWidth="196.0" />
+                  <ScrollBar layoutX="177.0" orientation="VERTICAL" prefHeight="122.0" prefWidth="19.0" />
+               </children>
+            </AnchorPane>
+      </content>
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="2.0" specularExponent="39.02" surfaceScale="3.2">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="49.39" elevation="40.61" />
+               </light>
+            </Lighting>
+         </effect>
+    </TitledPane>
+      <Button fx:id="btnConsultar" layoutX="427.0" layoutY="169.0" mnemonicParsing="false" onAction="#ConsultarPaciente" text="Consultar">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.61" specularConstant="1.45" specularExponent="37.56" surfaceScale="4.18">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="211.83" elevation="36.22" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Separator layoutX="287.0" layoutY="112.0" orientation="VERTICAL" prefHeight="306.0" prefWidth="19.0" />
+      <Button fx:id="btnVoltar" layoutX="34.0" layoutY="388.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="39.0" prefWidth="89.0" text="&lt;&lt;&lt;">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.31" specularConstant="0.45" specularExponent="40.0" surfaceScale="4.43">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="211.83" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</Pane>

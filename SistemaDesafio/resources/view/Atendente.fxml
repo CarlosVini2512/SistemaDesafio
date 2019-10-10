@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: PowderBlue;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.hospitalif.controller.AtendenteController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="42.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="400.0" fitWidth="590.0" layoutX="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagens/7.jpg" />
+         </image>
+      </ImageView>
+      <TextField editable="false" layoutX="212.0" layoutY="14.0" prefHeight="42.0" prefWidth="156.0" text="ATENDENTE">
+         <font>
+            <Font name="Arial Black" size="19.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.37" specularConstant="2.0" specularExponent="40.0" surfaceScale="3.33">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="216.22" elevation="137.19" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TextField>
+      <Button fx:id="buttonCadastroDePaciente" layoutX="157.0" layoutY="207.0" mnemonicParsing="false" onAction="#CadastrarPaciente" prefHeight="54.0" prefWidth="252.0" text="Cadastrar Paciente" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Black" size="19.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.66" specularConstant="0.0" specularExponent="34.63" surfaceScale="4.06">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant elevation="137.2" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</Pane>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: Navy;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.hospitalif.controller.CadastroFuncionarioController">
+   <children>
+      <ImageView fx:id="txtSenha" fitHeight="390.0" fitWidth="600.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" y="3.0">
+         <image>
+            <Image url="@Imagens/3.jpg" />
+         </image>
+      </ImageView>
+      <TextField alignment="CENTER" editable="false" layoutX="137.0" layoutY="9.0" prefHeight="42.0" prefWidth="334.0" text="ÁREA DO FUNCIONÁRIO">
+         <font>
+            <Font name="Arial Black" size="19.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.2" specularConstant="0.0" specularExponent="20.98" surfaceScale="5.15">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="216.22" elevation="40.61" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TextField>
+      <Text fill="WHITE" layoutX="341.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login:">
+         <font>
+            <Font name="Arial Black" size="19.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="2.0" specularExponent="39.51" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="273.29" elevation="70.24" />
+               </light>
+            </Lighting>
+         </effect>
+      </Text>
+      <Text fill="#f5f5f5" layoutX="339.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:">
+         <font>
+            <Font name="Arial Black" size="19.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="251.34" elevation="62.56" />
+               </light>
+            </Lighting>
+         </effect>
+      </Text>
+      <TextArea fx:id="txtStatus" layoutX="278.0" layoutY="229.0" prefHeight="117.0" prefWidth="309.0">
+         <effect>
+            <Lighting diffuseConstant="1.05" specularConstant="0.08" specularExponent="0.0" surfaceScale="7.36">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="49.39" elevation="49.39" />
+               </light>
+            </Lighting>
+         </effect>
+      </TextArea>
+      <TextField fx:id="txtLogin" layoutX="407.0" layoutY="88.0">
+         <effect>
+            <Lighting diffuseConstant="1.17" specularConstant="0.03" specularExponent="8.78" surfaceScale="4.07">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="360.0" />
+               </light>
+            </Lighting>
+         </effect>
+      </TextField>
+      <TextField fx:id="txtSenha" layoutX="411.0" layoutY="132.0" prefHeight="31.0" prefWidth="127.0">
+         <effect>
+            <Lighting diffuseConstant="1.1" specularConstant="0.2" specularExponent="5.36" surfaceScale="5.65">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="360.0" elevation="53.78" />
+               </light>
+            </Lighting>
+         </effect>
+      </TextField>
+      <TextField alignment="CENTER" editable="false" layoutX="493.0" layoutY="200.0" prefHeight="21.0" prefWidth="89.0" text="Status">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.34" specularConstant="0.0" specularExponent="6.83" surfaceScale="5.16">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="36.22" elevation="31.83" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TextField>
+      <Button fx:id="buttonSair" layoutX="27.0" layoutY="346.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="42.0" prefWidth="71.0" text="Sair">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Lighting diffuseConstant="1.37" specularConstant="1.06" specularExponent="40.0" surfaceScale="7.85">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="211.83" />
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+      <Button fx:id="buttonEntrar" layoutX="113.0" layoutY="346.0" mnemonicParsing="false" onAction="#LogarFuncionario" prefHeight="42.0" prefWidth="89.0" text="Entrar">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="1.1" specularExponent="40.0" surfaceScale="8.2">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="220.61" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</Pane>
