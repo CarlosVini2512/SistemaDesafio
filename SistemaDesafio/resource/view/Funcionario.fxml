@@ -15,23 +15,16 @@
             <Image url="@Imagens/11.jpg" />
          </image>
       </ImageView>
-      <TextField editable="false" layoutX="240.0" prefHeight="39.0" prefWidth="177.0" text="FUNCIONÁRIO">
+      <TextField editable="false" focusTraversable="false" layoutX="240.0" prefHeight="39.0" prefWidth="177.0" text="FUNCIONÁRIO">
          <font>
             <Font name="Arial Black" size="19.0" />
          </font>
-         <effect>
-            <Lighting diffuseConstant="1.14" specularExponent="31.22" surfaceScale="6.38">
-               <bumpInput>
-                  <Shadow />
-               </bumpInput>
-               <light>
-                  <Light.Distant azimuth="220.61" elevation="49.39" />
-               </light>
-            </Lighting>
-         </effect>
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
+         <effect>
+            <SepiaTone level="0.24" />
+         </effect>
       </TextField>
       <Text fill="#575757" layoutX="14.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login:">
          <font>

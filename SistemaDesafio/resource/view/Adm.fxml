@@ -15,25 +15,18 @@
             <Image url="@Imagens/11.jpg" />
          </image>
       </ImageView>
-      <TextField alignment="TOP_CENTER" editable="false" layoutX="160.0" layoutY="8.0" prefHeight="42.0" prefWidth="317.0" text="ÁREA DO ADMINISTRADOR">
+      <TextField alignment="TOP_CENTER" editable="false" focusTraversable="false" layoutX="160.0" layoutY="8.0" prefHeight="42.0" prefWidth="317.0" text="ÁREA DO ADMINISTRADOR">
          <font>
             <Font name="Arial Black" size="19.0" />
          </font>
-         <effect>
-            <Lighting diffuseConstant="1.17" specularConstant="0.74" specularExponent="40.0" surfaceScale="4.79">
-               <bumpInput>
-                  <Shadow />
-               </bumpInput>
-               <light>
-                  <Light.Distant azimuth="40.61" elevation="137.2" />
-               </light>
-            </Lighting>
-         </effect>
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
+         <effect>
+            <SepiaTone level="0.0" />
+         </effect>
       </TextField>
-      <Button fx:id="buttonCadastroFuncionario" ellipsisString="" layoutX="186.0" layoutY="166.0" mnemonicParsing="false" onAction="#CadastrarFuncionario" prefHeight="68.0" prefWidth="265.0" text="CADASTRAR FUNCIONÁRIO">
+      <Button fx:id="buttonCadastroFuncionario" ellipsisString="" layoutX="170.0" layoutY="169.0" mnemonicParsing="false" onAction="#CadastrarFuncionario" prefHeight="57.0" prefWidth="274.0" text="CADASTRAR FUNCIONÁRIO">
          <font>
             <Font name="Arial Black" size="16.0" />
          </font>
@@ -50,6 +43,11 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+      </Button>
+      <Button fx:id="btnVoltar" layoutX="24.0" layoutY="354.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="32.0" prefWidth="74.0" text="&lt;&lt;&lt;">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
       </Button>
    </children>
 </Pane>

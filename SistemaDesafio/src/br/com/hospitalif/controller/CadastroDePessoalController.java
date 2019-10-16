@@ -38,13 +38,14 @@ public class CadastroDePessoalController extends Main {
     private SplitMenuButton btnSexo;
 
     @FXML
-    void CadastrarPessoa(ActionEvent event) {
+    void CadastrarPessoa(ActionEvent event) throws IOException {
     	String status = txtStatus.getText();
     	String nome  = txtNome.getText();
     	String cpf = txtCPF.getText();
     	String tipodesangue = btnTipoSangue.getId();
     	String idade = txtIdade.getText();
     	String sexo = btnSexo.getId();
+    	openPage(Rotas.FUNCIONARIO);
     }
 
     @FXML

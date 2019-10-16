@@ -19,7 +19,7 @@ public class Main extends Application {
 		stageAtual = Stage;	
 		
 		try {	
-				openPage(Rotas.DASH);
+				openPage(Rotas.LOGIN);
 		} catch (Exception e) {
 				e.printStackTrace();
 		}

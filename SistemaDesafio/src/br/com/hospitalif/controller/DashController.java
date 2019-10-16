@@ -50,6 +50,9 @@ public class DashController extends Main{
     @FXML
     private Button btnAdm;
     
+    @FXML
+    private Button btnVolrar;
+    
 
     @FXML
     void RegistrarAtendimento(ActionEvent event) throws IOException {
@@ -58,7 +61,7 @@ public class DashController extends Main{
 
     @FXML
     void SalvarEnfermidadePessoal(ActionEvent event) throws IOException {
-    	openPage(Rotas.ENFERMEIRO);
+    	openPage(Rotas.ENFERMIDADE);
     }
 
     @FXML
@@ -103,12 +106,17 @@ public class DashController extends Main{
 
     @FXML
     void CadastrarFuncionario(ActionEvent event) throws IOException {
-    	openPage(Rotas.CADASTROFUNCIONARIO);
+    	openPage(Rotas.FUNCIONARIO);
     }
 
     @FXML
     void CadastrarGerente(ActionEvent event) {
 
+    }
+    
+    @FXML
+    void VoltarTela(ActionEvent event) throws IOException {
+    	openPage(Rotas.LOGIN);
     }
 
 }

@@ -14,72 +14,87 @@
          <image>
             <Image url="@Imagens/13.png" />
          </image></ImageView>
-      <Text fill="WHITE" layoutX="89.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN" wrappingWidth="64.09765625">
-         <font>
-            <Font name="Arial Black" size="15.0" />
-         </font>
-      </Text>
-      <Button fx:id="btnEntrar" layoutX="150.0" layoutY="419.0" mnemonicParsing="false" onAction="#LogarUsuario" prefHeight="31.0" prefWidth="83.0" text="Entrar">
-         <font>
-            <Font name="Arial Black" size="16.0" />
-         </font>
-         <effect>
-            <Lighting diffuseConstant="1.29" specularConstant="0.0" specularExponent="21.95" surfaceScale="4.92">
-               <bumpInput>
-                  <Shadow />
-               </bumpInput>
-               <light>
-                  <Light.Distant azimuth="211.83" />
-               </light>
-            </Lighting>
-         </effect>
-      </Button>
-      <TextField fx:id="txtLogin" layoutX="47.0" layoutY="189.0">
-         <effect>
-            <Lighting diffuseConstant="1.35" specularExponent="40.0" surfaceScale="2.78">
-               <bumpInput>
-                  <Shadow />
-               </bumpInput>
-               <light>
-                  <Light.Distant azimuth="49.19" />
-               </light>
-            </Lighting>
-         </effect>
-      </TextField>
-      <TextField fx:id="txtSenha" layoutX="65.0" layoutY="255.0" prefHeight="25.0" prefWidth="113.0">
-         <effect>
-            <Lighting diffuseConstant="1.14" specularExponent="40.0" surfaceScale="3.82">
-               <bumpInput>
-                  <Shadow />
-               </bumpInput>
-               <light>
-                  <Light.Distant elevation="57.56" />
-               </light>
-            </Lighting>
-         </effect>
-      </TextField>
-      <Text fill="WHITE" layoutX="92.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SENHA">
-         <font>
-            <Font name="Arial Black" size="15.0" />
-         </font>
-      </Text>
-      <Button fx:id="btnVoltar" layoutX="14.0" layoutY="417.0" mnemonicParsing="false" onAction="#VoltaTela" prefHeight="21.0" prefWidth="83.0" text="&lt;&lt;&lt;">
-         <font>
-            <Font name="Arial Black" size="18.0" />
-         </font>
-         <effect>
-            <Lighting diffuseConstant="1.41" specularConstant="1.3" specularExponent="40.0" surfaceScale="4.42">
-               <bumpInput>
-                  <Shadow />
-               </bumpInput>
-               <light>
-                  <Light.Distant azimuth="225.0" elevation="40.61" />
-               </light>
-            </Lighting>
-         </effect>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
+      <SplitPane dividerPositions="0.17647058823529413" layoutX="14.0" layoutY="37.0" orientation="VERTICAL" prefHeight="342.0" prefWidth="303.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="88.0" prefWidth="301.0" style="-fx-background-color: DimGray;">
+               <children>
+                  <Text fill="WHITE" layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN" wrappingWidth="110.0">
+                     <font>
+                        <Font name="Arial Black" size="27.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="246.0" prefWidth="294.0" style="-fx-background-color: DimGray;">
+               <children>
+                  <TextField fx:id="txtLogin" layoutX="14.0" layoutY="53.0" prefHeight="36.0" prefWidth="191.0">
+                     <effect>
+                        <Lighting diffuseConstant="1.35" specularExponent="40.0" surfaceScale="2.78">
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant azimuth="49.19" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </TextField>
+                  <Text fill="WHITE" layoutX="14.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USERNAME" wrappingWidth="122.09765625">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtSenha" layoutX="14.0" layoutY="127.0" prefHeight="36.0" prefWidth="191.0">
+                     <effect>
+                        <Lighting diffuseConstant="1.14" specularExponent="40.0" surfaceScale="3.82">
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant elevation="57.56" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </TextField>
+                  <Text fill="WHITE" layoutX="14.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PASSWORD">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="btnEntrar" layoutX="213.0" layoutY="127.0" mnemonicParsing="false" onAction="#LogarUsuario" prefHeight="36.0" prefWidth="80.0" text="LOGIN">
+                     <font>
+                        <Font name="Arial Black" size="16.0" />
+                     </font>
+                     <effect>
+                        <Lighting diffuseConstant="1.29" specularConstant="0.0" specularExponent="21.95" surfaceScale="4.92">
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant azimuth="211.83" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Hyperlink fx:id="btnEsqueciSenha" layoutX="149.0" layoutY="226.0" onAction="#EsqueciSenha" prefHeight="36.0" prefWidth="122.0" text="Esqueci Senha" textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Hyperlink>
+                  <RadioButton fx:id="btnLembrar" layoutX="22.0" layoutY="235.0" mnemonicParsing="false" onAction="#LembrarUsuario" text="LEMBRE-ME" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </RadioButton>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
    </children>
 </Pane>

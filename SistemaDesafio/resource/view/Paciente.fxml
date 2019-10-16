@@ -18,23 +18,16 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <TextField alignment="CENTER" editable="false" layoutX="254.0" prefHeight="42.0" prefWidth="156.0" text="PACIENTE">
+      <TextField alignment="CENTER" editable="false" focusTraversable="false" layoutX="254.0" prefHeight="42.0" prefWidth="156.0" text="PACIENTE">
          <font>
             <Font name="Arial Black" size="19.0" />
          </font>
-         <effect>
-            <Lighting diffuseConstant="1.37" specularConstant="2.0" specularExponent="40.0" surfaceScale="7.23">
-               <bumpInput>
-                  <Shadow />
-               </bumpInput>
-               <light>
-                  <Light.Distant azimuth="216.22" elevation="49.39" />
-               </light>
-            </Lighting>
-         </effect>
          <cursor>
             <Cursor fx:constant="DISAPPEAR" />
          </cursor>
+         <effect>
+            <SepiaTone level="0.35" />
+         </effect>
       </TextField>
       <Accordion layoutX="22.0" layoutY="21.0" />
       <DatePicker fx:id="dtDataInicio" editable="false" layoutX="327.0" layoutY="124.0" prefHeight="31.0" prefWidth="131.0">

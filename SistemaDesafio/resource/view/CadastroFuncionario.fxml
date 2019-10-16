@@ -10,7 +10,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: Navy;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.hospitalif.controller.CadastroFuncionarioController">
    <children>
-      <ImageView fx:id="txtSenha" fitHeight="390.0" fitWidth="600.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" y="3.0">
+      <ImageView fx:id="txtSenha" fitHeight="390.0" fitWidth="600.0" layoutX="4.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" y="3.0">
          <image>
             <Image url="@Imagens/3.jpg" />
          </image>
@@ -19,19 +19,12 @@
          <font>
             <Font name="Arial Black" size="19.0" />
          </font>
-         <effect>
-            <Lighting diffuseConstant="1.2" specularConstant="0.0" specularExponent="20.98" surfaceScale="5.15">
-               <bumpInput>
-                  <Shadow />
-               </bumpInput>
-               <light>
-                  <Light.Distant azimuth="216.22" elevation="40.61" />
-               </light>
-            </Lighting>
-         </effect>
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
+         <effect>
+            <SepiaTone level="0.36" />
+         </effect>
       </TextField>
       <Text fill="WHITE" layoutX="341.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login:">
          <font>
@@ -117,7 +110,7 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </TextField>
-      <Button fx:id="buttonSair" layoutX="27.0" layoutY="346.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="42.0" prefWidth="71.0" text="Sair">
+      <Button fx:id="btnSair" layoutX="27.0" layoutY="346.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="42.0" prefWidth="71.0" text="Sair">
          <font>
             <Font name="Arial Black" size="15.0" />
          </font>
@@ -135,7 +128,7 @@
             </Lighting>
          </effect>
       </Button>
-      <Button fx:id="buttonEntrar" layoutX="113.0" layoutY="346.0" mnemonicParsing="false" onAction="#LogarFuncionario" prefHeight="42.0" prefWidth="89.0" text="Entrar">
+      <Button fx:id="btnEntrar" layoutX="113.0" layoutY="346.0" mnemonicParsing="false" onAction="#LogarFuncionario" prefHeight="42.0" prefWidth="89.0" text="Entrar">
          <font>
             <Font name="Arial Black" size="15.0" />
          </font>

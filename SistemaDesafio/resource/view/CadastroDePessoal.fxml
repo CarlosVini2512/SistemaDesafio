@@ -35,12 +35,12 @@
             <Font name="Arial Black" size="16.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="399.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:" wrappingWidth="45.01220703125">
+      <Text fill="WHITE" layoutX="14.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:" wrappingWidth="45.01220703125">
          <font>
             <Font name="Arial Black" size="16.0" />
          </font>
       </Text>
-      <SplitMenuButton fx:id="btnSexo" layoutX="497.0" layoutY="162.0" mnemonicParsing="false" text="Sexo">
+      <SplitMenuButton fx:id="btnSexo" layoutX="497.0" layoutY="108.0" mnemonicParsing="false" text="Sexo">
         <items>
           <MenuItem mnemonicParsing="false" text="Action 1" />
           <MenuItem mnemonicParsing="false" text="Action 2" />
@@ -62,12 +62,12 @@
             <Font name="Arial Unicode MS" size="15.0" />
          </font>
       </SplitMenuButton>
-      <Text fill="WHITE" layoutX="18.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Idade:" wrappingWidth="53.85205078125">
+      <Text fill="WHITE" layoutX="10.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Idade:" wrappingWidth="53.85205078125">
          <font>
             <Font name="Arial Black" size="15.0" />
          </font>
       </Text>
-      <TextArea fx:id="txtStatus" layoutX="8.0" layoutY="234.0" prefHeight="116.0" prefWidth="360.0" style="-fx-background-color: DarkGray;">
+      <TextArea fx:id="txtStatus" layoutX="214.0" layoutY="169.0" prefHeight="116.0" prefWidth="360.0" style="-fx-background-color: DarkGray;">
          <effect>
             <Lighting>
                <bumpInput>
@@ -79,41 +79,24 @@
             </Lighting>
          </effect>
       </TextArea>
-      <TextField editable="false" layoutX="31.0" layoutY="341.0" prefHeight="20.0" prefWidth="81.0" text="Status">
+      <TextField editable="false" layoutX="479.0" layoutY="269.0" prefHeight="20.0" prefWidth="81.0" text="Status">
          <font>
             <Font name="Arial Black" size="15.0" />
          </font>
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
-         <effect>
-            <Lighting specularExponent="40.0" surfaceScale="3.33">
-               <bumpInput>
-                  <Shadow />
-               </bumpInput>
-               <light>
-                  <Light.Distant />
-               </light>
-            </Lighting>
-         </effect>
       </TextField>
-      <TextField editable="false" layoutX="159.0" layoutY="23.0" prefHeight="42.0" prefWidth="283.0" text="CADASTRO DE PESSOAL">
+      <TextField editable="false" layoutX="159.0" layoutY="23.0" prefHeight="31.0" prefWidth="282.0" text="CADASTRO DE PESSOAL">
          <font>
             <Font name="Arial Black" size="19.0" />
          </font>
-         <effect>
-            <Lighting diffuseConstant="1.32" specularConstant="0.37" specularExponent="23.9" surfaceScale="3.94">
-               <bumpInput>
-                  <Shadow />
-               </bumpInput>
-               <light>
-                  <Light.Distant azimuth="27.44" elevation="141.59" />
-               </light>
-            </Lighting>
-         </effect>
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
+         <effect>
+            <SepiaTone level="0.54" />
+         </effect>
       </TextField>
       <TextField fx:id="txtNome" layoutX="76.0" layoutY="102.0" prefHeight="42.0" prefWidth="236.0">
          <effect>
@@ -127,7 +110,7 @@
             </Lighting>
          </effect>
       </TextField>
-      <TextField fx:id="txtCPF" layoutX="451.0" layoutY="103.0" prefHeight="31.0" prefWidth="126.0">
+      <TextField fx:id="txtCPF" layoutX="72.0" layoutY="151.0" prefHeight="31.0" prefWidth="126.0">
          <effect>
             <Lighting diffuseConstant="0.93" surfaceScale="4.06">
                <bumpInput>
@@ -139,7 +122,7 @@
             </Lighting>
          </effect>
       </TextField>
-      <TextField fx:id="txtIdade" layoutX="76.0" layoutY="162.0" prefHeight="23.0" prefWidth="38.0">
+      <TextField fx:id="txtIdade" layoutX="72.0" layoutY="196.0" prefHeight="23.0" prefWidth="38.0">
          <effect>
             <Lighting specularExponent="29.76" surfaceScale="4.18">
                <bumpInput>
@@ -187,7 +170,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <SplitMenuButton fx:id="btnTipoSangue" layoutX="312.0" layoutY="162.0" mnemonicParsing="false" text="Tipo Sanguíneo">
+      <SplitMenuButton fx:id="btnTipoSangue" layoutX="332.0" layoutY="108.0" mnemonicParsing="false" text="Tipo Sanguíneo">
         <items>
           <MenuItem mnemonicParsing="false" text="Action 1" />
           <MenuItem mnemonicParsing="false" text="Action 2" />

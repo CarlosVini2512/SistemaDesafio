@@ -22,10 +22,10 @@ public class CadastroFuncionarioController extends Main{
     private TextArea txtStatus;
 
     @FXML
-    private Button buttonSair;
+    private Button btnSair;
 
     @FXML
-    private Button buttonEntrar;
+    private Button btnEntrar;
 
 
     @FXML

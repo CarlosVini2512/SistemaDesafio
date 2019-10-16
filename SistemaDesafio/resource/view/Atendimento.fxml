@@ -16,23 +16,16 @@
             <Image url="@Imagens/8.jpg" />
          </image>
       </ImageView>
-      <TextField editable="false" layoutX="208.0" layoutY="1.0" prefHeight="42.0" prefWidth="180.0" text="ATENDIMENTO">
+      <TextField editable="false" focusTraversable="false" layoutX="208.0" layoutY="1.0" prefHeight="42.0" prefWidth="180.0" text="ATENDIMENTO">
          <font>
             <Font name="Arial Black" size="19.0" />
          </font>
-         <effect>
-            <Lighting diffuseConstant="1.37" specularConstant="1.03" specularExponent="34.63" surfaceScale="6.87">
-               <bumpInput>
-                  <Shadow />
-               </bumpInput>
-               <light>
-                  <Light.Distant azimuth="216.22" elevation="40.61" />
-               </light>
-            </Lighting>
-         </effect>
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
+         <effect>
+            <SepiaTone level="0.13" />
+         </effect>
       </TextField>
       <DatePicker fx:id="txtData" layoutX="77.0" layoutY="75.0" prefHeight="31.0" prefWidth="132.0">
          <effect>
@@ -92,7 +85,7 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TextArea fx:id="txtComentEnfermeiro" layoutY="2.0" prefHeight="180.0" prefWidth="202.0" />
+                        <TextArea fx:id="txtComentEnfermeiro" layoutX="6.0" layoutY="-7.0" prefHeight="188.0" prefWidth="191.0" />
                      </children></AnchorPane>
             </content>
                <font>

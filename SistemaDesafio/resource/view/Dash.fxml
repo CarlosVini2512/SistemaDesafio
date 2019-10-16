@@ -180,6 +180,27 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
+                        <Button fx:id="btnVolrar" layoutX="-6.0" layoutY="388.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="39.0" prefWidth="67.0" text="&lt;&lt;&lt;" AnchorPane.leftAnchor="-5.0">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                           <effect>
+                              <Lighting diffuseConstant="1.51" specularConstant="0.0" surfaceScale="5.04">
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant azimuth="360.0" elevation="36.21" />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                           <padding>
+                              <Insets left="-4.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
                      </children>
                   </AnchorPane>
             </content>
