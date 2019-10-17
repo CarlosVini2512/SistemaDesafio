@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.time.LocalDate;
 
 import app.Main;
+import br.com.hospitalif.DAO.PacienteDAO;
+import br.com.hospitalif.model.Paciente;
 import br.com.hospitalif.util.Rotas;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -41,6 +43,10 @@ public class PacienteController extends Main{
     	LocalDate dataInicial = dtDataInicio.getValue();
     	Callback<?,?> doenca = listDoenca.getCellFactory();
     	LocalDate dataFinal = dtDataFinal.getValue();
+    	
+    	Paciente paciente = new Paciente();
+    	PacienteDAO pacienteDAO = new PacienteDAO();    	
+    	
     }
 
     @FXML

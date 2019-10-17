@@ -90,9 +90,9 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </TextField>
-      <Button fx:id="btnEntrar" layoutX="529.0" layoutY="383.0" mnemonicParsing="false" onAction="#LogarFuncionario" text="ENTRAR">
+      <Button fx:id="btnCadastrar" layoutX="526.0" layoutY="383.0" mnemonicParsing="false" onAction="#CadastrarFuncionario" prefHeight="42.0" prefWidth="119.0" text="CADASTRAR">
          <font>
-            <Font name="Arial Black" size="18.0" />
+            <Font name="Arial Black" size="14.0" />
          </font>
          <effect>
             <Lighting diffuseConstant="1.29" specularExponent="28.29" surfaceScale="4.79">
@@ -108,7 +108,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btnVoltar" layoutX="24.0" layoutY="383.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="39.0" prefWidth="107.0" text="VOLTAR">
+      <Button fx:id="btnVoltar" layoutX="24.0" layoutY="383.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="31.0" prefWidth="82.0" text="&lt;&lt;&lt;">
          <font>
             <Font name="Arial Black" size="17.0" />
          </font>

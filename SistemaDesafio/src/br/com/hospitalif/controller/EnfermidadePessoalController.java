@@ -1,8 +1,11 @@
 package br.com.hospitalif.controller;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import app.Main;
+import br.com.hospitalif.DAO.EnfermidadeDAO;
+import br.com.hospitalif.model.EnfermidadePessoal;
 import br.com.hospitalif.util.Rotas;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -24,10 +27,16 @@ public class EnfermidadePessoalController extends Main{
     private TextArea txtComent;
 
     @FXML
-    void SalvarDados(ActionEvent event) {
+    void SalvarDados(ActionEvent event) throws SQLException {
     	
-    	String comentario = txtComent.getText();
+    	String Comentario = txtComent.getText();
     	String StatusEnfPessoal = txtStatusEnfermidadeP.getText();
+    	
+    	EnfermidadePessoal enfermidadeP = new EnfermidadePessoal();
+    	EnfermidadeDAO enfermidadeDAO = new EnfermidadeDAO(); 
+    	enfermidadeP.setComentario(Comentario);
+    	enfermidadeP.setStatusEnfermidade(StatusEnfPessoal);
+    	enfermidadeDAO.save(enfermidadeP);
     }
 
     @FXML

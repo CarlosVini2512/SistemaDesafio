@@ -27,7 +27,7 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="246.0" prefWidth="294.0" style="-fx-background-color: DimGray;">
                <children>
-                  <TextField fx:id="txtLogin" layoutX="14.0" layoutY="53.0" prefHeight="36.0" prefWidth="191.0">
+                  <TextField fx:id="txtLogin" layoutX="14.0" layoutY="53.0" prefHeight="31.0" prefWidth="191.0">
                      <effect>
                         <Lighting diffuseConstant="1.35" specularExponent="40.0" surfaceScale="2.78">
                            <bumpInput>
@@ -44,26 +44,14 @@
                         <Font name="Arial Black" size="15.0" />
                      </font>
                   </Text>
-                  <TextField fx:id="txtSenha" layoutX="14.0" layoutY="127.0" prefHeight="36.0" prefWidth="191.0">
-                     <effect>
-                        <Lighting diffuseConstant="1.14" specularExponent="40.0" surfaceScale="3.82">
-                           <bumpInput>
-                              <Shadow />
-                           </bumpInput>
-                           <light>
-                              <Light.Distant elevation="57.56" />
-                           </light>
-                        </Lighting>
-                     </effect>
-                  </TextField>
                   <Text fill="WHITE" layoutX="14.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PASSWORD">
                      <font>
                         <Font name="Arial Black" size="15.0" />
                      </font>
                   </Text>
-                  <Button fx:id="btnEntrar" layoutX="213.0" layoutY="127.0" mnemonicParsing="false" onAction="#LogarUsuario" prefHeight="36.0" prefWidth="80.0" text="LOGIN">
+                  <Button fx:id="btnEntrar" layoutX="214.0" layoutY="130.0" mnemonicParsing="false" onAction="#LogarUsuario" prefHeight="31.0" prefWidth="73.0" text="LOGIN">
                      <font>
-                        <Font name="Arial Black" size="16.0" />
+                        <Font name="Arial Black" size="14.0" />
                      </font>
                      <effect>
                         <Lighting diffuseConstant="1.29" specularConstant="0.0" specularExponent="21.95" surfaceScale="4.92">
@@ -86,12 +74,13 @@
                   </Hyperlink>
                   <RadioButton fx:id="btnLembrar" layoutX="22.0" layoutY="235.0" mnemonicParsing="false" onAction="#LembrarUsuario" text="LEMBRE-ME" textFill="WHITE">
                      <font>
-                        <Font name="System Bold Italic" size="15.0" />
+                        <Font name="System Bold Italic" size="14.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </RadioButton>
+                  <PasswordField fx:id="txtSenha" layoutX="16.0" layoutY="130.0" prefHeight="30.0" prefWidth="191.0" />
                </children>
             </AnchorPane>
         </items>

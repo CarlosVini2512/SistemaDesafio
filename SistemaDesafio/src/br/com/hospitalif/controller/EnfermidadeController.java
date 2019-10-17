@@ -3,6 +3,8 @@ package br.com.hospitalif.controller;
 import java.io.IOException;
 
 import app.Main;
+import br.com.hospitalif.DAO.EnfermidadeDAO;
+import br.com.hospitalif.model.Enfermidade;
 import br.com.hospitalif.util.Rotas;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -34,7 +36,12 @@ public class EnfermidadeController extends Main{
     	
     	String nome = txtNome.getText();
     	String descricao = txtDescricao.getText();
-    	String tipoEnf = btnTipoEnfermidade.getId();
+    	//int tipoEnf = Integer.parseInt(btnTipoEnfermidade.getId());//não está pegado Id, concertar!    	
+    	Enfermidade enfermidade = new Enfermidade();
+    	EnfermidadeDAO enfermidadeDAO = new EnfermidadeDAO();
+    	enfermidade.setNome(nome);
+    	enfermidade.setDescricao(descricao);
+    	//enfermidade.setIdEnfermidade(tipoEnf);
     }
 
     @FXML

@@ -16,15 +16,15 @@ public class EnfermidadePessoal extends Enfermidade{
 		public String getComentario() {
 			return this.comentario;
 		}
-		public void setComentario(String coment) {
-			this.comentario = coment;
+		public void setComentario(String comentario) {
+			this.comentario = comentario;
 		}
 		
 		public String getStatusEnfermidade() {
 			return this.statusDeEnfermidade;
 		}
-		public void setStatusEnfermidade(String statusEnf) {
-			this.statusDeEnfermidade = statusEnf;
+		public void setStatusEnfermidade(String statusDeEnfermidade) {
+			this.statusDeEnfermidade = statusDeEnfermidade;
 		}
 		
 }

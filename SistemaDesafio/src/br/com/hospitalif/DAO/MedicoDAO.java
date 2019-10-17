@@ -13,7 +13,7 @@ import br.com.hospitalif.model.Medico;
 
 public class MedicoDAO {
 
-		public void save(Medico m) throws SQLException {
+		public static void save(Medico m) throws SQLException {
 			Conexao conn = new Conexao();
 			Connection conexao = conn.getConnection();
 			System.out.println(conn.getStatus());

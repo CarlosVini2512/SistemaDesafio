@@ -18,7 +18,7 @@ public class AtendenteController extends Main {
     
     @FXML
     void CadastrarPaciente(ActionEvent event) throws IOException {
-    	openPage(Rotas.PACIENTE);
+    	openPage(Rotas.CADASTRODEPESSOA);
     }
 
     @FXML

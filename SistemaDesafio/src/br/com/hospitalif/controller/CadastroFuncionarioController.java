@@ -1,8 +1,11 @@
 package br.com.hospitalif.controller;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import app.Main;
+import br.com.hospitalif.DAO.MedicoDAO;
+import br.com.hospitalif.model.Medico;
 import br.com.hospitalif.util.Rotas;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -35,10 +38,17 @@ public class CadastroFuncionarioController extends Main{
     }
 
     @FXML
-    void LogarFuncionario(ActionEvent event) {
+    void LogarFuncionario(ActionEvent event) throws SQLException {
     	String login = txtLogin.getText();
     	String senha = txtSenha.getText();
     	String status = txtStatus.getText();
+    	
+    	Medico medico = new Medico();    
+    	MedicoDAO medicoDAO = new MedicoDAO();
+    	medico.setLogin(login);
+    	medico.setSenha(senha);
+    	medico.setStatusUsuario(status);
+    	MedicoDAO.save(medico);
     }
 
 }

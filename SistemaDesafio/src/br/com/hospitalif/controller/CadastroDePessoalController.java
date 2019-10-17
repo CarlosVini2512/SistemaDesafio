@@ -1,8 +1,11 @@
 package br.com.hospitalif.controller;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import app.Main;
+import br.com.hospitalif.DAO.MedicoDAO;
+import br.com.hospitalif.model.Medico;
 import br.com.hospitalif.util.Rotas;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -38,20 +41,31 @@ public class CadastroDePessoalController extends Main {
     private SplitMenuButton btnSexo;
 
     @FXML
-    void CadastrarPessoa(ActionEvent event) throws IOException {
+    void CadastrarPessoa(ActionEvent event) throws IOException, SQLException {
     	String status = txtStatus.getText();
     	String nome  = txtNome.getText();
     	String cpf = txtCPF.getText();
     	String tipodesangue = btnTipoSangue.getId();
-    	String idade = txtIdade.getText();
+    	int idade = Integer.parseInt(txtIdade.getText());
     	String sexo = btnSexo.getId();
+    	
+    	Medico medico = new Medico();
+    	MedicoDAO medicoDAO = new MedicoDAO();
+    	medico.setStatusDaPessoa(status);
+    	medico.setNome(nome);
+    	medico.setCPF(cpf);
+    	medico.setTipoSangue(tipodesangue);
+    	medico.setIdade(idade);
+    	medico.setSexo(sexo);
+    	medicoDAO.save(medico);
+    	
     	openPage(Rotas.FUNCIONARIO);
     }
 
     @FXML
     void VoltarTela(ActionEvent event) throws IOException {
+    	
     	openPage(Rotas.DASH);
-
     }
 
 }
