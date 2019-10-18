@@ -22,7 +22,7 @@ import javafx.util.Callback;
 
 public class AtendimentoController extends Main{
 
-    @FXML
+	@FXML
     private DatePicker txtData;
 
     @FXML
@@ -32,7 +32,7 @@ public class AtendimentoController extends Main{
     private TextArea txtComentEnfermeiro;
 
     @FXML
-    private ListView<EnfermidadePessoalController> txtDoenca;
+    private TextArea txtDoenca;
 
     @FXML
     private TextArea txtComentMedico;
@@ -52,7 +52,7 @@ public class AtendimentoController extends Main{
     	LocalDate data = txtData.getValue();
     	float peso = Float.parseFloat(txtPeso.getText());
     	String ComentarioEnfermeiro = txtComentEnfermeiro.getText();  	
-    	Callback <?,?> doenca = txtDoenca.getCellFactory();
+    	String doenca = txtDoenca.getText();
     	String ComentarioMedico = txtComentMedico.getText();
     	float altura = Float.parseFloat(txtAltura.getText());
     	
@@ -61,7 +61,7 @@ public class AtendimentoController extends Main{
     	//atendimento.setData(data);
     	atendimento.setPeso(peso);
     	atendimento.setComentarioEnfermeiro(ComentarioEnfermeiro);
-    	//atendimento.setDoenca(doenca);
+    	atendimento.setDoenca(doenca);
     	atendimento.setComentarioMedico(ComentarioMedico);
     	atendimento.setAltura(altura);
     	atendimentoDAO.save(atendimento);

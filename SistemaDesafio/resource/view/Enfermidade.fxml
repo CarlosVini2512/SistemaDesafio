@@ -15,9 +15,9 @@
             <Image url="@Imagens/7.jpg" />
          </image>
       </ImageView>
-      <Text fill="WHITE" layoutX="25.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:">
+      <Text fill="#137970" layoutX="115.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:">
          <font>
-            <Font name="Arial Black" size="21.0" />
+            <Font name="Arial Black" size="17.0" />
          </font>
          <effect>
             <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
@@ -93,28 +93,6 @@
             <Image url="@Imagens/brasao2.png" />
          </image>
       </ImageView>
-      <SplitMenuButton fx:id="btnTipoEnfermidade" alignment="BASELINE_RIGHT" cache="true" cacheHint="ROTATE" contentDisplay="CENTER" graphicTextGap="5.0" layoutX="465.0" layoutY="195.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="274.0" text="Tipo de Infermidade" textAlignment="CENTER" textFill="#137970" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
-        <items>
-          <MenuItem mnemonicParsing="false" text="Action 1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
-        </items>
-         <font>
-            <Font name="Arial Black" size="19.0" />
-         </font>
-         <effect>
-            <Lighting diffuseConstant="2.0" specularConstant="2.0" specularExponent="40.0" surfaceScale="5.16">
-               <bumpInput>
-                  <Shadow />
-               </bumpInput>
-               <light>
-                  <Light.Distant azimuth="229.39" elevation="40.61" />
-               </light>
-            </Lighting>
-         </effect>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </SplitMenuButton>
       <Button fx:id="btnConsultar" layoutX="660.0" layoutY="519.0" mnemonicParsing="false" onAction="#ConsultarEnfermidade" prefHeight="38.0" prefWidth="103.0" text="Consultar">
          <font>
             <Font name="Arial Black" size="14.0" />
@@ -151,5 +129,22 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
+      <TextField fx:id="txtTipoEnfermidade" layoutX="469.0" layoutY="195.0" prefHeight="38.0" prefWidth="252.0">
+         <effect>
+            <Lighting diffuseConstant="1.44" specularConstant="2.0" specularExponent="40.0" surfaceScale="3.29">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="40.61" />
+               </light>
+            </Lighting>
+         </effect>
+      </TextField>
+      <Text fill="#137970" fontSmoothingType="LCD" layoutX="472.0" layoutY="192.0" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de Infermidade">
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font>
+      </Text>
    </children>
 </Pane>

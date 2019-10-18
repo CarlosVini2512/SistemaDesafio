@@ -140,36 +140,6 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TitledPane animated="false" layoutX="391.0" layoutY="153.0" prefHeight="168.0" prefWidth="151.0" text="Doenças">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="134.0" prefWidth="114.0">
-               <children>
-                  <ListView fx:id="txtDoenca" layoutX="-1.0" layoutY="-2.0" prefHeight="135.0" prefWidth="151.0" />
-                  <ScrollBar layoutX="126.0" layoutY="1.0" orientation="VERTICAL" prefHeight="128.0" prefWidth="20.0">
-                     <cursor>
-                        <Cursor fx:constant="DEFAULT" />
-                     </cursor>
-                  </ScrollBar>
-               </children>
-            </AnchorPane>
-        </content>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <effect>
-            <Lighting diffuseConstant="1.22" specularConstant="0.0" specularExponent="40.0" surfaceScale="5.77">
-               <bumpInput>
-                  <Shadow />
-               </bumpInput>
-               <light>
-                  <Light.Distant azimuth="49.39" elevation="128.41" />
-               </light>
-            </Lighting>
-         </effect>
-         <font>
-            <Font name="Arial Black" size="15.0" />
-         </font>
-      </TitledPane>
       <TextField fx:id="txtPeso" layoutX="339.0" layoutY="75.0" prefHeight="31.0" prefWidth="75.0">
          <cursor>
             <Cursor fx:constant="TEXT" />
@@ -210,5 +180,17 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
+      <TitledPane animated="false" layoutX="366.0" layoutY="143.0" text="Doenças">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextArea fx:id="txtDoenca" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </AnchorPane>
+        </content>
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </TitledPane>
    </children>
 </Pane>

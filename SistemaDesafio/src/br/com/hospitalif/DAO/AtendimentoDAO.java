@@ -17,11 +17,12 @@ public class AtendimentoDAO {
 		Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
-		String sqlINSERE = "INSERT INTO Atendimento VALUES(?,?,?,?,?,?)";
+		String sqlINSERE = "INSERT INTO Atendimento VALUES(?,?,?,?,?,?,?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		
 		//seta valores
+		stmt.setInt(1, a.getIdAtendimento());
 		stmt.setString(2, a.getComentarioEnfermeiro()); 
 		stmt.setString(3, a.getComentarioMedico());
 		stmt.setFloat(4, a.getPeso());
@@ -50,16 +51,17 @@ public class AtendimentoDAO {
 		Connection conexao = conn.getConnection();	
 		System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "UPDATE Atendimento SET (?,?,?,?,?,?) where id = (?)";
+		String sqlINSERE = "UPDATE Atendimento SET (?,?,?,?,?,?,?) where id = (?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
+		
+		stmt.setInt(1, a.getIdAtendimento());
 		stmt.setString(2, a.getComentarioEnfermeiro()); 
 		stmt.setString(3, a.getComentarioMedico());
 		stmt.setFloat(4, a.getPeso());
 		stmt.setFloat(5, a.getAltura());
 		stmt.setDate(6,new Date(a.getData().getTime()));
-		stmt.setString(7, a.getDoenca());
-		
+		stmt.setString(7, a.getDoenca());		
 		stmt.execute();
 	}
 	
@@ -67,12 +69,12 @@ public class AtendimentoDAO {
 		Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();		
 		System.out.println(conn.getStatus());
-		String sqlINSERE = "SELECT * FROM Atendimento (?,?,?,?,?,?)";
+		String sqlINSERE = "SELECT * FROM Atendimento";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		
 		ResultSet rs = stmt.executeQuery();
-		List <Atendimento> atendimentos = new ArrayList<Atendimento>();
+		List <Atendimento> atendimento = new ArrayList<Atendimento>();
 		
 		while(rs.next()) {
 			Atendimento atend = new Atendimento();
@@ -82,7 +84,7 @@ public class AtendimentoDAO {
 			atend.setAltura(rs.getFloat("altura"));
 			atend.setData(rs.getDate("data"));
 			atend.setDoenca(rs.getString("doenca"));
-			atendimentos.add(atend);
+			atendimento.add(atend);
 			
 			//executa
 			stmt.execute();

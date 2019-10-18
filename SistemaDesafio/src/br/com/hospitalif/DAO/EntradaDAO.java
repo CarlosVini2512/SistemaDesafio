@@ -21,10 +21,11 @@ public class EntradaDAO {
 		String sqlINSERE = "INSERT INTO Entrada VALUES(?,?,?,?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-		stmt.setDate(1, new Date(ent.getDataEntrada().getTime()));
-		stmt.setDate(2, new Date(ent.getDataSaida().getTime()));
-		stmt.setString(3, ent.getStatusEntrada());
-		stmt.setString(4, ent.getSituacaoDoPaciente());
+	    stmt.setInt(1, ent.getIdEntrada());
+		stmt.setDate(2, new Date(ent.getDataEntrada().getTime()));
+		stmt.setDate(3, new Date(ent.getDataSaida().getTime()));
+		stmt.setString(4, ent.getStatusEntrada());
+		stmt.setString(5, ent.getSituacaoDoPaciente());
 		stmt.execute();
 	}	
 
@@ -45,13 +46,14 @@ public class EntradaDAO {
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "UPDATE Entrada SET(?,?,?,?)";
+		String sqlINSERE = "UPDATE Entrada SET(?,?,?,?) where id = (?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-		stmt.setDate(1, new Date(ent.getDataEntrada().getTime()));
-		stmt.setDate(2, new Date(ent.getDataSaida().getTime()));
-		stmt.setString(3, ent.getStatusEntrada());
-		stmt.setString(4, ent.getSituacaoDoPaciente());
+	    stmt.setInt(1, ent.getIdEntrada());
+		stmt.setDate(2, new Date(ent.getDataEntrada().getTime()));
+		stmt.setDate(3, new Date(ent.getDataSaida().getTime()));
+		stmt.setString(4, ent.getStatusEntrada());
+		stmt.setString(5, ent.getSituacaoDoPaciente());
 		stmt.execute();
 	}	
 	
@@ -60,7 +62,7 @@ public class EntradaDAO {
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "SELECT * FROM Entrada VALUES(?,?,?,?)";
+		String sqlINSERE = "SELECT * FROM Entrada";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		

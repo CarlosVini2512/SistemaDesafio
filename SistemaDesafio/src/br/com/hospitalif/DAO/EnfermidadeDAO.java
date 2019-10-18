@@ -17,10 +17,12 @@ public class EnfermidadeDAO {
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "INSERT INTO Enfermidade VALUES(?,?,?)";
+		String sqlINSERE = "INSERT INTO Enfermidade VALUES(?,?,?,?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-		stmt.setString(1, enf.getNome());
+		
+		stmt.setInt(1, enf.getIdEnfermidade());
+		stmt.setString(2, enf.getNome());
 		stmt.setString(3, enf.getTipo()); 
 		stmt.setString(4, enf.getDescricao()); 
 		stmt.execute();
@@ -44,9 +46,10 @@ public class EnfermidadeDAO {
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "UPDATE FROM Enfermidade SET(?,?,?)";
+		String sqlINSERE = "UPDATE FROM Enfermidade SET(?,?,?,?) where id = (?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
+		stmt.setInt(1, enf.getIdEnfermidade());
 		stmt.setString(1, enf.getNome());
 		stmt.setString(3, enf.getTipo()); 
 		stmt.setString(4, enf.getDescricao()); 
@@ -58,7 +61,7 @@ public class EnfermidadeDAO {
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "SELECT * FROM Enfermidade SET(?,?,?)";
+		String sqlINSERE = "SELECT * FROM Enfermidade";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		

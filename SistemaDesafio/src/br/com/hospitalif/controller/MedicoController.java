@@ -17,7 +17,7 @@ import javafx.scene.control.TextField;
 public class MedicoController extends Main{
 
     @FXML
-    private SplitMenuButton btnEspecialidade;
+	private TextField txtEspecialidade;
 
     @FXML
     private Button btnSair;
@@ -31,7 +31,7 @@ public class MedicoController extends Main{
 
     @FXML
     void LogarMedico(ActionEvent event) throws SQLException {
-    	String especialidade = btnEspecialidade.getId();
+    	String especialidade = txtEspecialidade.getText();
     	int numeroRegistro = Integer.parseInt (txtNumRegistro.getText());
     	
     	Medico medico = new Medico();

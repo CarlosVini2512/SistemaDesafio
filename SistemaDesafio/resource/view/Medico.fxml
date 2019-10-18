@@ -44,28 +44,6 @@
             </Lighting>
          </effect>
       </TextField>
-      <SplitMenuButton fx:id="btnEspecialidade" layoutX="475.0" layoutY="193.0" mnemonicParsing="false" text="Especialidade:">
-        <items>
-          <MenuItem mnemonicParsing="false" text="Action 1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
-        </items>
-         <font>
-            <Font name="Arial Black" size="15.0" />
-         </font>
-         <effect>
-            <Lighting diffuseConstant="2.0" specularConstant="1.71" specularExponent="40.0" surfaceScale="7.48">
-               <bumpInput>
-                  <Shadow />
-               </bumpInput>
-               <light>
-                  <Light.Distant azimuth="220.61" />
-               </light>
-            </Lighting>
-         </effect>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </SplitMenuButton>
       <Button fx:id="btnEntrar" layoutX="565.0" layoutY="433.0" mnemonicParsing="false" onAction="#LogarMedico" prefHeight="38.0" prefWidth="111.0" text="Entrar">
          <font>
             <Font name="Arial Black" size="17.0" />
@@ -102,5 +80,22 @@
             </Lighting>
          </effect>
       </Button>
+      <Text fill="#515151" layoutX="474.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Especialidade:">
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtEspecialidade" layoutX="472.0" layoutY="216.0">
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="40.0" surfaceScale="4.43">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </TextField>
    </children>
 </Pane>

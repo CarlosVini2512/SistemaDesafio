@@ -28,7 +28,7 @@ public class EntradaController extends Main{
     private DatePicker dtDataSaida;
 
     @FXML
-    private SplitMenuButton btnSituacaoPaciente;
+    private TextArea txtSituacaoPaciente;
 
     @FXML
     private DatePicker dtDataEntrada;
@@ -40,7 +40,7 @@ public class EntradaController extends Main{
     @FXML
     void RegistrarEntrada(ActionEvent event) throws SQLException {
     	String statusEntrada = txtStatusDeEntrada.getText();
-    	String situacaoPaciente = btnSituacaoPaciente.getId();
+    	String situacaoPaciente = txtSituacaoPaciente.getText();
     	LocalDate dataEntrada = dtDataEntrada.getValue();
     	LocalDate dataSaida = dtDataSaida.getValue();
     	

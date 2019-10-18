@@ -74,8 +74,7 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <ListView fx:id="listDoenca" layoutX="-2.0" prefHeight="180.0" prefWidth="177.0" />
-                  <ScrollBar layoutX="175.0" layoutY="1.0" orientation="VERTICAL" prefHeight="179.0" prefWidth="22.0" />
+                  <TextArea fx:id="txtDoenca" layoutX="3.0" prefHeight="179.0" prefWidth="202.0" />
                </children>
             </AnchorPane>
       </content>
@@ -99,8 +98,7 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="123.0" prefWidth="200.0">
                <children>
-                  <ListView fx:id="listHistorico" layoutX="1.0" prefHeight="124.0" prefWidth="196.0" />
-                  <ScrollBar layoutX="177.0" orientation="VERTICAL" prefHeight="122.0" prefWidth="19.0" />
+                  <TextArea fx:id="txtHistorico" layoutX="-2.0" prefHeight="123.0" prefWidth="202.0" />
                </children>
             </AnchorPane>
       </content>

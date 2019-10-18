@@ -48,7 +48,7 @@ public class CadastroFuncionarioController extends Main{
     	medico.setLogin(login);
     	medico.setSenha(senha);
     	medico.setStatusUsuario(status);
-    	MedicoDAO.save(medico);
+    	medicoDAO.save(medico);
     }
 
 }

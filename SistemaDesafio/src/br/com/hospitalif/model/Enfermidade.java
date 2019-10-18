@@ -2,16 +2,24 @@ package br.com.hospitalif.model;
 
 public class Enfermidade {
 
-	private int idEnfermidade;
+	private int IdEnfermidade;
+	private String enfermidade;
 	private String nome;
 	private String tipo;
 	private String descricao;
 	
 	public int getIdEnfermidade() {
-		return this.idEnfermidade;
+		return this.IdEnfermidade;
 	}
 	public void setIdEnfermidade(int idEnfermidade) {
-		this.idEnfermidade = idEnfermidade;
+		this.IdEnfermidade = idEnfermidade;
+	}
+	
+	public String getEnfermidade() {
+		return this.enfermidade;
+	}
+	public void setEnfermidade(String enfermidade) {
+		this.enfermidade = enfermidade;
 	}
 	
 	public String getNome() {

@@ -4,19 +4,18 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 import app.Main;
-import br.com.hospitalif.DAO.MedicoDAO;
-import br.com.hospitalif.model.Medico;
+import br.com.hospitalif.DAO.PessoaDAO;
+import br.com.hospitalif.model.Pessoa;
 import br.com.hospitalif.util.Rotas;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 public class CadastroDePessoalController extends Main {
 
-    @FXML
+	@FXML
     private TextArea txtStatus;
 
     @FXML
@@ -32,34 +31,32 @@ public class CadastroDePessoalController extends Main {
     private TextField txtCPF;
 
     @FXML
-    private SplitMenuButton btnTipoSangue;
+    private TextField txtSexo;
 
     @FXML
     private TextField txtIdade;
 
     @FXML
-    private SplitMenuButton btnSexo;
+    private TextField txtTipoSangue;
 
     @FXML
     void CadastrarPessoa(ActionEvent event) throws IOException, SQLException {
     	String status = txtStatus.getText();
     	String nome  = txtNome.getText();
     	String cpf = txtCPF.getText();
-    	String tipodesangue = btnTipoSangue.getId();
+    	String tipodesangue = txtTipoSangue.getText();
     	int idade = Integer.parseInt(txtIdade.getText());
-    	String sexo = btnSexo.getId();
+    	String sexo = txtSexo.getText();
     	
-    	Medico medico = new Medico();
-    	MedicoDAO medicoDAO = new MedicoDAO();
-    	medico.setStatusDaPessoa(status);
-    	medico.setNome(nome);
-    	medico.setCPF(cpf);
-    	medico.setTipoSangue(tipodesangue);
-    	medico.setIdade(idade);
-    	medico.setSexo(sexo);
-    	medicoDAO.save(medico);
-    	
-    	openPage(Rotas.FUNCIONARIO);
+    	Pessoa pessoa = new Pessoa();
+    	PessoaDAO pessoaDAO = new PessoaDAO();
+    	pessoa.setStatusDaPessoa(status);
+    	pessoa.setNome(nome);
+    	pessoa.setCPF(cpf);
+    	pessoa.setTipoSangue(tipodesangue);
+    	pessoa.setIdade(idade);
+    	pessoa.setSexo(sexo);
+    	pessoaDAO.save(pessoa);
     }
 
     @FXML

@@ -101,12 +101,12 @@ public class DashController extends Main{
 
     @FXML
     void CadastrarEnfermeiro(ActionEvent event) throws IOException {
-    	openPage(Rotas.ENFERMEIRO);
+    	openPage(Rotas.	ENFERMEIRO);
     }
 
     @FXML
     void CadastrarFuncionario(ActionEvent event) throws IOException {
-    	openPage(Rotas.CADASTRODEPESSOA);
+    	openPage(Rotas.FUNCIONARIO);
     }
 
     @FXML

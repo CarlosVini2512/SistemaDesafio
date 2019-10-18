@@ -16,11 +16,12 @@ public class EnfermidadePessoalDAO {
 		Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
-		String sqlINSERE = "INSERT INTO EnfermidadePessoal VALUES(?,?)";
+		String sqlINSERE = "INSERT INTO EnfermidadePessoal VALUES(?,?,?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-			stmt.setString(1, ep.getComentario());
-			stmt.setString(2, ep.getStatusEnfermidade()); 
+		    stmt.setInt(1, ep.getIdEnfermidadePessoal());
+			stmt.setString(2, ep.getComentario());
+			stmt.setString(3, ep.getStatusEnfermidade()); 
 			stmt.execute();
 	}
 	
@@ -42,9 +43,10 @@ public class EnfermidadePessoalDAO {
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "UPDATE EnfermidadePessoal SET(?,?)";
+		String sqlINSERE = "UPDATE EnfermidadePessoal SET(?,?,?) where id = (?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
+	        stmt.setInt(1, ep.getIdEnfermidadePessoal());
 			stmt.setString(1, ep.getComentario());
 			stmt.setString(2, ep.getStatusEnfermidade()); 
 			stmt.execute();
@@ -53,7 +55,7 @@ public class EnfermidadePessoalDAO {
 		Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());	
-		String sqlINSERE = "SELECT * FROM EnfermidadePessoal VALUES(?,?)";
+		String sqlINSERE = "SELECT * FROM EnfermidadePessoal";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		

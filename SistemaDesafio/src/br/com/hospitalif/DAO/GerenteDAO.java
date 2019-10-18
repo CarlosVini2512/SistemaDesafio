@@ -16,10 +16,11 @@ public class GerenteDAO {
 		Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
-		String sqlINSERE = "INSERT INTO Gerente VALUES(?)";
+		String sqlINSERE = "INSERT INTO Gerente VALUES(?,?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-		stmt.setString(1, g.getCargo());
+	    stmt.setInt(1, g.getIdGerente());
+		stmt.setString(2, g.getCargo());
 		stmt.execute();
 	}
 	
@@ -38,10 +39,11 @@ public class GerenteDAO {
 		Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
-		String sqlINSERE = "UPDATE Gerente SET(?)";
+		String sqlINSERE = "UPDATE Gerente SET(?,?) where id = (?)";
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		
-		stmt.setString(1, g.getCargo());
+	    stmt.setInt(1, g.getIdGerente());
+		stmt.setString(2, g.getCargo());
 		stmt.execute();
 	}
 	
@@ -49,7 +51,7 @@ public class GerenteDAO {
 		Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
-		String sqlINSERE = "SELECT * FROM Gerente VALUES(?)";
+		String sqlINSERE = "SELECT * FROM Gerente";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		ResultSet rs = stmt.executeQuery();

@@ -36,19 +36,19 @@ public class FuncionarioController extends Main{
     void CadastrarFuncionario(ActionEvent event) throws SQLException {
     	String login = txtLogin.getText();
     	String senha = txtSenha.getText();
-    	//String statusFunc = txtStatusFuncionario.getText();
+    	String statusFunc = txtStatusFuncionario.getText();
     	
     	Medico medico = new Medico();
     	MedicoDAO medicoDAO = new MedicoDAO();
     	medico.setLogin(login);
     	medico.setSenha(senha);
-    	MedicoDAO.save(medico);
+    	medicoDAO.save(medico);
 
     }
 
     @FXML
     void VoltarTela(ActionEvent event) throws IOException {
-    	openPage(Rotas.CADASTRODEPESSOA);
+    	openPage(Rotas.DASH);
     }
 
 }

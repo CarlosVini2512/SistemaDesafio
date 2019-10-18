@@ -17,35 +17,37 @@ import javafx.util.Callback;
 
 public class PacienteController extends Main{
 
-    @FXML
-    private ListView<EntradaController> listHistorico;
+		@FXML
+	    private DatePicker dtDataInicio;
 
-    @FXML
-    private DatePicker dtDataInicio;
+	    @FXML
+	    private TextArea txtHistorico;
 
-    @FXML
-    private ListView<EnfermidadePessoalController> listDoenca;
+	    @FXML
+	    private TextArea txtDoenca;
 
-    @FXML
-    private Button btnVoltar;
+	    @FXML
+	    private Button btnVoltar;
 
-    @FXML
-    private Button btnConsultar;
+	    @FXML
+	    private Button btnConsultar;
 
-    @FXML
-    private DatePicker dtDataFinal;
+	    @FXML
+	    private DatePicker dtDataFinal;
 
 
     @FXML
     void ConsultarPaciente(ActionEvent event) {
 
-    	Callback<?, ?> historico = listHistorico.getCellFactory();
+    	String historico = txtHistorico.getText();
     	LocalDate dataInicial = dtDataInicio.getValue();
-    	Callback<?,?> doenca = listDoenca.getCellFactory();
+    	String doenca = txtDoenca.getText();
     	LocalDate dataFinal = dtDataFinal.getValue();
     	
     	Paciente paciente = new Paciente();
-    	PacienteDAO pacienteDAO = new PacienteDAO();    	
+    	PacienteDAO pacienteDAO = new PacienteDAO();    
+    	paciente.setHistorico(historico);
+    	paciente.setDoenca(doenca);
     	
     }
 

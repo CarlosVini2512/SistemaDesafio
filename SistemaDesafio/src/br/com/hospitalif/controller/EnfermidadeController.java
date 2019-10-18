@@ -1,6 +1,7 @@
 package br.com.hospitalif.controller;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import app.Main;
 import br.com.hospitalif.DAO.EnfermidadeDAO;
@@ -28,20 +29,22 @@ public class EnfermidadeController extends Main{
     private Button btnConsultar;
 
     @FXML
-    private SplitMenuButton btnTipoEnfermidade;
+    private TextField txtTipoEnfermidade;
 
 
     @FXML
-    void ConsultarEnfermidade(ActionEvent event) {
+    void ConsultarEnfermidade(ActionEvent event) throws SQLException {
     	
     	String nome = txtNome.getText();
     	String descricao = txtDescricao.getText();
-    	//int tipoEnf = Integer.parseInt(btnTipoEnfermidade.getId());//não está pegado Id, concertar!    	
+    	String tipoEnf = txtTipoEnfermidade.getText();  
+    	
     	Enfermidade enfermidade = new Enfermidade();
     	EnfermidadeDAO enfermidadeDAO = new EnfermidadeDAO();
     	enfermidade.setNome(nome);
     	enfermidade.setDescricao(descricao);
-    	//enfermidade.setIdEnfermidade(tipoEnf);
+    	enfermidade.setEnfermidade(tipoEnf);
+    	enfermidadeDAO.save(enfermidade);
     }
 
     @FXML
