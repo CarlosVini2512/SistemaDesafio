@@ -48,7 +48,7 @@ public class PacienteController extends Main{
     	PacienteDAO pacienteDAO = new PacienteDAO();    
     	paciente.setHistorico(historico);
     	paciente.setDoenca(doenca);
-    	
+    	pacienteDAO.save(paciente);
     }
 
     @FXML
