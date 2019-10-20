@@ -19,19 +19,20 @@ public class PacienteDAO {
 		String sqlINSERE = "INSERT INTO Paciente VALUES(?,?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-		stmt.setString(1, p.getDoenca());
-		stmt.setString(2, p.getHistorico()); 
+		stmt.setInt(1, p.getIdPaciente());
+		stmt.setString(2, p.getDoenca());
+		stmt.setString(3, p.getHistorico()); 
 		stmt.execute();
 	}
 	
-	public void removeById(int id) throws SQLException {
+	public void removeById(int IdPaciente) throws SQLException {
 		Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();	
 		System.out.println(conn.getStatus());	
-		String sqlINSERE = "DELETE FROM Paciente" + "WHERE id = (?)";
+		String sqlINSERE = "DELETE FROM Paciente" + "WHERE IdPaciente = (?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-		stmt.setInt(1,id);	
+		stmt.setInt(1,IdPaciente);	
 		stmt.execute();
 	}
 	
@@ -40,7 +41,7 @@ public class PacienteDAO {
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "UPDATE Paciente SET(?,?) where id = (?)";
+		String sqlINSERE = "UPDATE Paciente SET(?,?) where IdPaciente = (?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		stmt.setString(1, p.getDoenca());

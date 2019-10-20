@@ -28,16 +28,16 @@ public class EnfermidadeDAO {
 		stmt.execute();
 	}
 	
-	public void removeById(int id) throws SQLException {
+	public void removeById(int IdEnfermidade) throws SQLException {
 		Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();
 		
 		System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "DELETE FROM Enfermidade WHERE id = (?)";
+		String sqlINSERE = "DELETE FROM Enfermidade WHERE IdEnfermidade = (?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-		stmt.setInt(1,id);
+		stmt.setInt(1,IdEnfermidade);
 		stmt.execute();
 	}
 	
@@ -46,7 +46,7 @@ public class EnfermidadeDAO {
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "UPDATE FROM Enfermidade SET(?,?,?,?) where id = (?)";
+		String sqlINSERE = "UPDATE FROM Enfermidade SET(?,?,?,?) where IdEnfermidade = (?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		stmt.setInt(1, enf.getIdEnfermidade());

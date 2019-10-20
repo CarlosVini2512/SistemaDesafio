@@ -24,14 +24,14 @@ public class GerenteDAO {
 		stmt.execute();
 	}
 	
-	public void removeById(int id) throws SQLException {
+	public void removeById(int IdGerente) throws SQLException {
 		Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
-		String sqlINSERE = "DELETE FROM Gerente WHERE id = (?)";
+		String sqlINSERE = "DELETE FROM Gerente WHERE IdGerente = (?)";
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		
-		stmt.setInt(1,id);	
+		stmt.setInt(1,IdGerente);	
 		stmt.execute();
 	}
 	
@@ -39,7 +39,7 @@ public class GerenteDAO {
 		Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
-		String sqlINSERE = "UPDATE Gerente SET(?,?) where id = (?)";
+		String sqlINSERE = "UPDATE Gerente SET(?,?) where IdGerente = (?)";
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		
 	    stmt.setInt(1, g.getIdGerente());
