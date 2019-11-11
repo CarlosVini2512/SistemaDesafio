@@ -15,7 +15,7 @@
             <Image url="@Imagens/13.png" />
          </image>
       </ImageView>
-      <TextField editable="false" focusTraversable="false" layoutX="195.0" layoutY="14.0" prefHeight="42.0" prefWidth="166.0" text="ENFERMEIRO">
+      <TextField editable="false" focusTraversable="false" layoutX="214.0" layoutY="6.0" prefHeight="42.0" prefWidth="166.0" text="ENFERMEIRO">
          <font>
             <Font name="Arial Black" size="19.0" />
          </font>
@@ -26,12 +26,12 @@
             <SepiaTone level="0.23" />
          </effect>
       </TextField>
-      <Text fill="#434343" layoutX="14.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Número de Registro:">
+      <Text fill="#434343" layoutX="213.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Número de Registro:">
          <font>
-            <Font name="Arial Black" size="18.0" />
+            <Font name="Arial Black" size="15.0" />
          </font>
       </Text>
-      <TextField fx:id="txtNumDeRegistro" layoutX="14.0" layoutY="182.0" prefHeight="33.0" prefWidth="191.0">
+      <TextField fx:id="txtNumDeRegistro" layoutX="218.0" layoutY="223.0" prefHeight="33.0" prefWidth="191.0">
          <effect>
             <Lighting diffuseConstant="1.39" specularConstant="1.79" specularExponent="40.0" surfaceScale="4.79">
                <bumpInput>
@@ -79,5 +79,69 @@
             </Lighting>
          </effect>
       </Button>
+      <Text fill="#4d4d4d" layoutX="16.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="#464545" layoutX="18.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Idade:">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="#4a4a4a" layoutX="121.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sexo:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="#464646" layoutX="251.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo Sanguíneo:">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="#575757" layoutX="263.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtNome" layoutX="65.0" layoutY="79.0">
+         <effect>
+            <Lighting diffuseConstant="1.27" surfaceScale="4.06">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </TextField>
+      <TextField fx:id="txtCpf" layoutX="308.0" layoutY="79.0" prefHeight="31.0" prefWidth="106.0">
+         <effect>
+            <Lighting diffuseConstant="1.34" surfaceScale="3.82">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </TextField>
+      <TextField fx:id="txtIdade" layoutX="64.0" layoutY="113.0" prefHeight="31.0" prefWidth="40.0" />
+      <TextField fx:id="txtSexo" layoutX="161.0" layoutY="118.0" prefHeight="20.0" prefWidth="84.0" />
+      <TextField fx:id="txtTipoSanguineo" layoutX="367.0" layoutY="117.0" prefHeight="31.0" prefWidth="44.0" />
+      <Text fill="#404040" layoutX="21.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="#434343" layoutX="19.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtLogin" layoutX="74.0" layoutY="209.0" prefHeight="31.0" prefWidth="120.0" />
+      <TextField fx:id="txtSenha" layoutX="74.0" layoutY="244.0" prefHeight="31.0" prefWidth="94.0" />
    </children>
 </Pane>

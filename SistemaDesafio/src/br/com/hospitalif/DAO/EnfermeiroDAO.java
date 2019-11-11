@@ -17,18 +17,24 @@ public class EnfermeiroDAO {
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "INSERT INTO Enfermeiro VALUES(?,?)";
+		String sqlINSERE = "INSERT INTO Enfermeiro VALUES(?,?,?,?,?,?,?,?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		stmt.setInt(1, e.getIdEnfermeiro());
-		stmt.setInt(2, e.getNumeroRegistro());
+		stmt.setString(2, e.getNome());
+		stmt.setString(3, e.getCPF()); 
+		stmt.setInt(4, e.getIdade()); 
+		stmt.setString(5, e.getTipoSangue()); 
+		stmt.setString(6, e.getSexo());
+		stmt.setString(7, e.getLogin());
+		stmt.setString(8, e.getSenha()); 
+		stmt.setInt(9, e.getNumeroRegistro());
 		stmt.execute();
 	}
 	
 	public void removeById(int IdEnfermeiro) throws SQLException {
 		Conexao conn = new Conexao();
-		Connection conexao = conn.getConnection();
-		
+		Connection conexao = conn.getConnection();	
 		System.out.println(conn.getStatus());
 		
 		String sqlINSERE = "DELETE FROM Enfermeiro WHERE IdEnfermeiro = (?)";
@@ -44,31 +50,52 @@ public class EnfermeiroDAO {
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "UPDATE Enfermeiro SET(?,?) where IdEnfermeiro = (?)";
+		String sqlINSERE = "UPDATE Enfermeiro SET nome=(?), cpf=(?),idade=(?),tipoSanguineo=(?),sexo=(?),login=(?)"
+				+ ",senha=(?),numeroRegistro=(?) where id=(?) ";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-		stmt.setInt(1, e.getIdFuncionario());
-		stmt.setInt(1, e.getNumeroRegistro());
+		stmt.setInt(1, e.getIdEnfermeiro());
+		stmt.setString(2, e.getNome());
+		stmt.setString(3, e.getCPF()); 
+		stmt.setInt(4, e.getIdade()); 
+		stmt.setString(5, e.getTipoSangue()); 
+		stmt.setString(6, e.getSexo());
+		stmt.setString(7, e.getLogin());
+		stmt.setString(8, e.getSenha()); 
+		stmt.setInt(9, e.getNumeroRegistro());
 		stmt.execute();
 	}
 	
-	public void select(Enfermeiro e) throws SQLException {
-		Conexao conn = new Conexao();
-		Connection conexao = conn.getConnection();
-		System.out.println(conn.getStatus());
-		
-		String sqlINSERE = "SELECT * FROM Enfermeiro";
-		
-		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-		
-		ResultSet rs = stmt.executeQuery();
+	public List<Enfermeiro> select() {
 		List <Enfermeiro> enfermeiros = new ArrayList<Enfermeiro>();
+		try {
+			Conexao conn = new Conexao();
+			Connection conexao = conn.getConnection();
+			System.out.println(conn.getStatus());
 		
-		while(rs.next()) {
-		Enfermeiro enf = new Enfermeiro();
-		enf.setNumeroRegistro(rs.getInt("numeroderegistro"));
-		enfermeiros.add(enf);
+			String sqlINSERE = "SELECT * FROM Enfermeiro";
+			
+			PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
+		
+			ResultSet rs = stmt.executeQuery();
+		
+			while(rs.next()) {
+				Enfermeiro enf = new Enfermeiro();
+				enf.setIdFuncionario(rs.getInt("id"));
+				enf.setNome(rs.getString("nome"));
+				enf.setCPF(rs.getString("cpf"));
+				enf.setIdade(rs.getInt("idade"));
+				enf.setTipoSangue(rs.getString("tipoSanguineo"));
+				enf.setSexo(rs.getString("sexo"));
+				enf.setLogin(rs.getString("login"));
+				enf.setSenha(rs.getString("senha"));
+				enf.setNumeroRegistro(rs.getInt("numeroDeRegistro"));
+				enfermeiros.add(enf);
 		}
+		} catch (SQLException en) {
+			// TODO: handle exception
+		}
+		return enfermeiros;
 	}
 	
 }

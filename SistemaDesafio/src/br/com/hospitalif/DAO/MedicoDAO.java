@@ -18,22 +18,19 @@ public class MedicoDAO {
 			Connection conexao = conn.getConnection();
 			System.out.println(conn.getStatus());
 			
-			String sqlINSERE = "INSERT INTO Medico VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
+			String sqlINSERE = "INSERT INTO Medico VALUES(?,?,?,?,?,?,?,?,?)";
 			
 			PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		    stmt.setInt(1, m.getIdMedico());
-			stmt.setString(2, m.getEspecialidade());
-			stmt.setInt(3, m.getNumeroRegistro()); 
 			stmt.setString(4, m.getNome());
 			stmt.setString(5, m.getCPF()); 
 			stmt.setInt(6, m.getIdade()); 
 			stmt.setString(7, m.getTipoSangue()); 
 			stmt.setString(8, m.getSexo());
-			stmt.setString(9, m.getStatusDaPessoa());
 			stmt.setString(10, m.getLogin());
-			stmt.setString(11, m.getSenha()); 
-			stmt.setString(12, m.getStatusUsuario());
-			
+			stmt.setString(11, m.getSenha()); 		
+			stmt.setString(2, m.getEspecialidade());
+			stmt.setInt(3, m.getNumeroRegistro()); 
 			stmt.execute();
 		}
 		
@@ -51,7 +48,7 @@ public class MedicoDAO {
 			Conexao conn = new Conexao();
 			Connection conexao = conn.getConnection();
 			System.out.println(conn.getStatus());
-			String sqlINSERE = "UPDATE Medico SET(?,?,?,?,?,?,?,?,?,?,?,?) where IdMedico = (?)";
+			String sqlINSERE = "UPDATE Medico SET(?,?,?,?,?,?,?,?,?) where IdMedico = (?)";
 			
 			PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		    stmt.setInt(1, m.getIdMedico());
@@ -62,41 +59,41 @@ public class MedicoDAO {
 			stmt.setInt(6, m.getIdade()); 
 			stmt.setString(7, m.getTipoSangue()); 
 			stmt.setString(8, m.getSexo());
-			stmt.setString(9, m.getStatusDaPessoa());
 			stmt.setString(10, m.getLogin());
 			stmt.setString(11, m.getSenha()); 
-			stmt.setString(12, m.getStatusUsuario());
 			
 			stmt.execute();
 		}
 		
-		public void select(Medico m) throws SQLException {
-			Conexao conn = new Conexao();
-			Connection conexao = conn.getConnection();
-			System.out.println(conn.getStatus());
-			String sqlINSERE = "SELECT * FROM Medico";
-			PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-			
-			ResultSet rs = stmt.executeQuery();
-			
+		public List<Medico> select() {
 			List<Medico> medicos = new ArrayList<Medico>();
+			try {
+				Conexao conn = new Conexao();
+				Connection conexao = conn.getConnection();
+				System.out.println(conn.getStatus());
+				String sqlINSERE = "SELECT * FROM Medico";
+				PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 			
-			while(rs.next()) {
-				Medico med = new Medico();
-				med.setEspecialidade(rs.getString("especialidade"));
-				med.setNumeroRegistro(rs.getInt("numeroderegistro"));
-				med.setNome(rs.getString("nome"));
-				med.setCPF(rs.getString("cpf"));
-				med.setIdade(rs.getInt("idade"));
-				med.setTipoSangue(rs.getString("tipoSanguineo"));
-				med.setSexo(rs.getString("sexo"));
-				med.setStatusDaPessoa(rs.getString("statusPessoa"));
-				med.setLogin(rs.getString("login"));
-				med.setSenha(rs.getString("senha"));
-				med.setStatusUsuario(rs.getString("statusDeUsuario"));
+				ResultSet rs = stmt.executeQuery();
+			
+				while(rs.next()) {
+					Medico med = new Medico();
+					med.setEspecialidade(rs.getString("especialidade"));
+					med.setNumeroRegistro(rs.getInt("numeroderegistro"));
+					med.setNome(rs.getString("nome"));
+					med.setCPF(rs.getString("cpf"));
+					med.setIdade(rs.getInt("idade"));
+					med.setTipoSangue(rs.getString("tipoSanguineo"));
+					med.setSexo(rs.getString("sexo"));
+					med.setLogin(rs.getString("login"));
+					med.setSenha(rs.getString("senha"));
 				
-				medicos.add(med);
+					medicos.add(med);
 			}
+			} catch (SQLException e) {
+				// TODO: handle exception
+			}
+			return medicos;
 			
 		}
 }

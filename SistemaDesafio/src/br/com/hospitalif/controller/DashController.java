@@ -111,7 +111,7 @@ public class DashController extends Main{
 
     @FXML
     void CadastrarGerente(ActionEvent event) throws IOException {
-    	openPage(Rotas.FUNCIONARIO);
+    	openPage(Rotas.GERENTE);
     }
     
     @FXML
