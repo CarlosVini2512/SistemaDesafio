@@ -43,7 +43,6 @@ cpf varchar(12),
 idade int,
 tipoSanguineo varchar(3),
 sexo varchar(50) ,
-statusPessoa varchar(200),
 doenca varchar (300) ,
 historico varchar (300),
 constraint PK_Paciente primary key(idPaciente));

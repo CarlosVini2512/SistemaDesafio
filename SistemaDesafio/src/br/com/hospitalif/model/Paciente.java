@@ -1,6 +1,6 @@
 package br.com.hospitalif.model;
 
-public class Paciente {
+public class Paciente extends Pessoa{
 
 	private int idPaciente;
 	private String doenca;

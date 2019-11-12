@@ -1,6 +1,5 @@
 package br.com.hospitalif.controller;
 
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -8,6 +7,7 @@ import app.Main;
 import br.com.hospitalif.DAO.MedicoDAO;
 import br.com.hospitalif.model.Medico;
 import br.com.hospitalif.util.Rotas;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -48,29 +48,34 @@ public class MedicoController extends Main{
     private Button btnEntrar;
 
     @FXML
-    void LogarMedico(ActionEvent event) throws SQLException {
-    	String nome = txtNome.getText();
-    	int idade = Integer.parseInt (txtIdade.getText());
-    	String cpf = txtCpf.getText();
-    	String tipoSanguineo = txtTipoSanguineo.getText();
-    	String sexo = txtSexo.getText();
-    	String especialidade = txtEspecialidade.getText();
-    	int numeroRegistro = Integer.parseInt (txtNumRegistro.getText());
-    	String login = txtLogin.getText();
-    	String senha = txtSenha.getText();
+    void CadastrarMedico(ActionEvent event) throws SQLException, IOException {
+    	try {
+    		String nome = txtNome.getText();
+    		int idade = Integer.parseInt (txtIdade.getText());
+    		String cpf = txtCpf.getText();
+    		String tipoSanguineo = txtTipoSanguineo.getText();
+    		String sexo = txtSexo.getText();
+    		String especialidade = txtEspecialidade.getText();
+    		int numeroRegistro = Integer.parseInt (txtNumRegistro.getText());
+    		String login = txtLogin.getText();
+    		String senha = txtSenha.getText();
     	
-    	Medico medico = new Medico();
-    	MedicoDAO medicoDAO = new MedicoDAO();
-    	medico.setNome(nome);
-    	medico.setIdade(idade);
-    	medico.setCPF(cpf);
-    	medico.setTipoSangue(tipoSanguineo);
-    	medico.setSexo(sexo);
-    	medico.setEspecialidade(especialidade);
-    	medico.setNumeroRegistro(numeroRegistro);
-    	medico.setLogin(login);
-    	medico.setSenha(senha);
-    	medicoDAO.save(medico);
+    		Medico medico = new Medico();
+    		MedicoDAO medicoDAO = new MedicoDAO();
+    		medico.setNome(nome);
+    		medico.setIdade(idade);
+    		medico.setCPF(cpf);
+    		medico.setTipoSangue(tipoSanguineo);
+    		medico.setSexo(sexo);
+    		medico.setEspecialidade(especialidade);
+    		medico.setNumeroRegistro(numeroRegistro);
+    		medico.setLogin(login);
+    		medico.setSenha(senha);
+    		medicoDAO.save(medico);
+			openPage(Rotas.DASH);
+    	} catch (NumberFormatException e) {
+			System.out.println("Preencha o campo Vazio");
+		}
     }
 
     @FXML

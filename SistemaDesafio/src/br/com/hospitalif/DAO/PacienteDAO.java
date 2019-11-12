@@ -16,12 +16,17 @@ public class PacienteDAO {
 		Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
-		String sqlINSERE = "INSERT INTO Paciente VALUES(?,?)";
+		String sqlINSERE = "INSERT INTO Paciente VALUES(?,?,?,?,?,?,?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		stmt.setInt(1, p.getIdPaciente());
-		stmt.setString(2, p.getDoenca());
-		stmt.setString(3, p.getHistorico()); 
+		stmt.setString(2, p.getNome());
+		stmt.setString(3, p.getCPF()); 
+		stmt.setInt(4, p.getIdade()); 
+		stmt.setString(5, p.getTipoSangue()); 
+		stmt.setString(6, p.getSexo());
+		stmt.setString(7, p.getDoenca());
+		stmt.setString(8, p.getHistorico()); 
 		stmt.execute();
 	}
 	
@@ -29,7 +34,7 @@ public class PacienteDAO {
 		Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();	
 		System.out.println(conn.getStatus());	
-		String sqlINSERE = "DELETE FROM Paciente" + "WHERE IdPaciente = (?)";
+		String sqlINSERE = "DELETE FROM Paciente WHERE IdPaciente = (?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		stmt.setInt(1,IdPaciente);	
@@ -41,30 +46,48 @@ public class PacienteDAO {
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "UPDATE Paciente SET(?,?) where IdPaciente = (?)";
+		String sqlINSERE = "UPDATE Paciente SET nome = (?), cpf =(?), idade=(?), tipoSanguineo = (?), sexo = (?), "
+				+ "doenca = (?), historico = (?) WHERE IdPaciente = (?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-		stmt.setString(1, p.getDoenca());
-		stmt.setString(2, p.getHistorico()); 
+		stmt.setInt(1, p.getIdPaciente());
+		stmt.setString(2, p.getNome());
+		stmt.setString(3, p.getCPF()); 
+		stmt.setInt(4, p.getIdade()); 
+		stmt.setString(5, p.getTipoSangue()); 
+		stmt.setString(6, p.getSexo());
+		stmt.setString(7, p.getDoenca());
+		stmt.setString(8, p.getHistorico()); 
 		stmt.execute();
 	}
 	
-	public void select(Paciente p) throws SQLException {
-		Conexao conn = new Conexao();
-		Connection conexao = conn.getConnection();
-		System.out.println(conn.getStatus());
-		
-		String sqlINSERE = "SELECT * FROM Paciente VALUES(?,?)";
-		
-		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-		ResultSet rs = stmt.executeQuery();
+	public List<Paciente> select() throws SQLException {
 		List<Paciente> pacientes = new ArrayList<Paciente>();
+		try {	
+				Conexao conn = new Conexao();
+				Connection conexao = conn.getConnection();
+				System.out.println(conn.getStatus());
+		
+				String sqlINSERE = "SELECT * FROM Paciente";
+		
+				PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
+				ResultSet rs = stmt.executeQuery();
 		
 		while(rs.next()) {
-			Paciente p1 = new Paciente();
-			p1.setDoenca(rs.getString("doenca"));
-			p1.setHistorico(rs.getString("historico")); 
-			pacientes.add(p1);
+				Paciente p1 = new Paciente();
+				p1.setIdPaciente(rs.getInt("idPaciente"));
+				p1.setNome(rs.getString("nome"));
+				p1.setCPF(rs.getString("cpf"));
+				p1.setIdade(rs.getInt("idade"));
+				p1.setTipoSangue(rs.getString("tipoSanguineo"));
+				p1.setSexo(rs.getString("sexo"));
+				p1.setDoenca(rs.getString("doenca"));
+				p1.setHistorico(rs.getString("historico")); 
+				pacientes.add(p1);
 		}
+		}catch (SQLException e) {
+			// TODO: handle exception
+		}
+		return pacientes;
 	}
 }
