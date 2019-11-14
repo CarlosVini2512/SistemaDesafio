@@ -16,18 +16,18 @@ public class GerenteDAO {
 		Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
-		String sqlINSERE = "INSERT INTO Gerente VALUES(?,?,?,?,?,?,?,?,?)";
+		String sqlINSERE = "INSERT INTO Gerente VALUES(?,?,?,?,?,?,?,?,?,?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-	    stmt.setInt(1, g.getIdGerente());
+	    stmt.setInt(1, g.getIdFuncionario());
 	    stmt.setString(2, g.getNome());
 		stmt.setString(3, g.getCPF()); 
 		stmt.setInt(4, g.getIdade()); 
 		stmt.setString(5, g.getTipoSangue()); 
 		stmt.setString(6, g.getSexo());
+		stmt.setString(9, g.getStatusDaPessoa()); 
 		stmt.setString(7, g.getLogin());
 		stmt.setString(8, g.getSenha()); 		
-		stmt.setString(9, g.getStatusDaPessoa()); 
 		stmt.setString(10, g.getCargo());
 		stmt.execute();
 	}
@@ -51,7 +51,7 @@ public class GerenteDAO {
 				+ "login = (?),senha = (?), cargo = (?) where IdGerente = (?)";
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		
-	    stmt.setInt(1, g.getIdGerente());
+	    stmt.setInt(1, g.getIdFuncionario());
 	    stmt.setString(2, g.getNome());
 		stmt.setString(3, g.getCPF()); 
 		stmt.setInt(4, g.getIdade()); 

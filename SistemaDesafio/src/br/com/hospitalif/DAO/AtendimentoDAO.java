@@ -51,7 +51,8 @@ public class AtendimentoDAO {
 		Connection conexao = conn.getConnection();	
 		System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "UPDATE Atendimento SET (?,?,?,?,?,?,?) where idAtendimento = (?)";
+		String sqlINSERE = "UPDATE Atendimento SET comentarioEnfermeiro=(?),comentarioMedico =(?),peso=(?),altura=(?),"
+				+ "dtData=(?),doenca=(?) where idAtendimento = (?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		
@@ -65,30 +66,33 @@ public class AtendimentoDAO {
 		stmt.execute();
 	}
 	
-	public void select(Atendimento a) throws SQLException {
-		Conexao conn = new Conexao();
-		Connection conexao = conn.getConnection();		
-		System.out.println(conn.getStatus());
-		String sqlINSERE = "SELECT * FROM Atendimento";
-		
-		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-		
-		ResultSet rs = stmt.executeQuery();
+	public List<Atendimento> select() {
 		List <Atendimento> atendimento = new ArrayList<Atendimento>();
-		
-		while(rs.next()) {
-			Atendimento atend = new Atendimento();
-			atend.setComentarioEnfermeiro(rs.getString("comentarioEnfermeiro"));
-			atend.setComentarioMedico(rs.getString("comentarioMedico"));
-			atend.setPeso(rs.getFloat("peso"));
-			atend.setAltura(rs.getFloat("altura"));
-			atend.setData(rs.getDate("data"));
-			atend.setDoenca(rs.getString("doenca"));
-			atendimento.add(atend);
+		try {
 			
-			//executa
-			stmt.execute();
-		}	
+			Conexao conn = new Conexao();
+			Connection conexao = conn.getConnection();		
+			System.out.println(conn.getStatus());
+			String sqlINSERE = "SELECT * FROM Atendimento";
+			
+			PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
+		
+			ResultSet rs = stmt.executeQuery();
+		
+			while(rs.next()) {
+				Atendimento atend = new Atendimento();
+				atend.setComentarioEnfermeiro(rs.getString("comentarioEnfermeiro"));
+				atend.setComentarioMedico(rs.getString("comentarioMedico"));
+				atend.setPeso(rs.getFloat("peso"));
+				atend.setAltura(rs.getFloat("altura"));
+				atend.setData(rs.getDate("data"));
+				atend.setDoenca(rs.getString("doenca"));
+				atendimento.add(atend);
+			}	
+		} catch (SQLException e) {
+			// TODO: handle exception
+		}
+		return atendimento;
 	}
 	
 }

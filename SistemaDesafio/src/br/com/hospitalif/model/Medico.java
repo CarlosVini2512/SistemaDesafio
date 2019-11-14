@@ -2,13 +2,8 @@ package br.com.hospitalif.model;
 
 public class Medico extends Funcionario{
 		
-		private int IdMedico;
 		private int numeroderegistro;
-		private String especialidade;
-		
-		public int getIdMedico() {
-			return this.IdMedico;
-		}
+		private String especialidade;	
 		
 		public int getNumeroRegistro() {
 			return this.numeroderegistro;

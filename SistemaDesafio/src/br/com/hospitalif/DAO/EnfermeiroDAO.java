@@ -17,7 +17,7 @@ public class EnfermeiroDAO {
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "INSERT INTO Enfermeiro VALUES(?,?,?,?,?,?,?,?)";
+		String sqlINSERE = "INSERT INTO Enfermeiro VALUES(?,?,?,?,?,?,?,?,?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		stmt.setInt(1, e.getIdEnfermeiro());
@@ -91,7 +91,7 @@ public class EnfermeiroDAO {
 				enf.setSenha(rs.getString("senha"));
 				enf.setNumeroRegistro(rs.getInt("numeroDeRegistro"));
 				enfermeiros.add(enf);
-		}
+			}
 		} catch (SQLException en) {
 			// TODO: handle exception
 		}

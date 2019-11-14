@@ -2,7 +2,6 @@ package br.com.hospitalif.conexao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class Conexao {
@@ -15,7 +14,7 @@ public class Conexao {
 	 String pwd = "";
 	 String driverName = "com.mysql.jdbc.Driver";
 	 String server = "localhost";
-	 String bdName = "hospitalfx";
+	 String bdName = "bdhospital";
 	 String url = "jdbc:mysql://" + server + ";3306/" + bdName;
 	 
 	 
@@ -56,7 +55,7 @@ public class Conexao {
 		try {
 			this.closeConnection();
 			this.getConnection();
-			}catch(SQLException e) {
+			} catch(SQLException e) {
 				e.printStackTrace();
 			}
 	}

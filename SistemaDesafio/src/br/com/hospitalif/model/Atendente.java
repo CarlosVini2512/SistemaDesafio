@@ -2,8 +2,8 @@ package br.com.hospitalif.model;
 
 public class Atendente extends Gerente{
 	
-	public void CadastrarPaciente() {
-		
+	public int CadastrarPaciente() {
+		return 0;
 	}
 	
 	

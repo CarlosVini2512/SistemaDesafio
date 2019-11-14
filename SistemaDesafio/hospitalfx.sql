@@ -50,7 +50,7 @@ constraint PK_Paciente primary key(idPaciente));
 create table EnfermidadePessoal (
 idEnfermidadePessoal int not null AUTO_INCREMENT,
 comentario varchar(100),
-statusEnfermeiro varchar(100),
+statusEnfermidade varchar(100),
 constraint PK_EnfermidadePessoal primary key (idEnfermidadePessoal));
 
 create table Enfermidade(
@@ -74,7 +74,7 @@ comentarioEnfermeiro varchar(100),
 comentarioMedico varchar(100),
 altura float,
 peso float,
-dData date,
+dtData date,
 doenca varchar(300),
 constraint PK_Atendimento primary key (idAtendimento));
 

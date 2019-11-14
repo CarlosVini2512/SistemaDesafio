@@ -23,8 +23,8 @@ public class EnfermidadeDAO {
 		
 		stmt.setInt(1, enf.getIdEnfermidade());
 		stmt.setString(2, enf.getNome());
-		stmt.setString(3, enf.getTipo()); 
-		stmt.setString(4, enf.getDescricao()); 
+		stmt.setString(3, enf.getDescricao()); 
+		stmt.setString(4, enf.getTipo()); 
 		stmt.execute();
 	}
 	
@@ -46,33 +46,38 @@ public class EnfermidadeDAO {
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "UPDATE FROM Enfermidade SET(?,?,?,?) where IdEnfermidade = (?)";
+		String sqlINSERE = "UPDATE FROM Enfermidade SET nome=(?),descricao=(?),tipo=(?)  where IdEnfermidade = (?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		stmt.setInt(1, enf.getIdEnfermidade());
 		stmt.setString(1, enf.getNome());
+		stmt.setString(4, enf.getDescricao());
 		stmt.setString(3, enf.getTipo()); 
-		stmt.setString(4, enf.getDescricao()); 
+
 		stmt.execute();
 	}
 	
-	public void select(Enfermidade enf) throws SQLException {
-		Conexao conn = new Conexao();
-		Connection conexao = conn.getConnection();
-		System.out.println(conn.getStatus());
-		
-		String sqlINSERE = "SELECT * FROM Enfermidade";
-		
-		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-		
-		ResultSet rs = stmt.executeQuery();
+	public List<Enfermidade> select() {
 		List<Enfermidade> enfermidades = new ArrayList<Enfermidade>();
-		while(rs.next()) {
-			Enfermidade enf1 = new Enfermidade();
-			enf1.setNome(rs.getString("nome"));
-			enf1.setTipo(rs.getString("tipo")); 
-			enf1.setDescricao(rs.getString("descricao")); 
-			enfermidades.add(enf1);
+		try {
+			Conexao conn = new Conexao();
+			Connection conexao = conn.getConnection();
+			System.out.println(conn.getStatus());
+			
+			String sqlINSERE = "SELECT * FROM Enfermidade";	
+			PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
+			ResultSet rs = stmt.executeQuery();
+			
+			while(rs.next()) {
+				Enfermidade enf1 = new Enfermidade();
+				enf1.setNome(rs.getString("nome"));
+				enf1.setDescricao(rs.getString("descricao")); 
+				enf1.setTipo(rs.getString("tipo")); 
+				enfermidades.add(enf1);
+			}	
+		}catch (SQLException e) {
+			// TODO: handle exception
 		}
+		return enfermidades;
 	}
 }

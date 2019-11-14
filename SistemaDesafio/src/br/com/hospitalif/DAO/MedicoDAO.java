@@ -18,10 +18,10 @@ public class MedicoDAO {
 			Connection conexao = conn.getConnection();
 			System.out.println(conn.getStatus());
 			
-			String sqlINSERE = "INSERT INTO Medico VALUES(?,?,?,?,?,?,?,?,?)";
+			String sqlINSERE = "INSERT INTO Medico VALUES(?,?,?,?,?,?,?,?,?,?)";
 			
 			PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-		    stmt.setInt(1, m.getIdMedico());
+		    stmt.setInt(1, m.getIdFuncionario());
 			stmt.setString(2, m.getNome());
 			stmt.setString(3, m.getCPF()); 
 			stmt.setInt(4, m.getIdade()); 
@@ -49,7 +49,7 @@ public class MedicoDAO {
 			Connection conexao = conn.getConnection();
 			System.out.println(conn.getStatus());
 			String sqlINSERE = "UPDATE Medico SET nome=(?),cpf=(?),idade=(?),tipoSanguineo=(?),sexo=(?),statusPessoa=(?),"
-					+ "login=(?),senha=(?),statusUsuario=(?),numeroRegistro=(?),especialidade=(?) WHERE idMedico=(?) where IdMedico = (?)";
+					+ "login=(?),senha=(?),statusUsuario=(?),numeroRegistro=(?),especialidade=(?) WHERE idMedico=(?)";
 			
 			PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		    stmt.setInt(1, m.getIdFuncionario());
@@ -79,7 +79,8 @@ public class MedicoDAO {
 					ResultSet rs = stmt.executeQuery();
 			
 				while(rs.next()) {
-					Medico med = new Medico();
+					Medico med = new Medico();]
+					med.setIdFuncionario(rs.getInt("idMedico"));
 					med.setEspecialidade(rs.getString("especialidade"));
 					med.setNumeroRegistro(rs.getInt("numeroderegistro"));
 					med.setNome(rs.getString("nome"));
@@ -91,7 +92,7 @@ public class MedicoDAO {
 					med.setSenha(rs.getString("senha"));
 				
 					listmedicos.add(med);
-			}
+				}
 			} catch (SQLException e) {
 				// TODO: handle exception
 			}

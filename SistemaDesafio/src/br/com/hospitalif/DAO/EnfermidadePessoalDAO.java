@@ -43,7 +43,7 @@ public class EnfermidadePessoalDAO {
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "UPDATE EnfermidadePessoal SET(?,?,?) where IdEnfermidadePessoal = (?)";
+		String sqlINSERE = "UPDATE EnfermidadePessoal SET comentario = (?),statusEnfermidade=(?) where IdEnfermidadePessoal = (?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 	        stmt.setInt(1, ep.getIdEnfermidadePessoal());
@@ -51,21 +51,27 @@ public class EnfermidadePessoalDAO {
 			stmt.setString(2, ep.getStatusEnfermidade()); 
 			stmt.execute();
 	}
-	public void select(EnfermidadePessoal ep) throws SQLException {
-		Conexao conn = new Conexao();
-		Connection conexao = conn.getConnection();
-		System.out.println(conn.getStatus());	
-		String sqlINSERE = "SELECT * FROM EnfermidadePessoal";
+	
+	public List<EnfermidadePessoal> select(){
+		List<EnfermidadePessoal> enfermidadePessoal = new ArrayList<EnfermidadePessoal>();
+		try {
+			Conexao conn = new Conexao();
+			Connection conexao = conn.getConnection();
+			System.out.println(conn.getStatus());	
+			String sqlINSERE = "SELECT * FROM EnfermidadePessoal";
 		
-		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-		
-		ResultSet rs = stmt.executeQuery();
-		List<EnfermidadePessoal> enfermidadesPessoais = new ArrayList<EnfermidadePessoal>();
-		while(rs.next()) {
-			EnfermidadePessoal ep1 = new EnfermidadePessoal();
-			ep1.setComentario(rs.getString("comentario"));
-			ep1.setStatusEnfermidade(rs.getString("statusDeEnfermidade")); 
-			enfermidadesPessoais .add(ep1);
+			PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
+			ResultSet rs = stmt.executeQuery();
+			
+			while(rs.next()) {
+				EnfermidadePessoal ep1 = new EnfermidadePessoal();
+				ep1.setComentario(rs.getString("comentario"));
+				ep1.setStatusEnfermidade(rs.getString("statusDeEnfermidade")); 
+				enfermidadePessoal .add(ep1);
+			}
+		} catch (SQLException e) {
+			// TODO: handle exception
 		}
-	}
+		return enfermidadePessoal;
+	}	
 }

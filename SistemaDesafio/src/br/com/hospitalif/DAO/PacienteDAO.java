@@ -16,7 +16,7 @@ public class PacienteDAO {
 		Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
-		String sqlINSERE = "INSERT INTO Paciente VALUES(?,?,?,?,?,?,?)";
+		String sqlINSERE = "INSERT INTO Paciente VALUES(?,?,?,?,?,?,?,?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		stmt.setInt(1, p.getIdPaciente());
@@ -73,18 +73,18 @@ public class PacienteDAO {
 				PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 				ResultSet rs = stmt.executeQuery();
 		
-		while(rs.next()) {
-				Paciente p1 = new Paciente();
-				p1.setIdPaciente(rs.getInt("idPaciente"));
-				p1.setNome(rs.getString("nome"));
-				p1.setCPF(rs.getString("cpf"));
-				p1.setIdade(rs.getInt("idade"));
-				p1.setTipoSangue(rs.getString("tipoSanguineo"));
-				p1.setSexo(rs.getString("sexo"));
-				p1.setDoenca(rs.getString("doenca"));
-				p1.setHistorico(rs.getString("historico")); 
-				pacientes.add(p1);
-		}
+				while(rs.next()) {
+					Paciente p1 = new Paciente();
+					p1.setIdPaciente(rs.getInt("idPaciente"));
+					p1.setNome(rs.getString("nome"));
+					p1.setCPF(rs.getString("cpf"));
+					p1.setIdade(rs.getInt("idade"));
+					p1.setTipoSangue(rs.getString("tipoSanguineo"));
+					p1.setSexo(rs.getString("sexo"));
+					p1.setDoenca(rs.getString("doenca"));
+					p1.setHistorico(rs.getString("historico")); 
+					pacientes.add(p1);
+				}
 		}catch (SQLException e) {
 			// TODO: handle exception
 		}
