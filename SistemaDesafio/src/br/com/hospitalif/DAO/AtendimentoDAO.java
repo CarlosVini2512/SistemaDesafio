@@ -1,7 +1,6 @@
 package br.com.hospitalif.DAO;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -27,9 +26,8 @@ public class AtendimentoDAO {
 		stmt.setString(3, a.getComentarioMedico());
 		stmt.setFloat(4, a.getPeso());
 		stmt.setFloat(5, a.getAltura());
-		stmt.setDate(6, new Date(a.getData().getTime()));
+		stmt.setDate(6, java.sql.Date.valueOf(a.getData()));
 		stmt.setString(7, a.getDoenca());
-		
 		//executa
 		stmt.execute();
 	}
@@ -61,7 +59,7 @@ public class AtendimentoDAO {
 		stmt.setString(3, a.getComentarioMedico());
 		stmt.setFloat(4, a.getPeso());
 		stmt.setFloat(5, a.getAltura());
-		stmt.setDate(6,new Date(a.getData().getTime()));
+		stmt.setDate(6,java.sql.Date.valueOf(a.getData()));
 		stmt.setString(7, a.getDoenca());		
 		stmt.execute();
 	}
@@ -85,7 +83,7 @@ public class AtendimentoDAO {
 				atend.setComentarioMedico(rs.getString("comentarioMedico"));
 				atend.setPeso(rs.getFloat("peso"));
 				atend.setAltura(rs.getFloat("altura"));
-				atend.setData(rs.getDate("data"));
+				atend.setData(rs.getDate("data").toLocalDate());
 				atend.setDoenca(rs.getString("doenca"));
 				atendimento.add(atend);
 			}	

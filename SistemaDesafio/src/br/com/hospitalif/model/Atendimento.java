@@ -1,7 +1,6 @@
 package br.com.hospitalif.model;
 
-import java.util.Date;
-import java.util.List;
+import java.time.LocalDate;
 
 public class Atendimento {
 
@@ -10,7 +9,7 @@ public class Atendimento {
 	private String comentarioMedico;
 	private float peso;
 	private float altura;
-	private Date data;
+	private LocalDate data;
 	private String doenca;
 	
 	public int getIdAtendimento() {
@@ -48,10 +47,10 @@ public class Atendimento {
 		this.altura = a;
 	}
 	
-	public Date getData() {
+	public LocalDate getData() {
 		return this.data;
 	}
-	public void setData(Date d) {
+	public void setData(LocalDate d) {
 		this.data = d;
 	}
 	

@@ -14,8 +14,8 @@ public class Conexao {
 	 String pwd = "";
 	 String driverName = "com.mysql.jdbc.Driver";
 	 String server = "localhost";
-	 String bdName = "bdhospital";
-	 String url = "jdbc:mysql://" + server + ";3306/" + bdName;
+	 String bdName = "hospitalfx";
+	 String url = "jdbc:mysql://" + server + ":3306/" + bdName;
 	 
 	 
 	//método para devolver a conexão

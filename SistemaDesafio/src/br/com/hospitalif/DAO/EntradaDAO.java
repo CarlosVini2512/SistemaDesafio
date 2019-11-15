@@ -51,7 +51,7 @@ public class EntradaDAO {
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 	    stmt.setInt(1, ent.getIdEntrada());
 		stmt.setDate(2,java.sql.Date.valueOf(ent.getDataEntrada()));
-		stmt.setDate(1,java.sql.Date.valueOf(ent.getDataSaida()));
+		stmt.setDate(3,java.sql.Date.valueOf(ent.getDataSaida()));
 		stmt.setString(4, ent.getStatusEntrada());
 		stmt.setString(5, ent.getSituacaoDoPaciente());
 		stmt.execute();

@@ -55,10 +55,11 @@ public class MedicoController extends Main{
     		String cpf = txtCpf.getText();
     		String tipoSanguineo = txtTipoSanguineo.getText();
     		String sexo = txtSexo.getText();
-    		String especialidade = txtEspecialidade.getText();
-    		int numeroRegistro = Integer.parseInt (txtNumRegistro.getText());
     		String login = txtLogin.getText();
     		String senha = txtSenha.getText();
+    		int numeroRegistro = Integer.parseInt (txtNumRegistro.getText());
+    		String especialidade = txtEspecialidade.getText();
+    		
     	
     		Medico medico = new Medico();
     		MedicoDAO medicoDAO = new MedicoDAO();
@@ -67,13 +68,15 @@ public class MedicoController extends Main{
     		medico.setCPF(cpf);
     		medico.setTipoSangue(tipoSanguineo);
     		medico.setSexo(sexo);
-    		medico.setEspecialidade(especialidade);
-    		medico.setNumeroRegistro(numeroRegistro);
     		medico.setLogin(login);
     		medico.setSenha(senha);
+    		medico.setNumeroRegistro(numeroRegistro);
+    		medico.setEspecialidade(especialidade);
     		medicoDAO.save(medico);
 			openPage(Rotas.DASH);
     	} catch (NumberFormatException e) {
+			System.out.println("Preencha o campo Vazio");
+		}catch(NullPointerException e) {
 			System.out.println("Preencha o campo Vazio");
 		}
     }

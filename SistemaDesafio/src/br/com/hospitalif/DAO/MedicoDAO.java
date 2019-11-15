@@ -14,6 +14,7 @@ import br.com.hospitalif.model.Medico;
 public class MedicoDAO {
 
 		public static void save(Medico m) throws SQLException {
+			try {
 			Conexao conn = new Conexao();
 			Connection conexao = conn.getConnection();
 			System.out.println(conn.getStatus());
@@ -29,9 +30,12 @@ public class MedicoDAO {
 			stmt.setString(6, m.getSexo());
 			stmt.setString(7, m.getLogin());
 			stmt.setString(8, m.getSenha()); 		
-			stmt.setString(9, m.getEspecialidade());
-			stmt.setInt(10, m.getNumeroRegistro()); 
+			stmt.setInt(9, m.getNumeroRegistro()); 
+			stmt.setString(10, m.getEspecialidade());
 			stmt.execute();
+			} catch(NullPointerException e) {
+				System.out.println("Preencha o campo Vazio");
+			}
 		}
 		
 		public void removeById(int IdMedico)  throws SQLException{
@@ -79,7 +83,7 @@ public class MedicoDAO {
 					ResultSet rs = stmt.executeQuery();
 			
 				while(rs.next()) {
-					Medico med = new Medico();]
+					Medico med = new Medico();
 					med.setIdFuncionario(rs.getInt("idMedico"));
 					med.setEspecialidade(rs.getString("especialidade"));
 					med.setNumeroRegistro(rs.getInt("numeroderegistro"));
