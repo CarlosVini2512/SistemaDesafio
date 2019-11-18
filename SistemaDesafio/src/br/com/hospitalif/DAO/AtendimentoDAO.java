@@ -54,13 +54,13 @@ public class AtendimentoDAO {
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		
-		stmt.setInt(1, a.getIdAtendimento());
-		stmt.setString(2, a.getComentarioEnfermeiro()); 
-		stmt.setString(3, a.getComentarioMedico());
-		stmt.setFloat(4, a.getPeso());
-		stmt.setFloat(5, a.getAltura());
-		stmt.setDate(6,java.sql.Date.valueOf(a.getData()));
-		stmt.setString(7, a.getDoenca());		
+		stmt.setString(1, a.getComentarioEnfermeiro()); 
+		stmt.setString(2, a.getComentarioMedico());
+		stmt.setFloat(3, a.getPeso());
+		stmt.setFloat(4, a.getAltura());
+		stmt.setDate(5,java.sql.Date.valueOf(a.getData()));
+		stmt.setString(6, a.getDoenca());	
+		stmt.setInt(7, a.getIdAtendimento());
 		stmt.execute();
 	}
 	

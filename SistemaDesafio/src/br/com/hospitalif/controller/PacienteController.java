@@ -16,11 +16,14 @@ import javafx.scene.control.TextField;
 public class PacienteController extends Main {
 
     @FXML
-    private TextArea txtHistorico;
+    protected TextArea txtHistorico;
 
     @FXML
-    private TextArea txtDoenca;
+    protected TextArea txtDoenca;
 
+    @FXML
+    private Button btnLista;
+    
     @FXML
     private Button btnVoltar;
 
@@ -28,25 +31,25 @@ public class PacienteController extends Main {
     private Button btnCadastrar;
 
     @FXML
-    private TextField txtNome;
+	protected TextField txtNome;
 
     @FXML
-    private TextField txtCpf;
+    protected TextField txtCpf;
 
     @FXML
-    private TextField txtSexo;
+    protected TextField txtSexo;
 
     @FXML
-    private TextField txtIdade;
+    protected TextField txtIdade;
 
     @FXML
-    private TextField txtTipoSanguineo;
+    protected TextField txtTipoSanguineo;
 
     @FXML
     void CadastrarPaciente(ActionEvent event) throws SQLException {
     	try {
     		String nome = txtNome.getText();
-    		String cpf = txtCpf.getText();
+			int CPF = Integer.parseInt(txtCpf.getText());
     		int idade = Integer.parseInt (txtIdade.getText());
     		String tipoSangue = txtTipoSanguineo.getText();
     		String sexo = txtSexo.getText();
@@ -56,7 +59,7 @@ public class PacienteController extends Main {
     		Paciente paciente = new Paciente();
     		PacienteDAO pacienteDAO = new PacienteDAO();  
     		paciente.setNome(nome);
-    		paciente.setCPF(cpf);
+    		paciente.setCPF(CPF);
     		paciente.setIdade(idade);
     		paciente.setSexo(sexo);
     		paciente.setTipoSangue(tipoSangue);
@@ -66,12 +69,20 @@ public class PacienteController extends Main {
     	} catch (NumberFormatException e) {
 			System.out.println("Campo idade vazio");
 		}
+    	catch (SQLException e) {
+			e.printStackTrace();
+		}
     }
 
     @FXML
     void VoltarTela(ActionEvent event) throws IOException {
     	openPage(Rotas.DASH);
 
+    }
+    
+    @FXML
+    void listarPaciente(ActionEvent event) throws IOException {
+		openPage(Rotas.PACIENTELIST);
     }
 
 }

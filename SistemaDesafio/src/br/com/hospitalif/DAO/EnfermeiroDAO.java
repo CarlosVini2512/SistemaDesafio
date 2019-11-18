@@ -54,15 +54,15 @@ public class EnfermeiroDAO {
 				+ ",senha=(?),numeroRegistro=(?) where id=(?) ";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-		stmt.setInt(1, e.getIdEnfermeiro());
-		stmt.setString(2, e.getNome());
-		stmt.setString(3, e.getCPF()); 
-		stmt.setInt(4, e.getIdade()); 
-		stmt.setString(5, e.getTipoSangue()); 
-		stmt.setString(6, e.getSexo());
-		stmt.setString(7, e.getLogin());
-		stmt.setString(8, e.getSenha()); 
-		stmt.setInt(9, e.getNumeroRegistro());
+		stmt.setString(1, e.getNome());
+		stmt.setString(2, e.getCPF()); 
+		stmt.setInt(3, e.getIdade()); 
+		stmt.setString(4, e.getTipoSangue()); 
+		stmt.setString(5, e.getSexo());
+		stmt.setString(6, e.getLogin());
+		stmt.setString(7, e.getSenha()); 
+		stmt.setInt(8, e.getNumeroRegistro());
+		stmt.setInt(9, e.getIdEnfermeiro());
 		stmt.execute();
 	}
 	

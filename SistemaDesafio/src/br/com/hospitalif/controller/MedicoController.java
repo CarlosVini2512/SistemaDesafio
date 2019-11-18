@@ -10,39 +10,43 @@ import br.com.hospitalif.util.Rotas;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class MedicoController extends Main{
 
     @FXML
-    private TextField txtLogin;
+    protected TextField txtLogin;
 
     @FXML
-    private TextField txtSenha;
+    protected PasswordField txtSenha;
 
     @FXML
     private Button btnSair;
 
     @FXML
-    private TextField txtNome;
+	protected TextField txtNome;
 
     @FXML
-    private TextField txtNumRegistro;
+    protected TextField txtNumRegistro;
 
     @FXML
-    private TextField txtEspecialidade;
+    protected TextField txtEspecialidade;
 
     @FXML
-    private TextField txtCpf;
+    protected TextField txtCpf;
 
     @FXML
-    private TextField txtSexo;
+    protected TextField txtSexo;
+    
+    @FXML
+    private Button btnLista;
 
     @FXML
-    private TextField txtIdade;
+    protected TextField txtIdade;
 
     @FXML
-    private TextField txtTipoSanguineo;
+    protected TextField txtTipoSanguineo;
 
     @FXML
     private Button btnEntrar;
@@ -51,8 +55,8 @@ public class MedicoController extends Main{
     void CadastrarMedico(ActionEvent event) throws SQLException, IOException {
     	try {
     		String nome = txtNome.getText();
+			int CPF = Integer.parseInt(txtCpf.getText());
     		int idade = Integer.parseInt (txtIdade.getText());
-    		String cpf = txtCpf.getText();
     		String tipoSanguineo = txtTipoSanguineo.getText();
     		String sexo = txtSexo.getText();
     		String login = txtLogin.getText();
@@ -65,7 +69,7 @@ public class MedicoController extends Main{
     		MedicoDAO medicoDAO = new MedicoDAO();
     		medico.setNome(nome);
     		medico.setIdade(idade);
-    		medico.setCPF(cpf);
+    		medico.setCPF(CPF);
     		medico.setTipoSangue(tipoSanguineo);
     		medico.setSexo(sexo);
     		medico.setLogin(login);
@@ -77,7 +81,7 @@ public class MedicoController extends Main{
     	} catch (NumberFormatException e) {
 			System.out.println("Preencha o campo Vazio");
 		}catch(NullPointerException e) {
-			System.out.println("Preencha o campo Vazio");
+			System.out.println("");
 		}
     }
 
@@ -86,4 +90,8 @@ public class MedicoController extends Main{
     	openPage(Rotas.DASH);
     }
 
+    @FXML
+    void ListarMedicos(ActionEvent event) throws IOException {
+		openPage(Rotas.MEDICOLIST);
+    }
 }

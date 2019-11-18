@@ -10,12 +10,12 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: Navy;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.hospitalif.controller.GerenteController">
    <children>
-      <ImageView fx:id="txtSenha" fitHeight="390.0" fitWidth="600.0" layoutX="4.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" y="3.0">
+      <ImageView fitHeight="390.0" fitWidth="600.0" layoutX="4.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" y="3.0">
          <image>
             <Image url="@Imagens/3.jpg" />
          </image>
       </ImageView>
-      <TextField alignment="CENTER" editable="false" layoutX="137.0" layoutY="9.0" prefHeight="42.0" prefWidth="334.0" text="Cadastro de Gerente">
+      <TextField alignment="CENTER" editable="false" focusTraversable="false" layoutX="137.0" layoutY="9.0" prefHeight="42.0" prefWidth="334.0" text="Cadastro de Gerente">
          <font>
             <Font name="Arial Black" size="19.0" />
          </font>
@@ -67,6 +67,9 @@
                </light>
             </Lighting>
          </effect>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
       </TextArea>
       <TextField fx:id="txtLogin" layoutX="413.0" layoutY="99.0">
          <effect>
@@ -79,6 +82,9 @@
                </light>
             </Lighting>
          </effect>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
       </TextField>
       <TextField fx:id="txtSenha" layoutX="417.0" layoutY="156.0" prefHeight="31.0" prefWidth="127.0">
          <effect>
@@ -91,6 +97,9 @@
                </light>
             </Lighting>
          </effect>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
       </TextField>
       <TextField alignment="CENTER" editable="false" layoutX="493.0" layoutY="200.0" prefHeight="21.0" prefWidth="89.0" text="Status">
          <font>
@@ -110,7 +119,7 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </TextField>
-      <Button fx:id="btnSair" layoutX="27.0" layoutY="346.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="42.0" prefWidth="71.0" text="Sair">
+      <Button fx:id="btnSair" layoutX="20.0" layoutY="357.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="23.0" prefWidth="60.0" text="&lt;&lt;">
          <font>
             <Font name="Arial Black" size="15.0" />
          </font>
@@ -128,7 +137,7 @@
             </Lighting>
          </effect>
       </Button>
-      <Button fx:id="btnEntrar" layoutX="113.0" layoutY="346.0" mnemonicParsing="false" onAction="#CadGerente" prefHeight="42.0" prefWidth="89.0" text="Entrar">
+      <Button fx:id="btnEntrar" layoutX="499.0" layoutY="357.0" mnemonicParsing="false" onAction="#CadGerente" prefHeight="33.0" prefWidth="77.0" text="Salvar">
          <font>
             <Font name="Arial Black" size="15.0" />
          </font>
@@ -182,6 +191,9 @@
                </light>
             </Lighting>
          </effect>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
       </TextField>
       <TextField fx:id="txtCpf" layoutX="85.0" layoutY="145.0" prefHeight="31.0" prefWidth="127.0">
          <effect>
@@ -194,6 +206,9 @@
                </light>
             </Lighting>
          </effect>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
       </TextField>
       <TextField fx:id="txtIdade" layoutX="84.0" layoutY="183.0" prefHeight="31.0" prefWidth="38.0">
          <effect>
@@ -206,6 +221,9 @@
                </light>
             </Lighting>
          </effect>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
       </TextField>
       <TextField fx:id="txtSexo" layoutX="179.0" layoutY="185.0" prefHeight="31.0" prefWidth="89.0">
          <effect>
@@ -218,6 +236,9 @@
                </light>
             </Lighting>
          </effect>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
       </TextField>
       <TextField fx:id="txtTipoSanguineo" layoutX="157.0" layoutY="226.0" prefHeight="31.0" prefWidth="113.0">
          <effect>
@@ -230,6 +251,9 @@
                </light>
             </Lighting>
          </effect>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
       </TextField>
       <Text fill="WHITE" layoutX="79.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cargo:">
          <font>
@@ -247,6 +271,27 @@
                </light>
             </Lighting>
          </effect>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
       </TextField>
+      <Button fx:id="btnLista" layoutX="433.0" layoutY="358.0" mnemonicParsing="false" onAction="#listaGerente" prefHeight="31.0" prefWidth="60.0" text="Lista">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.76" surfaceScale="4.67">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="229.39" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </Pane>

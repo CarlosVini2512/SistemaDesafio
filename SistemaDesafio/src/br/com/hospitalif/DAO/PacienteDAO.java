@@ -21,7 +21,7 @@ public class PacienteDAO {
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		stmt.setInt(1, p.getIdPaciente());
 		stmt.setString(2, p.getNome());
-		stmt.setString(3, p.getCPF()); 
+		stmt.setInt(3, p.getCPF()); 
 		stmt.setInt(4, p.getIdade()); 
 		stmt.setString(5, p.getTipoSangue()); 
 		stmt.setString(6, p.getSexo());
@@ -41,7 +41,7 @@ public class PacienteDAO {
 		stmt.execute();
 	}
 	
-	public void upadte(Paciente p) throws SQLException {
+	public void update(Paciente p) throws SQLException {
 		Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
@@ -50,14 +50,14 @@ public class PacienteDAO {
 				+ "doenca = (?), historico = (?) WHERE IdPaciente = (?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-		stmt.setInt(1, p.getIdPaciente());
-		stmt.setString(2, p.getNome());
-		stmt.setString(3, p.getCPF()); 
-		stmt.setInt(4, p.getIdade()); 
-		stmt.setString(5, p.getTipoSangue()); 
-		stmt.setString(6, p.getSexo());
-		stmt.setString(7, p.getDoenca());
-		stmt.setString(8, p.getHistorico()); 
+		stmt.setString(1, p.getNome());
+		stmt.setInt(2, p.getCPF()); 
+		stmt.setInt(3, p.getIdade()); 
+		stmt.setString(4, p.getTipoSangue()); 
+		stmt.setString(5, p.getSexo());
+		stmt.setString(6, p.getDoenca());
+		stmt.setString(7, p.getHistorico());
+		stmt.setInt(8, p.getIdPaciente());
 		stmt.execute();
 	}
 	
@@ -77,7 +77,7 @@ public class PacienteDAO {
 					Paciente p1 = new Paciente();
 					p1.setIdPaciente(rs.getInt("idPaciente"));
 					p1.setNome(rs.getString("nome"));
-					p1.setCPF(rs.getString("cpf"));
+					p1.setCPF(rs.getInt("cpf"));
 					p1.setIdade(rs.getInt("idade"));
 					p1.setTipoSangue(rs.getString("tipoSanguineo"));
 					p1.setSexo(rs.getString("sexo"));

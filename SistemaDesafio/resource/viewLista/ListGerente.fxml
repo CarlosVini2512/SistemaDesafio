@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="404.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.hospitalif.controllerList.GerenteList">
+   <children>
+      <TableView fx:id="tableGerente" layoutY="-2.0" prefHeight="368.0" prefWidth="678.0">
+        <columns>
+          <TableColumn fx:id="nome" prefWidth="75.0" text="Nome" />
+          <TableColumn fx:id="idade" prefWidth="75.0" text="Idade" />
+            <TableColumn fx:id="cpf" prefWidth="75.0" text="CPF" />
+            <TableColumn fx:id="sangue" prefWidth="75.0" text="Sangue" />
+            <TableColumn fx:id="sexo" prefWidth="75.0" text="Sexo" />
+            <TableColumn fx:id="status" prefWidth="75.0" text="Status" />
+            <TableColumn fx:id="cargo" prefWidth="75.0" text="Cargo" />
+            <TableColumn fx:id="login" prefWidth="75.0" text="Login" />
+            <TableColumn fx:id="senha" prefWidth="75.0" text="Senha" />
+        </columns>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </TableView>
+      <Button fx:id="btnSalvar" layoutX="439.0" layoutY="366.0" mnemonicParsing="false" onAction="#salvarDados" text="Salvar" />
+      <Button fx:id="btnEditar" layoutX="362.0" layoutY="366.0" mnemonicParsing="false" onAction="#editarDados" text="Editar" />
+      <Button fx:id="btnVoltar" layoutX="251.0" layoutY="366.0" mnemonicParsing="false" onAction="#voltarTela" text="&lt;&lt;" />
+      <Button fx:id="btnExcluir" layoutX="300.0" layoutY="366.0" mnemonicParsing="false" onAction="#excluirDados" text="Excluir" />
+   </children>
+</Pane>

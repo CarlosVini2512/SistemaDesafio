@@ -4,7 +4,7 @@ public class Pessoa  {
 	
 	private int idPessoa;
 	private String nome;
-	private String cpf;
+	private int cpf;
 	private int idade;
 	private String tipoSanguineo;
 	private String sexo;
@@ -24,10 +24,10 @@ public class Pessoa  {
 		this.nome = n;
 	}
 	
-	public String getCPF() {
+	public int getCPF() {
 		return this.cpf;
 	}
-	public void setCPF(String cpf) {
+	public void setCPF(int cpf) {
 		this.cpf = cpf;
 	}
 	

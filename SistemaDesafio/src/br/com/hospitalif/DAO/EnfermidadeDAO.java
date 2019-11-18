@@ -49,10 +49,10 @@ public class EnfermidadeDAO {
 		String sqlINSERE = "UPDATE FROM Enfermidade SET nome=(?),descricao=(?),tipo=(?)  where IdEnfermidade = (?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-		stmt.setInt(1, enf.getIdEnfermidade());
 		stmt.setString(1, enf.getNome());
-		stmt.setString(4, enf.getDescricao());
+		stmt.setString(2, enf.getDescricao());
 		stmt.setString(3, enf.getTipo()); 
+		stmt.setInt(4, enf.getIdEnfermidade());
 
 		stmt.execute();
 	}

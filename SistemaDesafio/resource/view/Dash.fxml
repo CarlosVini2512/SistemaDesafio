@@ -180,7 +180,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button fx:id="btnVolrar" layoutX="-6.0" layoutY="388.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="39.0" prefWidth="67.0" text="&lt;&lt;&lt;" AnchorPane.leftAnchor="-5.0">
+                        <Button fx:id="btnVolrar" layoutX="-6.0" layoutY="388.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="39.0" prefWidth="67.0" text="Sair" AnchorPane.leftAnchor="-5.0">
                            <font>
                               <Font name="System Bold Italic" size="18.0" />
                            </font>

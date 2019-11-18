@@ -30,11 +30,12 @@ public class Conexao {
 				this.status = "STATUS --> Não concetado!";
 			}
 		
-		} catch (ClassNotFoundException e) {
+		} 
+		catch (ClassNotFoundException e) {
 			e.printStackTrace();
-		} catch (SQLException e) {
-			e.printStackTrace();
-			
+		}
+		catch (SQLException e) {
+			e.printStackTrace();	
 		}
 		return this.conn;
 	}

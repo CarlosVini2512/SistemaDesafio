@@ -24,7 +24,7 @@ public class MedicoDAO {
 			PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		    stmt.setInt(1, m.getIdFuncionario());
 			stmt.setString(2, m.getNome());
-			stmt.setString(3, m.getCPF()); 
+			stmt.setInt(3, m.getCPF()); 
 			stmt.setInt(4, m.getIdade()); 
 			stmt.setString(5, m.getTipoSangue()); 
 			stmt.setString(6, m.getSexo());
@@ -52,21 +52,20 @@ public class MedicoDAO {
 			Conexao conn = new Conexao();
 			Connection conexao = conn.getConnection();
 			System.out.println(conn.getStatus());
-			String sqlINSERE = "UPDATE Medico SET nome=(?),cpf=(?),idade=(?),tipoSanguineo=(?),sexo=(?),statusPessoa=(?),"
-					+ "login=(?),senha=(?),statusUsuario=(?),numeroRegistro=(?),especialidade=(?) WHERE idMedico=(?)";
+			String sqlINSERE = "UPDATE Medico SET nome=(?),cpf=(?),idade=(?),tipoSanguineo=(?),sexo=(?)"
+					+ "login=(?),senha=(?),numeroRegistro=(?),especialidade=(?) WHERE idMedico=(?)";
 			
 			PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-		    stmt.setInt(1, m.getIdFuncionario());
-			stmt.setString(2, m.getNome());
-			stmt.setString(3, m.getCPF()); 
-			stmt.setInt(4, m.getIdade()); 
-			stmt.setString(5, m.getTipoSangue()); 
-			stmt.setString(6, m.getSexo());
-			stmt.setString(7, m.getLogin());
-			stmt.setString(8, m.getSenha()); 
-			stmt.setString(9, m.getEspecialidade());
-			stmt.setInt(10, m.getNumeroRegistro()); 
-			
+			stmt.setString(1, m.getNome());
+			stmt.setInt(2, m.getCPF()); 
+			stmt.setInt(3, m.getIdade()); 
+			stmt.setString(4, m.getTipoSangue()); 
+			stmt.setString(5, m.getSexo());
+			stmt.setString(6, m.getLogin());
+			stmt.setString(7, m.getSenha());
+			stmt.setString(8, m.getEspecialidade());
+			stmt.setInt(9, m.getNumeroRegistro()); 
+		    stmt.setInt(10, m.getIdFuncionario());	
 			
 			stmt.execute();
 		}
@@ -85,15 +84,15 @@ public class MedicoDAO {
 				while(rs.next()) {
 					Medico med = new Medico();
 					med.setIdFuncionario(rs.getInt("idMedico"));
-					med.setEspecialidade(rs.getString("especialidade"));
-					med.setNumeroRegistro(rs.getInt("numeroderegistro"));
 					med.setNome(rs.getString("nome"));
-					med.setCPF(rs.getString("cpf"));
+					med.setCPF(rs.getInt("cpf"));
 					med.setIdade(rs.getInt("idade"));
 					med.setTipoSangue(rs.getString("tipoSanguineo"));
 					med.setSexo(rs.getString("sexo"));
 					med.setLogin(rs.getString("login"));
 					med.setSenha(rs.getString("senha"));
+					med.setNumeroRegistro(rs.getInt("numeroRegistro"));
+					med.setEspecialidade(rs.getString("especialidade"));
 				
 					listmedicos.add(med);
 				}
