@@ -24,8 +24,8 @@ public class AtendimentoDAO {
 		stmt.setInt(1, a.getIdAtendimento());
 		stmt.setString(2, a.getComentarioEnfermeiro()); 
 		stmt.setString(3, a.getComentarioMedico());
-		stmt.setFloat(4, a.getPeso());
-		stmt.setFloat(5, a.getAltura());
+		stmt.setFloat(4, a.getAltura());
+		stmt.setFloat(5, a.getPeso());
 		stmt.setDate(6, java.sql.Date.valueOf(a.getData()));
 		stmt.setString(7, a.getDoenca());
 		//executa
@@ -49,15 +49,15 @@ public class AtendimentoDAO {
 		Connection conexao = conn.getConnection();	
 		System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "UPDATE Atendimento SET comentarioEnfermeiro=(?),comentarioMedico =(?),peso=(?),altura=(?),"
-				+ "dtData=(?),doenca=(?) where idAtendimento = (?)";
+		String sqlINSERE = "UPDATE Atendimento SET comentarioEnfermeiro=(?),comentarioMedico =(?),altura=(?),peso=(?)"
+				+ "dData=(?),doenca=(?) where idAtendimento = (?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		
 		stmt.setString(1, a.getComentarioEnfermeiro()); 
 		stmt.setString(2, a.getComentarioMedico());
-		stmt.setFloat(3, a.getPeso());
-		stmt.setFloat(4, a.getAltura());
+		stmt.setFloat(3, a.getAltura());
+		stmt.setFloat(4, a.getPeso());
 		stmt.setDate(5,java.sql.Date.valueOf(a.getData()));
 		stmt.setString(6, a.getDoenca());	
 		stmt.setInt(7, a.getIdAtendimento());
@@ -81,8 +81,8 @@ public class AtendimentoDAO {
 				Atendimento atend = new Atendimento();
 				atend.setComentarioEnfermeiro(rs.getString("comentarioEnfermeiro"));
 				atend.setComentarioMedico(rs.getString("comentarioMedico"));
-				atend.setPeso(rs.getFloat("peso"));
 				atend.setAltura(rs.getFloat("altura"));
+				atend.setPeso(rs.getFloat("peso"));
 				atend.setData(rs.getDate("data").toLocalDate());
 				atend.setDoenca(rs.getString("doenca"));
 				atendimento.add(atend);

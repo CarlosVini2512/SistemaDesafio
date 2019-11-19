@@ -21,10 +21,13 @@ public class EnfermidadePessoalController extends Main{
     private Button btnVoltar;
 
     @FXML
-    private TextArea txtStatusEnfermidadeP;
+    private Button btnLista;
+    
+    @FXML
+    protected TextArea txtStatusEnfermidadeP;
 
     @FXML
-    private TextArea txtComent;
+	protected TextArea txtComent;
 
     @FXML
     void SalvarDados(ActionEvent event) throws SQLException {
@@ -37,6 +40,11 @@ public class EnfermidadePessoalController extends Main{
     	enfermidadeP.setComentario(Comentario);
     	enfermidadeP.setStatusEnfermidade(StatusEnfPessoal);
     	enfermidadeDAO.save(enfermidadeP);
+    }
+    
+    @FXML
+    void listarDados(ActionEvent event) throws IOException {
+    	openPage(Rotas.ENFERMIDADEPLIST);
     }
 
     @FXML

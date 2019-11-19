@@ -22,7 +22,7 @@ public class EnfermeiroDAO {
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		stmt.setInt(1, e.getIdEnfermeiro());
 		stmt.setString(2, e.getNome());
-		stmt.setString(3, e.getCPF()); 
+		stmt.setInt(3, e.getCPF()); 
 		stmt.setInt(4, e.getIdade()); 
 		stmt.setString(5, e.getTipoSangue()); 
 		stmt.setString(6, e.getSexo());
@@ -51,11 +51,11 @@ public class EnfermeiroDAO {
 		System.out.println(conn.getStatus());
 		
 		String sqlINSERE = "UPDATE Enfermeiro SET nome=(?), cpf=(?),idade=(?),tipoSanguineo=(?),sexo=(?),login=(?)"
-				+ ",senha=(?),numeroRegistro=(?) where id=(?) ";
+				+ "senha=(?),numeroRegistro=(?) where id=(?) ";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		stmt.setString(1, e.getNome());
-		stmt.setString(2, e.getCPF()); 
+		stmt.setInt(2, e.getCPF()); 
 		stmt.setInt(3, e.getIdade()); 
 		stmt.setString(4, e.getTipoSangue()); 
 		stmt.setString(5, e.getSexo());
@@ -83,7 +83,7 @@ public class EnfermeiroDAO {
 				Enfermeiro enf = new Enfermeiro();
 				enf.setIdFuncionario(rs.getInt("id"));
 				enf.setNome(rs.getString("nome"));
-				enf.setCPF(rs.getString("cpf"));
+				enf.setCPF(rs.getInt("cpf"));
 				enf.setIdade(rs.getInt("idade"));
 				enf.setTipoSangue(rs.getString("tipoSanguineo"));
 				enf.setSexo(rs.getString("sexo"));

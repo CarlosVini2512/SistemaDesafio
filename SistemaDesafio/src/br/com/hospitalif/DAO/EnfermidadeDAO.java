@@ -41,7 +41,7 @@ public class EnfermidadeDAO {
 		stmt.execute();
 	}
 	
-	public void upadte(Enfermidade enf) throws SQLException {
+	public void update(Enfermidade enf) throws SQLException {
 		Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());

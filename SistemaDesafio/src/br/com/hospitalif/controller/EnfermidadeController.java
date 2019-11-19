@@ -20,30 +20,33 @@ public class EnfermidadeController extends Main{
     private Button btnVoltar;
 
     @FXML
-    private TextField txtNome;
+	protected TextField txtNome;
 
     @FXML
-    private TextArea txtDescricao;
+    protected TextArea txtDescricao;
+
+    @FXML
+    protected TextField txtTipoEnfermidade;
 
     @FXML
     private Button btnConsultar;
 
     @FXML
-    private TextField txtTipoEnfermidade;
+    private Button btnLista;
 
-
+    
     @FXML
     void ConsultarEnfermidade(ActionEvent event) throws SQLException {
     	
     	String nome = txtNome.getText();
     	String descricao = txtDescricao.getText();
-    	String tipoEnf = txtTipoEnfermidade.getText();  
+    	String tipo = txtTipoEnfermidade.getText();  
     	
     	Enfermidade enfermidade = new Enfermidade();
     	EnfermidadeDAO enfermidadeDAO = new EnfermidadeDAO();
     	enfermidade.setNome(nome);
     	enfermidade.setDescricao(descricao);
-    	enfermidade.setEnfermidade(tipoEnf);
+    	enfermidade.setTipo(tipo);
     	enfermidadeDAO.save(enfermidade);
     }
 
@@ -52,5 +55,9 @@ public class EnfermidadeController extends Main{
     	openPage(Rotas.DASH);
     }
 
+    @FXML
+    void listarDados(ActionEvent event) throws IOException {
+		openPage(Rotas.ENFERMIDADELIST);
+    }
 }
 

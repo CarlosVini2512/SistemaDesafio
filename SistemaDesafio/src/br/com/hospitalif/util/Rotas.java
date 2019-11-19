@@ -20,5 +20,10 @@ public class Rotas {
 	public static String MEDICOLIST = "/viewLista/ListMedico.fxml";
 	public static String GERENTELIST = "/viewLista/ListGerente.fxml";
 	public static String PACIENTELIST = "/viewLista/ListPaciente.fxml";
+	public static String ATENDIMENTOLIST = "/viewLista/ListAtendimento.fxml";
+	public static String ENFERMEIROLIST = "/viewLista/ListEnfermeiro.fxml";
+	public static String ENFERMIDADELIST = "/viewLista/ListEnfermidade.fxml";
+	public static String ENFERMIDADEPLIST = "/viewLista/ListEnfermidadeP.fxml";
+
 
 }

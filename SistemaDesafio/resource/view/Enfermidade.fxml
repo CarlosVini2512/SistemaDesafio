@@ -93,7 +93,7 @@
             <Image url="@Imagens/brasao2.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnConsultar" layoutX="660.0" layoutY="519.0" mnemonicParsing="false" onAction="#ConsultarEnfermidade" prefHeight="38.0" prefWidth="103.0" text="Consultar">
+      <Button fx:id="btnConsultar" layoutX="666.0" layoutY="526.0" mnemonicParsing="false" onAction="#ConsultarEnfermidade" prefHeight="31.0" prefWidth="97.0" text="Consultar">
          <font>
             <Font name="Arial Black" size="14.0" />
          </font>
@@ -111,7 +111,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btnVoltar" layoutX="84.0" layoutY="519.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="38.0" prefWidth="84.0" text="Voltar">
+      <Button fx:id="btnVoltar" layoutX="14.0" layoutY="526.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="24.0" prefWidth="71.0" text="&lt;&lt;">
          <font>
             <Font name="Arial Black" size="15.0" />
          </font>
@@ -146,5 +146,23 @@
             <Font name="Arial Black" size="16.0" />
          </font>
       </Text>
+      <Button fx:id="btnLista" layoutX="595.0" layoutY="527.0" mnemonicParsing="false" onAction="#listarDados" prefHeight="24.0" prefWidth="71.0" text="Lista">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Lighting diffuseConstant="1.68" surfaceScale="4.55">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="207.44" />
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
    </children>
 </Pane>

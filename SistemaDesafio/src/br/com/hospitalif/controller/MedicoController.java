@@ -77,7 +77,7 @@ public class MedicoController extends Main{
     		medico.setNumeroRegistro(numeroRegistro);
     		medico.setEspecialidade(especialidade);
     		medicoDAO.save(medico);
-			openPage(Rotas.DASH);
+			openPage(Rotas.MEDICO);
     	} catch (NumberFormatException e) {
 			System.out.println("Preencha o campo Vazio");
 		}catch(NullPointerException e) {

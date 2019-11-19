@@ -104,7 +104,7 @@
           </TitledPane>
         </panes>
       </Accordion>
-      <Button fx:id="btnCadastrar" layoutX="456.0" layoutY="386.0" mnemonicParsing="false" onAction="#CadastrarAtendimento" prefHeight="33.0" prefWidth="115.0" text="Cadastar">
+      <Button fx:id="btnCadastrar" layoutX="450.0" layoutY="384.0" mnemonicParsing="false" onAction="#CadastrarAtendimento" prefHeight="33.0" prefWidth="115.0" text="Cadastar">
          <font>
             <Font name="Arial Black" size="16.0" />
          </font>
@@ -122,9 +122,9 @@
             </Lighting>
          </effect>
       </Button>
-      <Button fx:id="btnVoltar" layoutX="367.0" layoutY="386.0" mnemonicParsing="false" onAction="#VoltarTela" text="Votlar">
+      <Button fx:id="btnVoltar" layoutX="315.0" layoutY="386.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="24.0" prefWidth="62.0" text="&lt;&lt;">
          <effect>
-            <Lighting diffuseConstant="1.07" specularConstant="0.0" specularExponent="40.0" surfaceScale="4.67">
+            <Lighting diffuseConstant="1.22" specularConstant="0.0" specularExponent="40.0" surfaceScale="4.67">
                <bumpInput>
                   <Shadow />
                </bumpInput>
@@ -134,7 +134,7 @@
             </Lighting>
          </effect>
          <font>
-            <Font name="Arial Black" size="16.0" />
+            <Font name="Arial Black" size="15.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -192,5 +192,23 @@
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </TitledPane>
+      <Button fx:id="btnLista" layoutX="388.0" layoutY="384.0" mnemonicParsing="false" onAction="#listarDados" prefHeight="36.0" prefWidth="62.0" text="Lista">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Lighting diffuseConstant="1.2" surfaceScale="3.33">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="255.73" />
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
    </children>
 </Pane>

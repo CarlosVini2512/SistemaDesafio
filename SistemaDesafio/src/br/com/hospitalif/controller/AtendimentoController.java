@@ -23,28 +23,31 @@ import javafx.util.Callback;
 public class AtendimentoController extends Main{
 
 	@FXML
-    private DatePicker txtData;
+	protected DatePicker txtData;
 
     @FXML
-    private TextField txtPeso;
+    protected TextField txtPeso;
 
     @FXML
-    private TextArea txtComentEnfermeiro;
+    protected TextArea txtComentEnfermeiro;
 
     @FXML
-    private TextArea txtDoenca;
+    protected TextArea txtDoenca;
 
     @FXML
-    private TextArea txtComentMedico;
+    protected TextArea txtComentMedico;
 
     @FXML
     private Button btnVoltar;
 
     @FXML
     private Button btnCadastrar;
+    
+    @FXML
+    private Button btnLista;
 
     @FXML
-    private TextField txtAltura;
+	protected TextField txtAltura;
 
 
     @FXML
@@ -71,6 +74,11 @@ public class AtendimentoController extends Main{
     void VoltarTela(ActionEvent event) throws IOException {
     	openPage(Rotas.DASH);
 
+    }
+    
+    @FXML
+    void listarDados(ActionEvent event) throws IOException {
+		openPage(Rotas.ATENDIMENTOLIST);
     }
 
 }

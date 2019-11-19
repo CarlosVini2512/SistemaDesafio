@@ -47,12 +47,15 @@ public class EnfermeiroController extends Main{
 
         @FXML
         private Button btnEntrar;
+        
+        @FXML
+        private Button btnLista;
 
         @FXML
         void LogarEnfermeiro(ActionEvent event) throws SQLException {
         	String nome = txtNome.getText();
         	int idade = Integer.parseInt (txtIdade.getText());
-        	String cpf = txtCpf.getText();
+			int CPF = Integer.parseInt(txtCpf.getText());
         	String tipoSanguineo = txtTipoSanguineo.getText();
         	String sexo = txtSexo.getText();
         	String login = txtLogin.getText();
@@ -63,13 +66,18 @@ public class EnfermeiroController extends Main{
         	EnfermeiroDAO enfermeiroDAO = new EnfermeiroDAO();
         	enfermeiro.setNome(nome);
         	enfermeiro.setIdade(idade);
-        	enfermeiro.setCPF(cpf);
+        	enfermeiro.setCPF(CPF);
         	enfermeiro.setTipoSangue(tipoSanguineo);
         	enfermeiro.setSexo(sexo);
         	enfermeiro.setLogin(login);
         	enfermeiro.setSenha(senha);
         	enfermeiro.setNumeroRegistro(numRegistro);
         	enfermeiroDAO.save(enfermeiro);       	  
+        }
+        
+        @FXML
+        void listarDados(ActionEvent event) throws IOException {
+    		openPage(Rotas.ENFERMEIROLIST);
         }
 
         @FXML

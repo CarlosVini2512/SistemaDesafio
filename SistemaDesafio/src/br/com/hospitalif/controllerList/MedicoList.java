@@ -152,7 +152,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 			sexo.setCellValueFactory(new PropertyValueFactory<>("sexo"));
 			login.setCellValueFactory(new PropertyValueFactory<>("login"));
 			senha.setCellValueFactory(new PropertyValueFactory<>("senha"));
-			numRegistro.setCellValueFactory(new PropertyValueFactory<>("numeroDeRegistro"));
+			numRegistro.setCellValueFactory(new PropertyValueFactory<>("numeroRegistro"));
 			especialidade.setCellValueFactory(new PropertyValueFactory<>("especialidade"));
 			
 			senha.setVisible(false);
