@@ -24,6 +24,7 @@ public class Rotas {
 	public static String ENFERMEIROLIST = "/viewLista/ListEnfermeiro.fxml";
 	public static String ENFERMIDADELIST = "/viewLista/ListEnfermidade.fxml";
 	public static String ENFERMIDADEPLIST = "/viewLista/ListEnfermidadeP.fxml";
+	public static String ENTRADALIST = "/viewLista/ListEntrada.fxml";
 
 
 }

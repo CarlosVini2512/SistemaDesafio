@@ -1,7 +1,6 @@
 package br.com.hospitalif.DAO;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,19 +13,22 @@ import br.com.hospitalif.model.Entrada;
 public class EntradaDAO {
 
 	public void save(Entrada ent) throws SQLException {
-		Conexao conn = new Conexao();
-		Connection conexao = conn.getConnection();
-		System.out.println(conn.getStatus());
+		try {
+			Conexao conn = new Conexao();
+			Connection conexao = conn.getConnection();
+			System.out.println(conn.getStatus());
 		
-		String sqlINSERE = "INSERT INTO Entrada VALUES(?,?,?,?,?)";
+			String sqlINSERE = "INSERT INTO Entrada VALUES(?,?,?,?,?)";
 		
-		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-	    stmt.setInt(1, ent.getIdEntrada());
-		stmt.setDate(2, java.sql.Date.valueOf(ent.getDataEntrada()));
-		stmt.setDate(3, java.sql.Date.valueOf(ent.getDataSaida()));
-		stmt.setString(4, ent.getStatusEntrada());
-		stmt.setString(5, ent.getSituacaoDoPaciente());
-		stmt.execute();
+			PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
+			stmt.setInt(1, ent.getIdEntrada());
+			stmt.setDate(2, java.sql.Date.valueOf(ent.getDataEntrada()));
+			stmt.setDate(3, java.sql.Date.valueOf(ent.getDataSaida()));
+			stmt.setString(4, ent.getStatusEntrada());
+			stmt.setString(5, ent.getSituacaoDoPaciente());
+			stmt.execute();
+		} catch (NullPointerException e) {
+		}
 	}	
 
 	
@@ -49,11 +51,11 @@ public class EntradaDAO {
 		String sqlINSERE = "UPDATE Entrada SET dataEntrada=(?),dataSaida=(?),statusEntrada=(?),situacaoPaciente=(?) where IdEntrada = (?)";
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
-	    stmt.setInt(1, ent.getIdEntrada());
-		stmt.setDate(2,java.sql.Date.valueOf(ent.getDataEntrada()));
-		stmt.setDate(3,java.sql.Date.valueOf(ent.getDataSaida()));
-		stmt.setString(4, ent.getStatusEntrada());
-		stmt.setString(5, ent.getSituacaoDoPaciente());
+		stmt.setDate(1,java.sql.Date.valueOf(ent.getDataEntrada()));
+		stmt.setDate(2,java.sql.Date.valueOf(ent.getDataSaida()));
+		stmt.setString(3, ent.getStatusEntrada());
+		stmt.setString(4, ent.getSituacaoDoPaciente());
+	    stmt.setInt(5, ent.getIdEntrada());
 		stmt.execute();
 	}	
 	
@@ -73,8 +75,8 @@ public class EntradaDAO {
 				Entrada ent1 = new Entrada();
 				ent1.setDataEntrada(rs.getDate("dataEntrada").toLocalDate());
 				ent1.setDataSaida(rs.getDate("dataSaida").toLocalDate());
-				ent1.setStatusEntrada("statusDeEntrada");
-				ent1.setSituacaoDoPaciente("situacaoDoPaciente");
+				ent1.setStatusEntrada("statusEntrada");
+				ent1.setSituacaoDoPaciente("situacaoPaciente");
 				entradas.add(ent1);
 			}
 		} catch (SQLException e) {

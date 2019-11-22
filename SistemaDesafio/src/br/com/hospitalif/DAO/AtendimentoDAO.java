@@ -13,6 +13,7 @@ import br.com.hospitalif.model.Atendimento;
 public class AtendimentoDAO {
 
 	public void save(Atendimento a) throws SQLException {
+		try {
 		Conexao conn = new Conexao();
 		Connection conexao = conn.getConnection();
 		System.out.println(conn.getStatus());
@@ -20,7 +21,6 @@ public class AtendimentoDAO {
 		
 		PreparedStatement stmt = conexao.prepareStatement(sqlINSERE);
 		
-		//seta valores
 		stmt.setInt(1, a.getIdAtendimento());
 		stmt.setString(2, a.getComentarioEnfermeiro()); 
 		stmt.setString(3, a.getComentarioMedico());
@@ -28,8 +28,9 @@ public class AtendimentoDAO {
 		stmt.setFloat(5, a.getPeso());
 		stmt.setDate(6, java.sql.Date.valueOf(a.getData()));
 		stmt.setString(7, a.getDoenca());
-		//executa
 		stmt.execute();
+		} catch (NullPointerException e) {
+		}
 	}
 	
 
@@ -83,7 +84,7 @@ public class AtendimentoDAO {
 				atend.setComentarioMedico(rs.getString("comentarioMedico"));
 				atend.setAltura(rs.getFloat("altura"));
 				atend.setPeso(rs.getFloat("peso"));
-				atend.setData(rs.getDate("data").toLocalDate());
+				atend.setData(rs.getDate("dData").toLocalDate());
 				atend.setDoenca(rs.getString("doenca"));
 				atendimento.add(atend);
 			}	

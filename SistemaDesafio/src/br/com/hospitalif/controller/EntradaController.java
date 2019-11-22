@@ -13,28 +13,30 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
-import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextArea;
 
 public class EntradaController extends Main{
 
     @FXML
-    private Button btnVoltar;
+    protected TextArea txtStatusDeEntrada;
 
     @FXML
-    private TextArea txtStatusDeEntrada;
+    protected DatePicker dtDataSaida;
 
     @FXML
-    private DatePicker dtDataSaida;
+    protected TextArea txtSituacaoPaciente;
 
     @FXML
-    private TextArea txtSituacaoPaciente;
-
-    @FXML
-    private DatePicker dtDataEntrada;
+	protected DatePicker dtDataEntrada;
 
     @FXML
     private Button btnRegistrar;
+
+    @FXML
+    private Button btnVoltar;
+    
+    @FXML
+    private Button btnLista;
 
 
     @FXML
@@ -48,8 +50,8 @@ public class EntradaController extends Main{
     	EntradaDAO entradaDAO = new EntradaDAO();
     	entrada.setStatusEntrada(statusEntrada);
     	entrada.setSituacaoDoPaciente(situacaoPaciente);
-    	//entrada.setData(dataEntrada);
-    	//entrada.setDataSaida(dataSaida);
+    	entrada.setData(dataEntrada);
+    	entrada.setDataSaida(dataSaida);
     	entradaDAO.save(entrada);
     	
     }
@@ -57,6 +59,11 @@ public class EntradaController extends Main{
     @FXML
     void VoltarTela(ActionEvent event) throws IOException {
     	openPage(Rotas.DASH);
+    }
+    
+    @FXML
+    void listarDados(ActionEvent event) throws IOException {
+    	openPage(Rotas.ENTRADALIST);
     }
 }
 

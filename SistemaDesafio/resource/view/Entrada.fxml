@@ -95,7 +95,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
     </TitledPane>
-      <Button fx:id="btnRegistrar" layoutX="670.0" layoutY="492.0" mnemonicParsing="false" onAction="#RegistrarEntrada" prefHeight="42.0" prefWidth="103.0" text="Registrar">
+      <Button fx:id="btnRegistrar" layoutX="684.0" layoutY="509.0" mnemonicParsing="false" onAction="#RegistrarEntrada" prefHeight="32.0" prefWidth="95.0" text="Registrar">
          <font>
             <Font name="Arial Black" size="14.0" />
          </font>
@@ -113,12 +113,12 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btnVoltar" layoutX="29.0" layoutY="500.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="23.0" prefWidth="82.0" text="Voltar">
+      <Button fx:id="btnVoltar" layoutX="537.0" layoutY="509.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="31.0" prefWidth="67.0" text="&lt;&lt;">
          <font>
             <Font name="Arial Black" size="14.0" />
          </font>
          <effect>
-            <Lighting diffuseConstant="1.07" surfaceScale="3.01">
+            <Lighting diffuseConstant="1.29" surfaceScale="4.11">
                <bumpInput>
                   <Shadow />
                </bumpInput>
@@ -143,5 +143,23 @@
             <Font name="Arial Black" size="16.0" />
          </font>
       </TitledPane>
+      <Button fx:id="btnLista" layoutX="617.0" layoutY="510.0" mnemonicParsing="false" onAction="#listarDados" prefHeight="31.0" prefWidth="67.0" text="Lista">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Lighting diffuseConstant="1.24" specularConstant="0.23" surfaceScale="2.96">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="189.88" />
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
    </children>
 </Pane>

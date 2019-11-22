@@ -61,7 +61,7 @@ public class AtendimentoController extends Main{
     	
     	Atendimento atendimento = new Atendimento();
     	AtendimentoDAO atendimentoDAO = new AtendimentoDAO();
-    	//atendimento.setData(data);
+    	atendimento.setData(data);
     	atendimento.setPeso(peso);
     	atendimento.setComentarioEnfermeiro(ComentarioEnfermeiro);
     	atendimento.setDoenca(doenca);

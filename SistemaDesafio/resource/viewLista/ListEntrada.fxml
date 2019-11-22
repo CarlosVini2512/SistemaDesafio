@@ -5,18 +5,14 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.hospitalif.controllerList.PacienteList">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.hospitalif.controllerList.EntradaList">
    <children>
-      <TableView fx:id="tablePaciente" layoutX="1.0" layoutY="1.0" prefHeight="366.0" prefWidth="600.0">
+      <TableView fx:id="tableEntrada" layoutX="1.0" layoutY="1.0" prefHeight="366.0" prefWidth="600.0">
         <columns>
-          <TableColumn fx:id="nome" prefWidth="75.0" text="Nome" />
-          <TableColumn fx:id="cpf" prefWidth="75.0" text="CPF" />
-            <TableColumn fx:id="sexo" prefWidth="75.0" text="Sexo" />
-            <TableColumn fx:id="idade" prefWidth="75.0" text="Idade" />
-            <TableColumn fx:id="sangue" prefWidth="75.0" text="Sangue" />
-            <TableColumn fx:id="doenca" prefWidth="105.0" text="Doenças" />
-            <TableColumn fx:id="historico" prefWidth="119.0" text="Histórico" />
+          <TableColumn fx:id="statusEntrada" prefWidth="155.0" text="Status Entrada" />
+          <TableColumn fx:id="situacaoPaciente" prefWidth="205.0" text="Situaçao do Paciente" />
+            <TableColumn fx:id="dataEntrada" prefWidth="130.0" text="Data de Entrada" />
+            <TableColumn fx:id="dataSaida" prefWidth="109.0" text="Data de Saída" />
         </columns>
          <effect>
             <SepiaTone />
