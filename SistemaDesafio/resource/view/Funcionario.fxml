@@ -1,21 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.hospitalif.controller.FuncionarioController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: Navy;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.hospitalif.controller.FuncionarioController">
    <children>
-      <ImageView fitHeight="440.0" fitWidth="656.0" layoutX="-2.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" translateX="2.0" translateY="1.0">
+      <ImageView disable="true" fitHeight="314.0" fitWidth="600.0" layoutY="87.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Imagens/11.jpg" />
+            <Image url="@Imagens/10.jpg" />
          </image>
+         <effect>
+            <Lighting diffuseConstant="1.59">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
       </ImageView>
-      <TextField editable="false" focusTraversable="false" layoutX="240.0" prefHeight="39.0" prefWidth="177.0" text="FUNCIONÁRIO">
+      <Text fill="WHITE" layoutX="14.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" wrappingWidth="61.9873046875">
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="14.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:" wrappingWidth="45.01220703125">
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="10.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Idade:" wrappingWidth="53.85205078125">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </Text>
+      <TextArea fx:id="txtStatus" layoutX="159.0" layoutY="212.0" prefHeight="116.0" prefWidth="360.0" style="-fx-background-color: DarkGray;">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </TextArea>
+      <TextField editable="false" layoutX="176.0" layoutY="312.0" prefHeight="20.0" prefWidth="81.0" text="Status">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TextField>
+      <TextField editable="false" layoutX="159.0" layoutY="23.0" prefHeight="42.0" prefWidth="341.0" text="CADASTRO DE FUNCIONÁRIO">
          <font>
             <Font name="Arial Black" size="19.0" />
          </font>
@@ -23,84 +73,56 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
          <effect>
-            <SepiaTone level="0.24" />
+            <SepiaTone level="0.54" />
          </effect>
       </TextField>
-      <Text fill="#575757" layoutX="14.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login:">
-         <font>
-            <Font name="Arial Black" size="16.0" />
-         </font>
-      </Text>
-      <Text fill="#4a4a4a" layoutX="14.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:">
-         <font>
-            <Font name="Arial Black" size="17.0" />
-         </font>
-      </Text>
-      <TextField fx:id="txtLogin" layoutX="84.0" layoutY="94.0">
+      <TextField fx:id="txtNome" layoutX="76.0" layoutY="102.0" prefHeight="42.0" prefWidth="236.0">
          <effect>
-            <Lighting diffuseConstant="1.27" specularConstant="2.0" specularExponent="40.0" surfaceScale="5.53">
+            <Lighting diffuseConstant="0.95" specularExponent="40.0" surfaceScale="4.06">
                <bumpInput>
                   <Shadow />
                </bumpInput>
                <light>
-                  <Light.Distant azimuth="30.73" elevation="36.22" />
+                  <Light.Distant azimuth="53.78" />
                </light>
             </Lighting>
          </effect>
       </TextField>
-      <PasswordField fx:id="txtSenha" layoutX="84.0" layoutY="137.0" prefHeight="31.0" prefWidth="132.0">
+      <TextField fx:id="txtCPF" layoutX="72.0" layoutY="151.0" prefHeight="31.0" prefWidth="126.0">
          <effect>
-            <Lighting diffuseConstant="1.32" specularConstant="0.84" specularExponent="37.56" surfaceScale="5.77">
+            <Lighting diffuseConstant="0.93" surfaceScale="4.06">
                <bumpInput>
                   <Shadow />
                </bumpInput>
                <light>
-                  <Light.Distant azimuth="40.61" elevation="36.22" />
+                  <Light.Distant />
                </light>
             </Lighting>
          </effect>
-      </PasswordField>
-      <TextArea fx:id="txtStatusFuncionario" layoutX="328.0" layoutY="110.0" prefHeight="137.0" prefWidth="308.0">
-         <effect>
-            <Lighting diffuseConstant="1.48" specularConstant="0.0" specularExponent="0.0" surfaceScale="4.91">
-               <bumpInput>
-                  <Shadow />
-               </bumpInput>
-               <light>
-                  <Light.Distant azimuth="53.78" elevation="36.22" />
-               </light>
-            </Lighting>
-         </effect>
-      </TextArea>
-      <TextField editable="false" layoutX="329.0" layoutY="82.0" prefHeight="14.0" prefWidth="82.0" text="Status:">
-         <font>
-            <Font name="Arial Black" size="15.0" />
-         </font>
-         <effect>
-            <Lighting diffuseConstant="0.98" specularConstant="0.0" specularExponent="40.0" surfaceScale="5.4">
-               <bumpInput>
-                  <Shadow />
-               </bumpInput>
-               <light>
-                  <Light.Distant azimuth="31.83" elevation="40.61" />
-               </light>
-            </Lighting>
-         </effect>
-         <cursor>
-            <Cursor fx:constant="DEFAULT" />
-         </cursor>
       </TextField>
-      <Button fx:id="btnCadastrar" layoutX="526.0" layoutY="383.0" mnemonicParsing="false" onAction="#CadastrarFuncionario" prefHeight="42.0" prefWidth="119.0" text="CADASTRAR">
+      <TextField fx:id="txtIdade" layoutX="72.0" layoutY="196.0" prefHeight="23.0" prefWidth="38.0">
+         <effect>
+            <Lighting specularExponent="29.76" surfaceScale="4.18">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </TextField>
+      <Button fx:id="btnCadastrar" layoutX="484.0" layoutY="353.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="33.0" prefWidth="101.0" text="Cadastrar">
          <font>
             <Font name="Arial Black" size="14.0" />
          </font>
          <effect>
-            <Lighting diffuseConstant="1.29" specularExponent="28.29" surfaceScale="4.79">
+            <Lighting surfaceScale="3.82">
                <bumpInput>
                   <Shadow />
                </bumpInput>
                <light>
-                  <Light.Distant azimuth="229.39" elevation="31.83" />
+                  <Light.Distant azimuth="229.39" />
                </light>
             </Lighting>
          </effect>
@@ -108,23 +130,75 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btnVoltar" layoutX="24.0" layoutY="383.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="31.0" prefWidth="82.0" text="&lt;&lt;&lt;">
+      <Button fx:id="btnVoltar" layoutX="361.0" layoutY="353.0" mnemonicParsing="false" onAction="#voltarTela" prefHeight="31.0" prefWidth="54.0" text="&lt;&lt;">
          <font>
-            <Font name="Arial Black" size="17.0" />
+            <Font name="Arial Black" size="15.0" />
          </font>
          <effect>
-            <Lighting diffuseConstant="1.02" surfaceScale="5.46">
+            <Lighting diffuseConstant="1.1" surfaceScale="3.82">
                <bumpInput>
                   <Shadow />
                </bumpInput>
                <light>
-                  <Light.Distant azimuth="208.26" />
+                  <Light.Distant azimuth="203.05" />
                </light>
             </Lighting>
          </effect>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+      </Button>
+      <Text fill="WHITE" layoutX="291.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo Sanguíneo:">
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="346.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sexo:">
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtTipoSangue" layoutX="441.0" layoutY="162.0" prefHeight="31.0" prefWidth="54.0">
+         <effect>
+            <Lighting surfaceScale="2.48">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </TextField>
+      <TextField fx:id="txtSexo" layoutX="402.0" layoutY="114.0" prefHeight="21.0" prefWidth="101.0">
+         <effect>
+            <Lighting surfaceScale="3.57">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </TextField>
+      <Button fx:id="btnLista" layoutX="422.0" layoutY="354.0" mnemonicParsing="false" onAction="#listarDados" prefHeight="31.0" prefWidth="62.0" text="Lista">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Lighting diffuseConstant="1.1" specularConstant="0.0" surfaceScale="4.06">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="216.22" />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
       </Button>
    </children>
 </Pane>

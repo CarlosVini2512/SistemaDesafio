@@ -4,8 +4,8 @@ public class Rotas {
 	public static String ADM = "/view/Adm.fxml";
 	public static String ATENDENTE = "/view/Atendente.fxml";
 	public static String ATENDIMENTO = "/view/Atendimento.fxml";
-	public static String CADASTRODEPESSOA = "/view/CadastroDePessoal.fxml";
-	public static String CADASTROFUNCIONARIO = "/view/CadastroFuncionario.fxml";
+	public static String CADASTRODEFUNCIONARIO = "/view/Funcionario.fxml";
+	public static String LOGINFUNCIONARIO = "/view/CadastroFuncionario.fxml";
 	public static String DASH = "/view/Dash.fxml";
 	public static String ENFERMEIRO = "/view/Enfermeiro.fxml";
 	public static String ENFERMIDADE = "/view/Enfermidade.fxml";
@@ -25,6 +25,7 @@ public class Rotas {
 	public static String ENFERMIDADELIST = "/viewLista/ListEnfermidade.fxml";
 	public static String ENFERMIDADEPLIST = "/viewLista/ListEnfermidadeP.fxml";
 	public static String ENTRADALIST = "/viewLista/ListEntrada.fxml";
+	public static String FUNCIONARIOLIST = "/viewLista/ListFuncionario.fxml";
 
 
 }

@@ -18,7 +18,7 @@ public class AdmController extends Main {
 
     @FXML
     void CadastrarFuncionario(ActionEvent event) throws IOException {
-    	openPage(Rotas.CADASTRODEPESSOA);
+    	openPage(Rotas.CADASTRODEFUNCIONARIO);
     }
     
     @FXML
